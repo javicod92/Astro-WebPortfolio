@@ -1,0 +1,11 @@
+---
+type ClassProps = {
+  class: string;
+};
+
+const { class: classProps } = Astro.props as ClassProps;
+---
+
+<div class={`max-w-[1100px] ${classProps}`}>
+  <slot />
+</div>

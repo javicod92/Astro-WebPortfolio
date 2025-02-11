@@ -10,6 +10,14 @@
   color-scheme: light dark;
 }
 
-* {
+body {
   font-family: "Inter", serif;
+}
+
+.workSans {
+  font-family: "Work Sans", serif;
+}
+
+.righteous {
+  font-family: "Righteous", serif;
 }
