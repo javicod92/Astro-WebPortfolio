@@ -3,7 +3,10 @@ import Briefcase from "../../icons/Briefcase.astro";
 import GeneralContainer from "../../Utils/GeneralContainer.astro";
 ---
 
-<header class="fixed top-0 left-0 right-0 flex justify-center">
+<header
+  id="navbar"
+  class="fixed top-0 left-0 right-0 flex justify-center transition-colors duration-300"
+>
   <GeneralContainer class="p-5 grow flex justify-between items-center">
     <div>
       <a
@@ -36,3 +39,18 @@ import GeneralContainer from "../../Utils/GeneralContainer.astro";
     </nav>
   </GeneralContainer>
 </header>
+
+<!-- This script is used to add a background to my navigation bar -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        navbar?.classList.add("bg-zinc-500", "backdrop-blur-md");
+      } else {
+        navbar?.classList.remove("bg-zinc-500", "backdrop-blur-md");
+      }
+    });
+  });
+</script>
