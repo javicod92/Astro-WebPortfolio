@@ -11,12 +11,27 @@
   }
 </style> -->
 
-<style>
+<!-- Style only with Radial Gradient -->
+<!-- <style>
   div {
     background: radial-gradient(
-      ellipse 80% 80% at 50% -20%,
+      ellipse 80% 80% at 50% 0,
       #193847 5%,
       #0a0a0a 85%
     );
+  }
+</style> -->
+
+<!-- Style with Background Image -->
+<style>
+  div {
+    background: radial-gradient(
+        ellipse 80% 80% at 50% 0,
+        #193847 5%,
+        rgba(10, 10, 10, 0.95) 85%
+      ),
+      url(/Bg-Image.webp);
+    background-size: cover;
+    background-position: center;
   }
 </style>
