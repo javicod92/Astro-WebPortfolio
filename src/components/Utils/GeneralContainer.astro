@@ -6,6 +6,6 @@ type ClassProps = {
 const { class: classProps } = Astro.props as ClassProps;
 ---
 
-<div class={`max-w-[1200px] ${classProps}`}>
+<div class={`max-w-[1200px] w-full ${classProps}`}>
   <slot />
 </div>
