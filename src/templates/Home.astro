@@ -13,14 +13,18 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
 <!-- Home Section -->
 <section
   id="home"
-  class="relative w-full min-h-screen h-full p-[80px_20px_20px] flex justify-center items-center"
+  class="relative w-full min-h-screen h-full p-[80px_60px_20px] flex justify-center items-center"
 >
   <MidnightRadial />
   <GeneralContainer class="flex justify-between gap-8 mb-8">
     <!-- Description content -->
     <div class="w-full flex flex-col justify-center">
-      <p class="text-2xl text-zinc-400">Hey, this is my web portfolio. 👋</p>
-      <h1 class="text-5xl font-semibold flex items-center gap-4 mt-2">
+      <p class="text-xl xl:text-2xl text-zinc-400">
+        Hey, this is my web portfolio. 👋
+      </p>
+      <h1
+        class="text-4xl xl:text-5xl font-semibold flex items-center gap-4 mt-2 flex-wrap"
+      >
         I'm <span class="text-cyan-500">Javier Codutti</span>
         <a
           class="flex justify-center items-center"
@@ -31,7 +35,9 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
           ><Badge>Available to Work</Badge>
         </a>
       </h1>
-      <h2 class="opacity-80 text-xl font-extralight text-pretty mt-4">
+      <h2
+        class="opacity-80 text-lg xl:text-xl font-extralight text-pretty mt-4"
+      >
         <span class="text-white font-semibold">Frontend Developer</span>
         <span class="text-amber-200 font-semibold"
           >with 2+ years of experience</span
