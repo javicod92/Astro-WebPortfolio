@@ -1,0 +1,78 @@
+---
+type ClassProps = {
+  class: string;
+  text: string;
+};
+
+const { class: classList, text } = Astro.props as ClassProps;
+---
+
+<div class={`scroll-container ${classList}`}>
+  <div class="mouse-box">
+    <div class="scroll-dot"></div>
+  </div>
+  <div class="scroll-text">{text}</div>
+</div>
+
+<style>
+  .scroll-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mouse-box {
+    width: 25px;
+    height: 40px;
+    border: 2px solid #b8b8b8;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scroll-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #b8b8b8;
+    border-radius: 50%;
+    animation: scrollDown 1.5s infinite ease-in-out;
+  }
+
+  @keyframes scrollDown {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    70% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+  }
+
+  .scroll-text {
+    font-size: 14px;
+    color: #b8b8b8;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: textBlink 2s infinite alternate;
+  }
+
+  @keyframes textBlink {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+</style>
