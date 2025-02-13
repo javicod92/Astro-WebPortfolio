@@ -1,7 +1,7 @@
 ---
 type ClassProps = {
   class: string;
-  text: string;
+  text?: string;
 };
 
 const { class: classList, text } = Astro.props as ClassProps;
@@ -11,7 +11,7 @@ const { class: classList, text } = Astro.props as ClassProps;
   <div class="mouse-box">
     <div class="scroll-dot"></div>
   </div>
-  <div class="scroll-text">{text}</div>
+  {text ? <div class="scroll-text">{text}</div> : ""}
 </div>
 
 <style>
