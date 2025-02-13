@@ -24,6 +24,7 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
           href="https://linkedin.com/in/aldo-javier-codutti"
           target="_blank"
           rel="noopener"
+          aria-label="Check my LinkedIn profile"
           ><Badge>Available to Work</Badge>
         </a>
       </h1>
@@ -46,7 +47,7 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
             title="Github"
             aria-label="Github"
           >
-            <Github class="w-full" />
+            <Github class="w-full" aria-hidden="true" />
           </a>
         </li>
         <li>
@@ -58,7 +59,7 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
             title="LinkedIn"
             aria-label="LinkedIn"
           >
-            <LinkedIn class="w-full" />
+            <LinkedIn class="w-full" aria-hidden="true" />
           </a>
         </li>
         <li>
@@ -70,7 +71,7 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
             title="Email"
             aria-label="Email"
           >
-            <Mail class="w-full" />
+            <Mail class="w-full" aria-hidden="true" />
           </a>
         </li>
       </ul>
