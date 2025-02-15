@@ -1,5 +1,6 @@
 ---
 import Briefcase from "../../icons/Briefcase.astro";
+import Menu from "../../icons/Menu.astro";
 import GeneralContainer from "../../utils/GeneralContainer.astro";
 ---
 
@@ -7,7 +8,9 @@ import GeneralContainer from "../../utils/GeneralContainer.astro";
   id="navbar"
   class="fixed z-10 top-0 left-0 right-0 flex justify-center transition-colors duration-300"
 >
-  <GeneralContainer class="m-[20px_60px] flex justify-between items-center">
+  <GeneralContainer
+    class="m-5 lg:m-[20px_60px] flex justify-between items-center"
+  >
     <div>
       <a
         href="#"
@@ -17,7 +20,7 @@ import GeneralContainer from "../../utils/GeneralContainer.astro";
         JAVIER <span class="text-cyan-500">CODUTTI</span>
       </a>
     </div>
-    <nav class="flex gap-8 text-white/80">
+    <nav class="hidden lg:flex gap-8 text-white/80">
       <a class="transition-colors duration-250 hover:text-cyan-400" href="#"
         >Home</a
       >
@@ -37,6 +40,9 @@ import GeneralContainer from "../../utils/GeneralContainer.astro";
         >Contact</a
       >
     </nav>
+    <div class="lg:hidden block">
+      <Menu />
+    </div>
   </GeneralContainer>
 </header>
 
