@@ -27,17 +27,12 @@ const { class: classList, text } = Astro.props as ClassProps;
     height: 40px;
     border: 2px solid #b8b8b8;
     border-radius: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 5px;
-    position: relative;
-    overflow: hidden;
+    padding: 4px;
   }
 
   .scroll-dot {
-    width: 10px;
-    height: 10px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     background-color: #b8b8b8;
     border-radius: 50%;
     animation: scrollDown 1.5s infinite ease-in-out;
