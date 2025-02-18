@@ -6,18 +6,28 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
 
 <section
   id="about"
-  class="relative w-full min-h-screen h-full p-[80px_20px_20px] lg:p-[80px_60px_20px] flex justify-center items-center"
+  class="relative w-full min-h-screen h-full p-[80px_20px_20px] lg:p-[80px_60px_20px] flex flex-col justify-center items-center"
 >
+  <!-- Background -->
   <SideRadialBlue />
-  <GeneralContainer>
-    <!-- <div>
-      <img src="/173981629971322.webp" alt="User Photo Profile" />
-    </div> -->
-    <div>
-      <h2 class="righteous text-4xl flex items-center gap-2">
-        <User class="size-10" /> About me
-      </h2>
-      <div class="mt-10 text-gray-200 flex flex-col gap-6 font-extralight">
+
+  <!-- Main Content -->
+  <GeneralContainer class="flex gap-8">
+    <!-- Image Profile -->
+    <div class="flex items-center justify-center">
+      <img
+        src="/173981629971322.webp"
+        alt="User Photo Profile"
+        class="w-[80%]"
+      />
+    </div>
+
+    <!-- Description Sesction -->
+    <div class="flex items-center">
+      <div class="text-gray-200 flex flex-col gap-6 font-extralight">
+        <h2 class="righteous text-4xl flex items-center gap-2">
+          <User class="size-10" /> About me
+        </h2>
         <p
           class="text-lg md:text-xl text-pretty border-l-4 border-cyan-600 pl-4"
         >
@@ -52,10 +62,6 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
           >
         </p>
       </div>
-    </div>
-
-    <div class="mt-10">
-      <h3 class="righteous text-2xl">Other interests</h3>
     </div>
   </GeneralContainer>
 </section>
