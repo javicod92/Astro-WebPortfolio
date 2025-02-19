@@ -17,10 +17,10 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
 >
   <MidnightRadialLights />
   <GeneralContainer
-    class="flex flex-col-reverse lg:flex-row justify-between gap-8 mt-10"
+    class="flex flex-col-reverse lg:flex-row justify-between gap-8 lg:gap-12 mt-10"
   >
     <!-- Description content -->
-    <div class="flex flex-col justify-center lg:w-1/2">
+    <div class="flex flex-col justify-center lg:w-2/3">
       <p class="text-base sm:text-xl xl:text-2xl text-zinc-400">
         Hey, this is my web portfolio. 👋
       </p>
@@ -95,13 +95,13 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
     </div>
 
     <!-- Image Profile -->
-    <div class="flex items-center justify-center lg:w-1/2">
+    <div class="flex items-center justify-center lg:w-2/5">
       <img
         src="/Profile.webp"
         alt="Javier Codutti - Web Developer"
         width="500"
         height="500"
-        class="w-[80%] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
+        class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
         loading="lazy"
       />
     </div>
