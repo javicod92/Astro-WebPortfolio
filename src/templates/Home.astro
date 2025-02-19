@@ -20,7 +20,7 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
     class="flex flex-col-reverse lg:flex-row justify-between gap-8 mt-10"
   >
     <!-- Description content -->
-    <div class="w-full flex flex-col justify-center">
+    <div class="flex flex-col justify-center lg:w-1/2">
       <p class="text-base sm:text-xl xl:text-2xl text-zinc-400">
         Hey, this is my web portfolio. 👋
       </p>
@@ -94,14 +94,14 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
       </div>
     </div>
 
-    <!-- Profile photo -->
-    <div class="w-full flex items-center justify-center">
+    <!-- Image Profile -->
+    <div class="flex items-center justify-center lg:w-1/2">
       <img
-        src="Profile.webp"
-        alt="Javier Codutti, Frontend Developer"
-        class="w-[80%]"
+        src="/Profile.webp"
+        alt="Javier Codutti - Web Developer"
         width="500"
         height="500"
+        class="w-[80%] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
         loading="lazy"
       />
     </div>
