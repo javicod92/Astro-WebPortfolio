@@ -13,10 +13,6 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
 
   <!-- Main Content -->
   <GeneralContainer class="flex flex-col items-center">
-    <h2 class="righteous text-4xl flex items-center gap-2">
-      <User class="size-10" /> About me
-    </h2>
-
     <div class="mt-6 flex flex-col lg:flex-row gap-8">
       <!-- Image Profile -->
       <div class="flex items-center justify-center lg:w-1/2">
@@ -25,7 +21,7 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
           alt="Javier Codutti - Web Developer"
           width="500"
           height="500"
-          class="w-[80%]"
+          class="w-[80%] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
           loading="lazy"
         />
       </div>
@@ -33,6 +29,16 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
       <!-- Description Section -->
       <div class="flex items-center lg:w-1/2">
         <div class="text-gray-200 flex flex-col gap-6 font-extralight">
+          <div>
+            <h3
+              class="text-lg md:text-xl font-medium text-zinc-400 flex items-center gap-2"
+            >
+              <User class="size-6" /> About me
+            </h3>
+            <h2 class="mt-1 md:mt-2 text-4xl font-semibold">
+              This is a little bit <span class="text-cyan-500">about me</span>
+            </h2>
+          </div>
           <p
             class="mt-6 text-lg md:text-xl text-pretty border-l-4 border-cyan-600 pl-4"
           >
