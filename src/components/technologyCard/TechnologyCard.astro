@@ -1,0 +1,15 @@
+---
+import React from "../../icons/React.astro";
+
+type ClassTypes = {
+  class: string;
+};
+
+const { class: classList } = Astro.props as ClassTypes;
+---
+
+<div
+  class={`h-[150px] bg-gray-800 rounded-sm flex flex-col items-center justify-evenly p-2 ${classList}`}
+>
+  <slot />
+</div>

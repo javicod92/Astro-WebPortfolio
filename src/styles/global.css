@@ -41,3 +41,8 @@ p {
 .righteous {
   font-family: "Righteous", serif;
 }
+
+.grid-cols-auto {
+  grid-auto-flow: row;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}

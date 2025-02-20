@@ -1,5 +1,14 @@
 ---
+import TechnologyCard from "../components/technologyCard/TechnologyCard.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
+import CSSModules from "../icons/CSSModules.astro";
+import Html5 from "../icons/Html5.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import Nextjs from "../icons/Nextjs.astro";
+import React from "../icons/React.astro";
+import TailwindCSS from "../icons/TailwindCSS.astro";
 import Tool from "../icons/Tool.astro";
+import TypeScript from "../icons/TypeScript.astro";
 import GeneralContainer from "../utils/GeneralContainer.astro";
 import HighLight from "../utils/HighLight.astro";
 ---
@@ -8,11 +17,11 @@ import HighLight from "../utils/HighLight.astro";
   id="skills"
   class="relative w-full min-h-screen h-full px-5 py-12 flex flex-col justify-center items-center"
 >
-  <GeneralContainer class="flex">
+  <GeneralContainer class="flex flex-row gap-12">
     <!-- Skills Description -->
-    <div class="flex flex-col gap-6 xl:w-2/3">
+    <div class="flex flex-col gap-6 w-1/2">
       <div>
-        <h3 class="ifont-medium text-zinc-400 flex items-center gap-2">
+        <h3 class="font-medium text-zinc-400 flex items-center gap-2">
           <Tool class="size-6" />My Skills
         </h3>
         <h2 class="mt-1 font-semibold">
@@ -41,6 +50,44 @@ import HighLight from "../utils/HighLight.astro";
     </div>
 
     <!-- Skills Cards -->
-    <div class="xl:w-2/5"></div>
+    <!-- Skills Cards -->
+    <div class="w-1/2 flex items-center">
+      <div
+        class="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-4 grow"
+      >
+        <TechnologyCard>
+          <React class="size-14" />
+          <p><span class="font-medium text-base">React</span></p>
+        </TechnologyCard>
+        <TechnologyCard>
+          <Nextjs class="size-14" />
+          <p><span class="font-medium text-base">Next.js</span></p>
+        </TechnologyCard>
+        <TechnologyCard>
+          <AstroIcon class="size-14" />
+          <p><span class="font-medium text-base">Astro</span></p>
+        </TechnologyCard>
+        <TechnologyCard>
+          <Html5 class="size-14" />
+          <p><span class="font-medium text-base">HTML 5</span></p>
+        </TechnologyCard>
+        <TechnologyCard>
+          <TailwindCSS class="size-14" />
+          <p><span class="font-medium text-base">Tailwind CSS</span></p>
+        </TechnologyCard>
+        <TechnologyCard>
+          <CSSModules class="size-14" />
+          <p><span class="font-medium text-base">CSS Modules</span></p>
+        </TechnologyCard>
+        <TechnologyCard>
+          <JavaScript class="size-14" />
+          <p><span class="font-medium text-base">JavaScript</span></p>
+        </TechnologyCard>
+        <TechnologyCard>
+          <TypeScript class="size-14" />
+          <p><span class="font-medium text-base">TypeScript</span></p>
+        </TechnologyCard>
+      </div>
+    </div>
   </GeneralContainer>
 </section>
