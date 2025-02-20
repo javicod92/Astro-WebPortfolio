@@ -1,0 +1,11 @@
+---
+type ClassTypes = {
+  class: string;
+};
+
+const { class: classList } = Astro.props as ClassTypes;
+---
+
+<span class={`text-amber-200 font-semibold ${classList}`}>
+  <slot />
+</span>
