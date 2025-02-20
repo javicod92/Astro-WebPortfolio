@@ -5,12 +5,23 @@ import CSSModules from "../icons/CSSModules.astro";
 import Html5 from "../icons/Html5.astro";
 import JavaScript from "../icons/JavaScript.astro";
 import Nextjs from "../icons/Nextjs.astro";
-import React from "../icons/React.astro";
+import ReactIcon from "../icons/React.astro";
 import TailwindCSS from "../icons/TailwindCSS.astro";
 import Tool from "../icons/Tool.astro";
 import TypeScript from "../icons/TypeScript.astro";
 import GeneralContainer from "../utils/GeneralContainer.astro";
 import HighLight from "../utils/HighLight.astro";
+
+const skills = [
+  { name: "React", icon: ReactIcon },
+  { name: "Next.js", icon: Nextjs },
+  { name: "Astro", icon: AstroIcon },
+  { name: "HTML 5", icon: Html5 },
+  { name: "Tailwind CSS", icon: TailwindCSS },
+  { name: "CSS Modules", icon: CSSModules },
+  { name: "JavaScript", icon: JavaScript },
+  { name: "TypeScript", icon: TypeScript },
+];
 ---
 
 <section
@@ -50,43 +61,20 @@ import HighLight from "../utils/HighLight.astro";
     </div>
 
     <!-- Skills Cards -->
-    <!-- Skills Cards -->
     <div class="w-1/2 flex items-center">
       <div
         class="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-4 grow"
       >
-        <TechnologyCard>
-          <React class="size-14" />
-          <p><span class="font-medium text-base">React</span></p>
-        </TechnologyCard>
-        <TechnologyCard>
-          <Nextjs class="size-14" />
-          <p><span class="font-medium text-base">Next.js</span></p>
-        </TechnologyCard>
-        <TechnologyCard>
-          <AstroIcon class="size-14" />
-          <p><span class="font-medium text-base">Astro</span></p>
-        </TechnologyCard>
-        <TechnologyCard>
-          <Html5 class="size-14" />
-          <p><span class="font-medium text-base">HTML 5</span></p>
-        </TechnologyCard>
-        <TechnologyCard>
-          <TailwindCSS class="size-14" />
-          <p><span class="font-medium text-base">Tailwind CSS</span></p>
-        </TechnologyCard>
-        <TechnologyCard>
-          <CSSModules class="size-14" />
-          <p><span class="font-medium text-base">CSS Modules</span></p>
-        </TechnologyCard>
-        <TechnologyCard>
-          <JavaScript class="size-14" />
-          <p><span class="font-medium text-base">JavaScript</span></p>
-        </TechnologyCard>
-        <TechnologyCard>
-          <TypeScript class="size-14" />
-          <p><span class="font-medium text-base">TypeScript</span></p>
-        </TechnologyCard>
+        {
+          skills.map(({ name, icon: Icon }) => (
+            <TechnologyCard>
+              <Icon class="size-14" />
+              <p>
+                <span class="font-medium text-base">{name}</span>
+              </p>
+            </TechnologyCard>
+          ))
+        }
       </div>
     </div>
   </GeneralContainer>
