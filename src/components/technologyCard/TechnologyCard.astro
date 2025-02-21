@@ -9,7 +9,7 @@ const { class: classList } = Astro.props as ClassTypes;
 ---
 
 <div
-  class={`h-[150px] bg-gray-800 rounded-sm flex flex-col items-center justify-evenly p-2 transition-all duration-150 ${classList}`}
+  class={`h-[150px] bg-gray-800 rounded-sm flex flex-col items-center justify-evenly p-2 transition-all duration-100 ${classList}`}
 >
   <slot />
 </div>
@@ -17,5 +17,6 @@ const { class: classList } = Astro.props as ClassTypes;
 <style>
   div:hover {
     box-shadow: 0 0 20px 2px rgb(0, 109, 182);
+    transform: scale(1.05);
   }
 </style>

@@ -29,9 +29,9 @@ const skills = [
   class="relative w-full min-h-screen h-full px-5 py-24 flex flex-col justify-center items-center"
   aria-labelledby="skills-heading"
 >
-  <GeneralContainer class="flex flex-row gap-12">
+  <GeneralContainer class="flex flex-col lg:flex-row gap-12">
     <!-- Skills Description -->
-    <div class="flex flex-col gap-6 w-1/2">
+    <div class="flex flex-col gap-6 lg:w-1/2">
       <div>
         <h3
           class="font-medium text-zinc-400 flex items-center gap-2"
@@ -65,7 +65,7 @@ const skills = [
     </div>
 
     <!-- Skills Cards -->
-    <div class="w-1/2 flex items-center">
+    <div class="flex items-center lg:w-1/2">
       <div
         class="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-4 grow"
         role="list"
