@@ -1,7 +1,8 @@
 ---
-import CoursesCard from "../components/CoursesCard/CoursesCard.astro";
+import CoursesCard from "../components/coursesCard/CoursesCard.astro";
 import Certificate from "../icons/Certificate.astro";
 import GeneralContainer from "../utils/GeneralContainer.astro";
+import HighLight from "../utils/HighLight.astro";
 ---
 
 <section
@@ -30,7 +31,25 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
         title="React"
         platform="Informatorio Chaco"
         date="July - November 2024"
-      />
+      >
+        <p>
+          <span class="text-lg text-gray-200 text-pretty">
+            In this course, I developed and deployed interactive web
+            applications using <HighLight>React and Next.js,</HighLight> using Hooks
+            like <HighLight>useState, useEffect, useRef</HighLight> and others to
+            manage states and effects, I also used <HighLight
+              >React Router and Context API</HighLight
+            > for state management. I implemented authentication with <HighLight
+              >NextAuth and JWT</HighLight
+            >, integrated databases like <HighLight>MongoDb</HighLight> and consumed
+            APIs with <HighLight>Axios</HighLight>. In addition, I optimized
+            styles with <HighLight>Tailwind CSS</HighLight> and added <HighLight
+              >Framer-Motion</HighLight
+            > animations. I applied this knowledge to personal projects, including
+            an audio playback app inspired by YouTube Music.
+          </span>
+        </p>
+      </CoursesCard>
     </div>
   </GeneralContainer>
 </section>
