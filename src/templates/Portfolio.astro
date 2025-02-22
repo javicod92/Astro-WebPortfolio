@@ -1,6 +1,36 @@
+---
+import CoursesCard from "../components/CoursesCard/CoursesCard.astro";
+import Certificate from "../icons/Certificate.astro";
+import GeneralContainer from "../utils/GeneralContainer.astro";
+---
+
 <section
   id="portfolio"
   class="relative w-full min-h-screen h-full px-5 py-24 flex flex-col justify-center items-center"
   aria-labelledby="portfolio-heading"
 >
+  <GeneralContainer class="flex justify-center">
+    <div class="max-w-2/3">
+      <!-- Page Titles -->
+      <div>
+        <h3
+          class="font-medium text-zinc-400 flex items-center gap-2"
+          id="portfolio-heading"
+        >
+          <Certificate class="size-8" />Courses and Certifications
+        </h3>
+        <h2 class="mt-1 font-semibold">
+          These are some of my most relevant
+          <span class="text-cyan-500"> courses and certifications </span>
+        </h2>
+      </div>
+
+      <!-- Courses and Certifications Cards -->
+      <CoursesCard
+        title="React"
+        platform="Informatorio Chaco"
+        date="July - November 2024"
+      />
+    </div>
+  </GeneralContainer>
 </section>
