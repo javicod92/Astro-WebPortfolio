@@ -9,7 +9,7 @@ const { class: classList } = Astro.props as ClassTypes;
 ---
 
 <div
-  class={`h-[150px] bg-gray-800 rounded-sm flex flex-col items-center justify-evenly p-2 transition-all duration-100 ${classList}`}
+  class={`h-[150px] bg-gray-800/60 rounded-sm flex flex-col items-center justify-evenly p-2 transition-all duration-100 ${classList}`}
 >
   <slot />
 </div>
