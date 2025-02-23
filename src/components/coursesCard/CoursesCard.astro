@@ -8,7 +8,7 @@ type CoursesTypes = {
 const { title, platform, date } = Astro.props as CoursesTypes;
 ---
 
-<div class="relative bg-gray-800 border-l-4 border-cyan-600 grow p-6">
+<div class="relative bg-gray-800/60 border-l-4 border-cyan-600 grow p-6">
   <h4 class="flex flex-col">
     {title}
     <span class="mt-1 text-2xl text-cyan-500">{platform}</span>
