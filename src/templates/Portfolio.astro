@@ -119,112 +119,143 @@ import HighLight from "../utils/HighLight.astro";
             View Certification
           </GeneralButton>
         </CoursesCard>
-        <CoursesCard
-          title="Legacy JavaScript Algorithms and Data Structures"
-          platform="freeCodeCamp"
-          date="May - 2024"
+
+        <!-- Courses Hidden -->
+        <div id="coursesHidden" class="hidden flex-col gap-8">
+          <CoursesCard
+            title="Legacy JavaScript Algorithms and Data Structures"
+            platform="freeCodeCamp"
+            date="May - 2024"
+          >
+            <p>
+              <span class="text-lg text-gray-200 text-pretty">
+                Consolidated new knowledge with the application of JavaScript in
+                the creation of variables, <HighLight>classes</HighLight> and <HighLight
+                  >functions</HighLight
+                >, arithmetic operations, <HighLight
+                  >manipulation of arrays and JavaScript objects.</HighLight
+                >
+              </span>
+            </p>
+            <GeneralButton href="/Certifications/LegacyJs-freeCodeCamp.png">
+              View Certification
+            </GeneralButton>
+          </CoursesCard>
+          <CoursesCard
+            title="Curso CSS3 (CSS3 Course)"
+            platform="Ademass"
+            date="May - 2024"
+          >
+            <p>
+              <span class="text-lg text-gray-200 text-pretty">
+                Consolidated my knowledge of CSS3 by applying it to a web
+                application. Strengthened my understanding of <HighLight
+                  >class implementation, selectors,</HighLight
+                > and advanced layout techniques using <HighLight
+                  >Flexbox and Grid</HighLight
+                > to create a fully <HighLight>responsive web design.</HighLight
+                > Additionally, improved my skills in handling animations, transitions,
+                and best practices for maintainable styles.
+              </span>
+            </p>
+            <GeneralButton href="/Certifications/CSS3-Ademass.pdf">
+              View Certification
+            </GeneralButton>
+          </CoursesCard>
+          <CoursesCard
+            title="Curso HTML5 (HTML5 Course)"
+            platform="Ademass"
+            date="May - 2024"
+          >
+            <p>
+              <span class="text-lg text-gray-200 text-pretty">
+                Strengthened my knowledge of HTML5 by building <HighLight
+                  >structured</HighLight
+                > and <HighLight>accessible</HighLight> web applications. Gained
+                expertise in <HighLight>semantic elements,</HighLight> proper use
+                of <HighLight>headings, forms,</HighLight> and attributes to enhance
+                <HighLight>SEO</HighLight> and <HighLight
+                  >user experience.</HighLight
+                > Additionally, learned best practices for accessibility <HighLight
+                  >(ARIA roles)</HighLight
+                >
+                and integrated multimedia elements like videos and audio.
+              </span>
+            </p>
+            <GeneralButton href="/Certifications/HTML5-Ademass.pdf">
+              View Certification
+            </GeneralButton>
+          </CoursesCard>
+          <CoursesCard
+            title="Responsive Web Design"
+            platform="freeCodeCamp"
+            date="April - 2024"
+          >
+            <p>
+              <span class="text-lg text-gray-200 text-pretty">
+                Learned how to build websites that <HighLight>adapt</HighLight> to
+                any device using <HighLight
+                  >HTML5, CSS3, Flexbox, and Grid.</HighLight
+                > I worked with media queries to implement <HighLight
+                  >responsive designs</HighLight
+                >, ensuring web pages adjust properly to different screen sizes.
+                By the end of the course, built several practical projects that
+                solidified my skills in creating modern, fully responsive web
+                designs.
+              </span>
+            </p>
+            <GeneralButton href="/Certifications/ResponsiveWD-freeCodeCamp.png">
+              View Certification
+            </GeneralButton>
+          </CoursesCard>
+          <CoursesCard
+            title="Desarrollo Web (Web Development)"
+            platform="Informatorio Chaco"
+            date="August - December 2022"
+          >
+            <p>
+              <span class="text-lg text-gray-200 text-pretty">
+                Learned and applied backend oriented programming skills using
+                <HighLight>Python and Django.</HighLight> Developed the user interface
+                for an “association” using HTML CSS and Vanilla JavaScript. Implemented
+                user authentication and user storage in <HighLight
+                  >SQL Server and SQLite3</HighLight
+                > databases. This was one of my first experiences for a real client.
+              </span>
+            </p>
+            <GeneralButton
+              href="/Certifications/DesarrolloWeb-Informatorio.png"
+            >
+              View Certification
+            </GeneralButton>
+          </CoursesCard>
+        </div>
+      </div>
+      <div class="w-full flex justify-center">
+        <button
+          class="px-10 py-2 border border-cyan-500 mt-8 rounded-lg bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500 cursor-pointer"
+          id="showMoreBtn">View More</button
         >
-          <p>
-            <span class="text-lg text-gray-200 text-pretty">
-              Consolidated new knowledge with the application of JavaScript in
-              the creation of variables, <HighLight>classes</HighLight> and <HighLight
-                >functions</HighLight
-              >, arithmetic operations, <HighLight
-                >manipulation of arrays and JavaScript objects.</HighLight
-              >
-            </span>
-          </p>
-          <GeneralButton href="/Certifications/LegacyJs-freeCodeCamp.png">
-            View Certification
-          </GeneralButton>
-        </CoursesCard>
-        <CoursesCard
-          title="Curso CSS3 (CSS3 Course)"
-          platform="Ademass"
-          date="May - 2024"
-        >
-          <p>
-            <span class="text-lg text-gray-200 text-pretty">
-              Consolidated my knowledge of CSS3 by applying it to a web
-              application. Strengthened my understanding of <HighLight
-                >class implementation, selectors,</HighLight
-              > and advanced layout techniques using <HighLight
-                >Flexbox and Grid</HighLight
-              > to create a fully <HighLight>responsive web design.</HighLight> Additionally,
-              improved my skills in handling animations, transitions, and best practices
-              for maintainable styles.
-            </span>
-          </p>
-          <GeneralButton href="/Certifications/CSS3-Ademass.pdf">
-            View Certification
-          </GeneralButton>
-        </CoursesCard>
-        <CoursesCard
-          title="Curso HTML5 (HTML5 Course)"
-          platform="Ademass"
-          date="May - 2024"
-        >
-          <p>
-            <span class="text-lg text-gray-200 text-pretty">
-              Strengthened my knowledge of HTML5 by building <HighLight
-                >structured</HighLight
-              > and <HighLight>accessible</HighLight> web applications. Gained expertise
-              in <HighLight>semantic elements,</HighLight> proper use of <HighLight
-                >headings, forms,</HighLight
-              > and attributes to enhance <HighLight>SEO</HighLight> and <HighLight
-                >user experience.</HighLight
-              > Additionally, learned best practices for accessibility <HighLight
-                >(ARIA roles)</HighLight
-              >
-              and integrated multimedia elements like videos and audio.
-            </span>
-          </p>
-          <GeneralButton href="/Certifications/HTML5-Ademass.pdf">
-            View Certification
-          </GeneralButton>
-        </CoursesCard>
-        <CoursesCard
-          title="Responsive Web Design"
-          platform="freeCodeCamp"
-          date="April - 2024"
-        >
-          <p>
-            <span class="text-lg text-gray-200 text-pretty">
-              Learned how to build websites that <HighLight>adapt</HighLight> to
-              any device using <HighLight
-                >HTML5, CSS3, Flexbox, and Grid.</HighLight
-              > I worked with media queries to implement <HighLight
-                >responsive designs</HighLight
-              >, ensuring web pages adjust properly to different screen sizes.
-              By the end of the course, built several practical projects that
-              solidified my skills in creating modern, fully responsive web
-              designs.
-            </span>
-          </p>
-          <GeneralButton href="/Certifications/ResponsiveWD-freeCodeCamp.png">
-            View Certification
-          </GeneralButton>
-        </CoursesCard>
-        <CoursesCard
-          title="Desarrollo Web (Web Development)"
-          platform="Informatorio Chaco"
-          date="August - December 2022"
-        >
-          <p>
-            <span class="text-lg text-gray-200 text-pretty">
-              Learned and applied backend oriented programming skills using
-              <HighLight>Python and Django.</HighLight> Developed the user interface
-              for an “association” using HTML CSS and Vanilla JavaScript. Implemented
-              user authentication and user storage in <HighLight
-                >SQL Server and SQLite3</HighLight
-              > databases. This was one of my first experiences for a real client.
-            </span>
-          </p>
-          <GeneralButton href="/Certifications/DesarrolloWeb-Informatorio.png">
-            View Certification
-          </GeneralButton>
-        </CoursesCard>
       </div>
     </div>
   </GeneralContainer>
 </section>
+
+<script>
+  const containerHidden = document.getElementById("coursesHidden");
+  const showMoreBtn = document.getElementById("showMoreBtn");
+
+  function handleBtn() {
+    if (containerHidden?.classList.contains("hidden")) {
+      containerHidden.classList.remove("hidden");
+      containerHidden.classList.add("flex");
+      showMoreBtn ? (showMoreBtn.textContent = "Show Less") : "";
+    } else {
+      containerHidden?.classList.remove("flex");
+      containerHidden?.classList.add("hidden");
+      showMoreBtn ? (showMoreBtn.textContent = "Show More") : "";
+    }
+  }
+
+  showMoreBtn?.addEventListener("click", handleBtn);
+</script>
