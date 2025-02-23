@@ -15,7 +15,9 @@ const { title, platform, date } = Astro.props as CoursesTypes;
     <span class="text-base text-cyan-500">{date}</span>
   </h4>
   <div class="mt-2"><slot /></div>
-  <div class="h-0.5 bg-cyan-600 w-[44px] absolute top-1/2 left-[-44px]">
+  <div
+    class="hidden lg:block h-0.5 bg-cyan-600 w-[44px] absolute top-1/2 left-[-44px]"
+  >
     <div
       class="block h-2.5 w-2.5 rounded-full bg-cyan-600 float-left absolute top-[-4px] left-[-6px]"
     >
