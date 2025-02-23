@@ -27,29 +27,80 @@ import HighLight from "../utils/HighLight.astro";
       </div>
 
       <!-- Courses and Certifications Cards -->
-      <CoursesCard
-        title="React"
-        platform="Informatorio Chaco"
-        date="July - November 2024"
+      <div
+        class="mt-8 pl-10 flex flex-col gap-8 border-l-2 border-zinc-700 w-full"
       >
-        <p>
-          <span class="text-lg text-gray-200 text-pretty">
-            In this course, I developed and deployed interactive web
-            applications using <HighLight>React and Next.js,</HighLight> using Hooks
-            like <HighLight>useState, useEffect, useRef</HighLight> and others to
-            manage states and effects, I also used <HighLight
-              >React Router and Context API</HighLight
-            > for state management. I implemented authentication with <HighLight
-              >NextAuth and JWT</HighLight
-            >, integrated databases like <HighLight>MongoDb</HighLight> and consumed
-            APIs with <HighLight>Axios</HighLight>. In addition, I optimized
-            styles with <HighLight>Tailwind CSS</HighLight> and added <HighLight
-              >Framer-Motion</HighLight
-            > animations. I applied this knowledge to personal projects, including
-            an audio playback app inspired by YouTube Music.
-          </span>
-        </p>
-      </CoursesCard>
+        <CoursesCard
+          title="React"
+          platform="Informatorio Chaco"
+          date="July - November 2024"
+        >
+          <p>
+            <span class="text-lg text-gray-200 text-pretty">
+              Developed and deployed interactive web applications using <HighLight
+                >React and Next.js,</HighLight
+              > using Hooks like <HighLight
+                >useState, useEffect, useRef</HighLight
+              > and others to manage states and effects, I also used <HighLight
+                >React Router, TypeScript and Context API</HighLight
+              > for state management. I implemented authentication with <HighLight
+                >NextAuth and JWT</HighLight
+              >, integrated databases like <HighLight>MongoDb</HighLight> and consumed
+              APIs with <HighLight>Axios</HighLight>. In addition, I optimized
+              styles with <HighLight>Tailwind CSS</HighLight> and added <HighLight
+                >Framer-Motion</HighLight
+              > animations. I applied this knowledge to personal projects, including
+              an audio playback app inspired by YouTube Music.
+            </span>
+          </p>
+        </CoursesCard>
+        <CoursesCard
+          title="Inglés Técnico"
+          platform="Informatorio Chaco"
+          date="July - November 2024"
+        >
+          <p>
+            <span class="text-lg text-gray-200 text-pretty">
+              Improved <HighLight>English</HighLight> skills in reading, writing,
+              and speaking, with a technical focus on programming. Developed fluency
+              in the language and applied it across various projects.
+            </span>
+          </p>
+        </CoursesCard>
+        <CoursesCard
+          title="JavaScript Algorithms and Data Structures (Beta)"
+          platform="freeCodeCamp"
+          date="July 2024"
+        >
+          <p>
+            <span class="text-lg text-gray-200 text-pretty">
+              Learned and applied new <HighLight>JavaScript</HighLight> concepts
+              to <HighLight>build static websites</HighLight>, improving my
+              understanding of the language. Worked with functions, <HighLight
+                >arrays, objects, and asynchronous programming.</HighLight
+              > Gained experience in <HighLight
+                >DOM manipulation, event handling,</HighLight
+              > and best coding practices.
+            </span>
+          </p>
+        </CoursesCard>
+        <CoursesCard
+          title="Introducción a la Programación"
+          platform="Informatorio Chaco"
+          date="May - June 2024"
+        >
+          <p>
+            <span class="text-lg text-gray-200 text-pretty">
+              Improved and applied my knowledge in <HighLight
+                >HTML, CSS 3, Git and GitHub</HighLight
+              > by building a static Web Portfolio. These tools have helped me to
+              consolidate my general knowledge and to apply <HighLight
+                >good programming practices.</HighLight
+              >
+            </span>
+          </p>
+        </CoursesCard>
+      </div>
     </div>
   </GeneralContainer>
 </section>

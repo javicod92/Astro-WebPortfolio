@@ -8,19 +8,17 @@ type CoursesTypes = {
 const { title, platform, date } = Astro.props as CoursesTypes;
 ---
 
-<div class="mt-8 pl-10 flex flex-col gap-4 border-l-2 border-zinc-700 w-full">
-  <div class="relative bg-gray-800 border-l-4 border-cyan-600 grow p-6">
-    <h4 class="flex flex-col">
-      {title}
-      <span class="mt-1 text-2xl text-cyan-500">{platform}</span>
-      <span class="text-base text-cyan-500">{date}</span>
-    </h4>
-    <div class="mt-2"><slot /></div>
-    <div class="h-0.5 bg-cyan-600 w-[44px] absolute top-1/2 left-[-44px] z-10">
-      <div
-        class="block h-2.5 w-2.5 rounded-full bg-cyan-600 float-left absolute top-[-4px] left-[-6px]"
-      >
-      </div>
+<div class="relative bg-gray-800 border-l-4 border-cyan-600 grow p-6">
+  <h4 class="flex flex-col">
+    {title}
+    <span class="mt-1 text-2xl text-cyan-500">{platform}</span>
+    <span class="text-base text-cyan-500">{date}</span>
+  </h4>
+  <div class="mt-2"><slot /></div>
+  <div class="h-0.5 bg-cyan-600 w-[44px] absolute top-1/2 left-[-44px] z-10">
+    <div
+      class="block h-2.5 w-2.5 rounded-full bg-cyan-600 float-left absolute top-[-4px] left-[-6px]"
+    >
     </div>
   </div>
 </div>
