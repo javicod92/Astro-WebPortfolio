@@ -1,4 +1,5 @@
 ---
+import ButtonBlue from "../components/buttons/ButtonBlue.astro";
 import GeneralButton from "../components/buttons/GeneralButton.astro";
 import CodeIcon from "../icons/CodeIcon.astro";
 import FramerMotion from "../icons/FramerMotion.astro";
@@ -100,15 +101,21 @@ import HighLight from "../utils/HighLight.astro";
         </div>
         <div class="flex gap-2 mt-6">
           <GeneralButton
+            as="a"
             href="https://github.com/javicod92/next-fullstack-ecommerce"
+            title="https://github.com/javicod92/next-fullstack-ecommerce"
+            target="_blank"
           >
             View in GitHub
           </GeneralButton>
-          <GeneralButton
+          <ButtonBlue
+            as="a"
             href="https://next-fullstack-ecommerce-1rpa.vercel.app"
+            title="https://next-fullstack-ecommerce-1rpa.vercel.app"
+            target="_blank"
           >
             View deploy in Vercel
-          </GeneralButton>
+          </ButtonBlue>
         </div>
       </div>
     </div>
