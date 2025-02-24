@@ -6,6 +6,6 @@ type ClassTypes = {
 const { class: classList } = Astro.props as ClassTypes;
 ---
 
-<span class={`text-amber-200 font-semibold ${classList}`}>
+<span class={`text-amber-200 font-medium ${classList}`}>
   <slot />
 </span>

@@ -1,0 +1,107 @@
+---
+import GeneralButton from "../components/buttons/GeneralButton.astro";
+import CodeIcon from "../icons/CodeIcon.astro";
+import FramerMotion from "../icons/FramerMotion.astro";
+import MongoDB from "../icons/MongoDB.astro";
+import Nextjs from "../icons/Nextjs.astro";
+import React from "../icons/React.astro";
+import Stripe from "../icons/Stripe.astro";
+import TailwindCSS from "../icons/TailwindCSS.astro";
+import TypeScript from "../icons/TypeScript.astro";
+import GeneralContainer from "../utils/GeneralContainer.astro";
+import HighLight from "../utils/HighLight.astro";
+---
+
+<section
+  id="projects"
+  class="relative w-full min-h-screen h-full px-5 py-24 flex flex-col justify-center items-center bg-zinc-900/50"
+  aria-labelledby="projects-heading"
+>
+  <GeneralContainer>
+    <!-- Page Title -->
+    <div class="max-w-2/3">
+      <h3
+        class="font-medium text-zinc-400 flex items-center gap-2"
+        id="projects-heading"
+      >
+        <CodeIcon class="size-8" />Projects
+      </h3>
+      <h2 class="mt-1 font-semibold">
+        These are some of my
+        <span class="text-cyan-500">most relevant projects</span>
+      </h2>
+    </div>
+
+    <!-- Main Project Sections -->
+    <div
+      class="mt-10 flex bg-gray-800/60 rounded-lg overflow-hidden border border-gray-800"
+    >
+      <!-- Image -->
+      <div class="max-w-2/5 flex items-center justify-center bg-[#0000004d]">
+        <img
+          src="/Projects/ecommerce-front.webp"
+          alt="Project Image"
+          class="rounded-sm w-[90%]"
+        />
+      </div>
+
+      <!-- Project Description -->
+      <div class="max-w-2/3 px-6 py-8">
+        <h3 class="flex flex-col text-cyan-500 font-medium">
+          Fullstack E-commerce (Backend)
+        </h3>
+        <p class="mt-2">
+          <span class="text-lg text-gray-200 text-pretty">
+            This ecommerce, built with <HighLight>Next.js</HighLight>, offers a
+            fast and seamless shopping experience. It features a carousel of <HighLight
+              >highlighted products</HighLight
+            >, <HighLight>category filters</HighLight>, and a modern interface
+            designed with <HighLight>Tailwind CSS</HighLight> and animations powered
+            by <HighLight>Framer Motion</HighLight>. Products are stored in <HighLight
+              >MongoDB</HighLight
+            >, and <HighLight>Stripe</HighLight> integration ensures secure payments.
+            Optimized for <HighLight>high performance</HighLight>, it guarantees
+            smooth navigation on any device.
+          </span>
+        </p>
+
+        <!-- Technologies Icons -->
+        <div class="mt-6 flex gap-2 flex-wrap">
+          <div
+            class="flex items-center gap-2 px-4 rounded-full py-2 bg-gray-800"
+          >
+            <React class="size-6" />React
+          </div>
+          <div
+            class="flex items-center gap-2 px-4 rounded-full py-2 bg-gray-800"
+          >
+            <Nextjs class="size-6" />Next.js
+          </div>
+          <div
+            class="flex items-center gap-2 px-4 rounded-full py-2 bg-gray-800"
+          >
+            <TypeScript class="size-6" />TypeScript
+          </div>
+          <div
+            class="flex items-center gap-2 px-4 rounded-full py-2 bg-gray-800"
+          >
+            <TailwindCSS class="size-6" />Tailwind CSS
+          </div>
+          <div
+            class="flex items-center gap-2 px-4 rounded-full py-2 bg-gray-800"
+          >
+            <MongoDB class="size-6" />MongoDB
+          </div>
+          <div
+            class="flex items-center gap-2 px-4 rounded-full py-2 bg-gray-800"
+          >
+            <FramerMotion class="size-6" />Framer Motion
+          </div>
+        </div>
+        <GeneralButton href="/Certifications/React-Informatorio.pdf">
+          Goto Github
+        </GeneralButton>
+      </div>
+    </div>
+  </GeneralContainer>
+</section>
