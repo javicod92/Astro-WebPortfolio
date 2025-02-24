@@ -1,6 +1,7 @@
 ---
 import ButtonBlue from "../components/buttons/ButtonBlue.astro";
 import GeneralButton from "../components/buttons/GeneralButton.astro";
+import ProjectCard from "../components/projectCard/ProjectCard.astro";
 import CodeIcon from "../icons/CodeIcon.astro";
 import FramerMotion from "../icons/FramerMotion.astro";
 import MongoDB from "../icons/MongoDB.astro";
@@ -34,90 +35,34 @@ import HighLight from "../utils/HighLight.astro";
     </div>
 
     <!-- Main Project Sections -->
-    <div
-      class="mt-10 flex bg-gray-800/60 rounded-lg overflow-hidden border border-gray-800"
+    <ProjectCard
+      src="/Projects/ecommerce-front.webp"
+      title="Fullstack E-commerce (Backend)"
+      technologies={[
+        { name: "React", icon: React },
+        { name: "Next.js", icon: Nextjs },
+        { name: "TypeScript", icon: TypeScript },
+        { name: "Tailwind CSS", icon: TailwindCSS },
+        { name: "MongoDB", icon: MongoDB },
+        { name: "Framer Motion", icon: FramerMotion },
+      ]}
+      github="https://github.com/javicod92/next-fullstack-ecommerce"
+      live="https://next-fullstack-ecommerce-1rpa.vercel.app"
     >
-      <!-- Image -->
-      <div class="max-w-2/5 flex items-center justify-center bg-black/30">
-        <img
-          src="/Projects/ecommerce-front.webp"
-          alt="Project Image"
-          class="rounded-sm w-[90%]"
-        />
-      </div>
-
-      <!-- Project Description -->
-      <div class="max-w-2/3 px-6 py-8">
-        <h3 class="flex flex-col text-cyan-500 font-medium">
-          Fullstack E-commerce (Backend)
-        </h3>
-        <p class="mt-2">
-          <span class="text-lg text-gray-200 text-pretty">
-            This ecommerce, built with <HighLight>Next.js</HighLight>, offers a
-            fast and seamless shopping experience. It features a carousel of <HighLight
-              >highlighted products</HighLight
-            >, <HighLight>category filters</HighLight>, and a modern interface
-            designed with <HighLight>Tailwind CSS</HighLight> and animations powered
-            by <HighLight>Framer Motion</HighLight>. Products are stored in <HighLight
-              >MongoDB</HighLight
-            >, and <HighLight>Stripe</HighLight> integration ensures secure payments.
-            Optimized for <HighLight>high performance</HighLight>, it guarantees
-            smooth navigation on any device.
-          </span>
-        </p>
-
-        <!-- Technologies Icons -->
-        <div class="mt-6 flex gap-2 flex-wrap">
-          <div
-            class="flex items-center gap-2 px-4 rounded-full py-2 bg-gray-800"
-          >
-            <React class="size-6" />React
-          </div>
-          <div
-            class="flex items-center gap-2 px-4 rounded-full py-2 bg-gray-800"
-          >
-            <Nextjs class="size-6" />Next.js
-          </div>
-          <div
-            class="flex items-center gap-2 px-4 rounded-full py-2 bg-gray-800"
-          >
-            <TypeScript class="size-6" />TypeScript
-          </div>
-          <div
-            class="flex items-center gap-2 px-4 rounded-full py-2 bg-gray-800"
-          >
-            <TailwindCSS class="size-6" />Tailwind CSS
-          </div>
-          <div
-            class="flex items-center gap-2 px-4 rounded-full py-2 bg-gray-800"
-          >
-            <MongoDB class="size-6" />MongoDB
-          </div>
-          <div
-            class="flex items-center gap-2 px-4 rounded-full py-2 bg-gray-800"
-          >
-            <FramerMotion class="size-6" />Framer Motion
-          </div>
-        </div>
-        <div class="flex gap-2 mt-6">
-          <GeneralButton
-            as="a"
-            href="https://github.com/javicod92/next-fullstack-ecommerce"
-            title="https://github.com/javicod92/next-fullstack-ecommerce"
-            target="_blank"
-          >
-            View in GitHub
-          </GeneralButton>
-          <ButtonBlue
-            as="a"
-            href="https://next-fullstack-ecommerce-1rpa.vercel.app"
-            title="https://next-fullstack-ecommerce-1rpa.vercel.app"
-            target="_blank"
-          >
-            View deploy in Vercel
-          </ButtonBlue>
-        </div>
-      </div>
-    </div>
+      <p class="mt-2">
+        <span class="text-lg text-gray-200 text-pretty">
+          This ecommerce, built with <HighLight>Next.js</HighLight>, offers a
+          fast and seamless shopping experience. It features a carousel of <HighLight
+            >highlighted products</HighLight
+          >, <HighLight>category filters</HighLight>, and a modern interface
+          designed with <HighLight>Tailwind CSS</HighLight> and animations powered
+          by <HighLight>Framer Motion</HighLight>. Products are stored in <HighLight
+            >MongoDB</HighLight
+          >, and <HighLight>Stripe</HighLight> integration ensures secure payments.
+          Optimized for <HighLight>high performance</HighLight>, it guarantees
+          smooth navigation on any device.
+        </span>
+      </p>
+    </ProjectCard>
   </GeneralContainer>
 </section>

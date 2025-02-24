@@ -1,0 +1,57 @@
+---
+import ButtonBlue from "../buttons/ButtonBlue.astro";
+import GeneralButton from "../buttons/GeneralButton.astro";
+
+type ProjectTypes = {
+  src: string;
+  title: string;
+  technologies: Array<Record<string, any>>;
+  github: string;
+  live: string;
+};
+
+const { src, title, technologies, github, live } = Astro.props as ProjectTypes;
+---
+
+<div
+  class="mt-10 flex bg-gray-800/60 rounded-lg overflow-hidden border border-gray-800"
+>
+  <!-- Image -->
+  <div class="max-w-2/5 flex items-center justify-center bg-black/30">
+    <img src={src} alt="Project-Image" class="rounded-sm w-[90%]" />
+  </div>
+
+  <!-- Project Description -->
+  <div class="max-w-2/3 px-6 py-8">
+    <h3 class="flex flex-col text-cyan-500 font-medium">
+      {title}
+    </h3>
+    <slot />
+
+    <!-- Technologies Icons -->
+    <div class="mt-6 flex gap-2 flex-wrap">
+      {
+        technologies.map((technologie) => (
+          <div class="flex items-center gap-2 px-4 rounded-full py-2 bg-gray-800">
+            <technologie.icon class="size-6" />
+            {technologie.name}
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Buttons to view projects -->
+    <div class="flex gap-2 mt-6">
+      <GeneralButton as="a" href={github} title={github} target="_blank">
+        View in GitHub
+      </GeneralButton>
+      {
+        live && (
+          <ButtonBlue as="a" href={live} title={live} target="_blank">
+            View deploy in Vercel
+          </ButtonBlue>
+        )
+      }
+    </div>
+  </div>
+</div>
