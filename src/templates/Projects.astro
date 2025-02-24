@@ -37,7 +37,7 @@ import HighLight from "../utils/HighLight.astro";
       class="mt-10 flex bg-gray-800/60 rounded-lg overflow-hidden border border-gray-800"
     >
       <!-- Image -->
-      <div class="max-w-2/5 flex items-center justify-center bg-[#0000004d]">
+      <div class="max-w-2/5 flex items-center justify-center bg-black/30">
         <img
           src="/Projects/ecommerce-front.webp"
           alt="Project Image"
@@ -98,9 +98,18 @@ import HighLight from "../utils/HighLight.astro";
             <FramerMotion class="size-6" />Framer Motion
           </div>
         </div>
-        <GeneralButton href="/Certifications/React-Informatorio.pdf">
-          Goto Github
-        </GeneralButton>
+        <div class="flex gap-2 mt-6">
+          <GeneralButton
+            href="https://github.com/javicod92/next-fullstack-ecommerce"
+          >
+            View in GitHub
+          </GeneralButton>
+          <GeneralButton
+            href="https://next-fullstack-ecommerce-1rpa.vercel.app"
+          >
+            View deploy in Vercel
+          </GeneralButton>
+        </div>
       </div>
     </div>
   </GeneralContainer>
