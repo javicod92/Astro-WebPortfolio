@@ -5,12 +5,14 @@ import GeneralButton from "../buttons/GeneralButton.astro";
 type ProjectTypes = {
   src: string;
   title: string;
+  date: string;
   technologies: Array<Record<string, any>>;
   github: string;
   live: string;
 };
 
-const { src, title, technologies, github, live } = Astro.props as ProjectTypes;
+const { src, title, date, technologies, github, live } =
+  Astro.props as ProjectTypes;
 ---
 
 <div
@@ -25,6 +27,9 @@ const { src, title, technologies, github, live } = Astro.props as ProjectTypes;
   <div class="max-w-2/3 px-6 py-8">
     <h3 class="flex flex-col text-cyan-500 font-medium">
       {title}
+      <span class="text-base font-light">
+        {date}
+      </span>
     </h3>
     <slot />
 

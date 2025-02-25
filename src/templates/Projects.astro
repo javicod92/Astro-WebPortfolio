@@ -1,12 +1,16 @@
 ---
 import ProjectCard from "../components/projectCard/ProjectCard.astro";
 import Cloudinary from "../icons/Cloudinary.astro";
+import Zod from "../icons/Zod.astro";
 import CodeIcon from "../icons/CodeIcon.astro";
 import CSS3 from "../icons/CSS3.astro";
 import FramerMotion from "../icons/FramerMotion.astro";
+import JWT from "../icons/JWT.astro";
 import MongoDB from "../icons/MongoDB.astro";
 import Nextjs from "../icons/Nextjs.astro";
 import React from "../icons/React.astro";
+import Resend from "../icons/Resend.astro";
+import Sass from "../icons/Sass.astro";
 import Stripe from "../icons/Stripe.astro";
 import TailwindCSS from "../icons/TailwindCSS.astro";
 import TypeScript from "../icons/TypeScript.astro";
@@ -41,6 +45,7 @@ import HighLight from "../utils/HighLight.astro";
       <ProjectCard
         src="/Projects/ecommerce-front.webp"
         title="Fullstack E-commerce (Frontend)"
+        date="2024 - 2025"
         technologies={[
           { name: "React", icon: React },
           { name: "Next.js", icon: Nextjs },
@@ -73,6 +78,7 @@ import HighLight from "../utils/HighLight.astro";
       <ProjectCard
         src="Projects/ecommerce-back.webp"
         title="Fullstack E-commerce (Backend)"
+        date="2024 - 2025"
         technologies={[
           { name: "React", icon: React },
           { name: "Next.js", icon: Nextjs },
@@ -103,10 +109,11 @@ import HighLight from "../utils/HighLight.astro";
         </p>
       </ProjectCard>
 
-      <!-- E-commerce Backend -->
+      <!-- YouTube Music App -->
       <ProjectCard
         src="Projects/YoutubeClone.webp"
         title="YouTube Music App (Clone)"
+        date="2024"
         technologies={[
           { name: "React", icon: React },
           { name: "Vite", icon: Vite },
@@ -140,6 +147,136 @@ import HighLight from "../utils/HighLight.astro";
               >smooth,</HighLight
             >
             <HighLight>uninterrupted audio!</HighLight>
+          </span>
+        </p>
+      </ProjectCard>
+
+      <!-- Credentials Creation and Validation System -->
+      <ProjectCard
+        src="/Projects/NextAuth.webp"
+        title="Credentials Creation and Validation System"
+        date="2024"
+        technologies={[
+          { name: "React", icon: React },
+          { name: "Next.js", icon: Nextjs },
+          { name: "TypeScript", icon: TypeScript },
+          { name: "CSS", icon: CSS3 },
+          { name: "Sass", icon: Sass },
+          { name: "JWT", icon: JWT },
+          { name: "MongoDB", icon: MongoDB },
+          { name: "Resend", icon: Resend },
+          { name: "Zod", icon: Zod },
+        ]}
+        github="https://github.com/javicod92/auth-next-15"
+      >
+        <p class="mt-2">
+          <span class="text-lg text-gray-200 text-pretty">
+            A modern platform for <HighLight
+              >secure user authentication</HighLight
+            > and <HighLight>credential management.</HighLight> Built with <HighLight
+              >Next.js</HighLight
+            >, <HighLight>React,</HighLight> and <HighLight
+              >TypeScript,</HighLight
+            > it ensures robust security with <HighLight
+              >JWT authentication,</HighLight
+            >
+            <HighLight>bcrypt password encryption,</HighLight> and <HighLight
+              >cookie-based session management.</HighLight
+            > Featuring <HighLight>Zod</HighLight> for <HighLight
+              >data validation,</HighLight
+            >
+            <HighLight>MongoDB</HighLight> with <HighLight>Mongoose,</HighLight>
+            and <HighLight>Resend</HighLight> for <HighLight
+              >email notifications,</HighLight
+            > this system provides a <HighLight>scalable</HighLight> and <HighLight
+              >modular architecture</HighLight
+            > for seamless <HighLight>user authentication.</HighLight>
+          </span>
+        </p>
+      </ProjectCard>
+
+      <!-- Estudio Edificar -->
+      <ProjectCard
+        src="/Projects/Edificar-StudioProject.webp"
+        title="Estudio Edificar (Architecture Studio)"
+        date="2023"
+        technologies={[
+          { name: "React", icon: React },
+          { name: "Next.js", icon: Nextjs },
+          { name: "TypeScript", icon: TypeScript },
+          { name: "CSS", icon: CSS3 },
+          { name: "Sass", icon: Sass },
+          { name: "JWT", icon: JWT },
+          { name: "MongoDB", icon: MongoDB },
+          { name: "Resend", icon: Resend },
+          { name: "Zod", icon: Zod },
+        ]}
+        github="https://github.com/javicod92/auth-next-15"
+      >
+        <p class="mt-2">
+          <span class="text-lg text-gray-200 text-pretty">
+            A modern platform for <HighLight
+              >secure user authentication</HighLight
+            > and <HighLight>credential management.</HighLight> Built with <HighLight
+              >Next.js</HighLight
+            >, <HighLight>React,</HighLight> and <HighLight
+              >TypeScript,</HighLight
+            > it ensures robust security with <HighLight
+              >JWT authentication,</HighLight
+            >
+            <HighLight>bcrypt password encryption,</HighLight> and <HighLight
+              >cookie-based session management.</HighLight
+            > Featuring <HighLight>Zod</HighLight> for <HighLight
+              >data validation,</HighLight
+            >
+            <HighLight>MongoDB</HighLight> with <HighLight>Mongoose,</HighLight>
+            and <HighLight>Resend</HighLight> for <HighLight
+              >email notifications,</HighLight
+            > this system provides a <HighLight>scalable</HighLight> and <HighLight
+              >modular architecture</HighLight
+            > for seamless <HighLight>user authentication.</HighLight>
+          </span>
+        </p>
+      </ProjectCard>
+      <ProjectCard
+        src="/Projects/Blog-Project.webp"
+        title="Estudio Edificar (Architecture Studio)"
+        date="2022"
+        technologies={[
+          { name: "React", icon: React },
+          { name: "Next.js", icon: Nextjs },
+          { name: "TypeScript", icon: TypeScript },
+          { name: "CSS", icon: CSS3 },
+          { name: "Sass", icon: Sass },
+          { name: "JWT", icon: JWT },
+          { name: "MongoDB", icon: MongoDB },
+          { name: "Resend", icon: Resend },
+          { name: "Zod", icon: Zod },
+        ]}
+        github="https://github.com/javicod92/auth-next-15"
+      >
+        <p class="mt-2">
+          <span class="text-lg text-gray-200 text-pretty">
+            A modern platform for <HighLight
+              >secure user authentication</HighLight
+            > and <HighLight>credential management.</HighLight> Built with <HighLight
+              >Next.js</HighLight
+            >, <HighLight>React,</HighLight> and <HighLight
+              >TypeScript,</HighLight
+            > it ensures robust security with <HighLight
+              >JWT authentication,</HighLight
+            >
+            <HighLight>bcrypt password encryption,</HighLight> and <HighLight
+              >cookie-based session management.</HighLight
+            > Featuring <HighLight>Zod</HighLight> for <HighLight
+              >data validation,</HighLight
+            >
+            <HighLight>MongoDB</HighLight> with <HighLight>Mongoose,</HighLight>
+            and <HighLight>Resend</HighLight> for <HighLight
+              >email notifications,</HighLight
+            > this system provides a <HighLight>scalable</HighLight> and <HighLight
+              >modular architecture</HighLight
+            > for seamless <HighLight>user authentication.</HighLight>
           </span>
         </p>
       </ProjectCard>
