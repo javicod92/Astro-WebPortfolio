@@ -1,7 +1,6 @@
 ---
-import ButtonBlue from "../components/buttons/ButtonBlue.astro";
-import GeneralButton from "../components/buttons/GeneralButton.astro";
 import ProjectCard from "../components/projectCard/ProjectCard.astro";
+import Cloudinary from "../icons/Cloudinary.astro";
 import CodeIcon from "../icons/CodeIcon.astro";
 import FramerMotion from "../icons/FramerMotion.astro";
 import MongoDB from "../icons/MongoDB.astro";
@@ -35,34 +34,105 @@ import HighLight from "../utils/HighLight.astro";
     </div>
 
     <!-- Main Project Sections -->
-    <ProjectCard
-      src="/Projects/ecommerce-front.webp"
-      title="Fullstack E-commerce (Backend)"
-      technologies={[
-        { name: "React", icon: React },
-        { name: "Next.js", icon: Nextjs },
-        { name: "TypeScript", icon: TypeScript },
-        { name: "Tailwind CSS", icon: TailwindCSS },
-        { name: "MongoDB", icon: MongoDB },
-        { name: "Framer Motion", icon: FramerMotion },
-      ]}
-      github="https://github.com/javicod92/next-fullstack-ecommerce"
-      live="https://next-fullstack-ecommerce-1rpa.vercel.app"
-    >
-      <p class="mt-2">
-        <span class="text-lg text-gray-200 text-pretty">
-          This ecommerce, built with <HighLight>Next.js</HighLight>, offers a
-          fast and seamless shopping experience. It features a carousel of <HighLight
-            >highlighted products</HighLight
-          >, <HighLight>category filters</HighLight>, and a modern interface
-          designed with <HighLight>Tailwind CSS</HighLight> and animations powered
-          by <HighLight>Framer Motion</HighLight>. Products are stored in <HighLight
-            >MongoDB</HighLight
-          >, and <HighLight>Stripe</HighLight> integration ensures secure payments.
-          Optimized for <HighLight>high performance</HighLight>, it guarantees
-          smooth navigation on any device.
-        </span>
-      </p>
-    </ProjectCard>
+    <div class="mt-10 flex flex-col gap-10">
+      <!-- E-commerce Frontend -->
+      <ProjectCard
+        src="/Projects/ecommerce-front.webp"
+        title="Fullstack E-commerce (Frontend)"
+        technologies={[
+          { name: "React", icon: React },
+          { name: "Next.js", icon: Nextjs },
+          { name: "TypeScript", icon: TypeScript },
+          { name: "Tailwind CSS", icon: TailwindCSS },
+          { name: "MongoDB", icon: MongoDB },
+          { name: "Framer Motion", icon: FramerMotion },
+        ]}
+        github="https://github.com/javicod92/next-fullstack-ecommerce"
+        live="https://next-fullstack-ecommerce-1rpa.vercel.app"
+      >
+        <p class="mt-2">
+          <span class="text-lg text-gray-200 text-pretty">
+            This ecommerce, built with <HighLight>Next.js</HighLight>, offers a
+            fast and seamless shopping experience. It features a carousel of <HighLight
+              >highlighted products</HighLight
+            >, <HighLight>category filters</HighLight>, and a modern interface
+            designed with <HighLight>Tailwind CSS</HighLight> and animations powered
+            by <HighLight>Framer Motion</HighLight>. Products are stored in <HighLight
+              >MongoDB</HighLight
+            >, and <HighLight>Stripe</HighLight> integration ensures secure payments.
+            Optimized for <HighLight>high performance</HighLight>, it guarantees
+            smooth navigation on any device.
+          </span>
+        </p>
+      </ProjectCard>
+
+      <!-- E-commerce Backend -->
+      <ProjectCard
+        src="Projects/ecommerce-back.webp"
+        title="Fullstack E-commerce (Backend)"
+        technologies={[
+          { name: "React", icon: React },
+          { name: "Next.js", icon: Nextjs },
+          { name: "TypeScript", icon: TypeScript },
+          { name: "Tailwind CSS", icon: TailwindCSS },
+          { name: "MongoDB", icon: MongoDB },
+          { name: "Cloudinary", icon: Cloudinary },
+        ]}
+        github="https://github.com/javicod92/next-fullstack-ecommerce"
+        live="https://next-fullstack-ecommerce-gules.vercel.app/"
+      >
+        <p class="mt-2">
+          <span class="text-lg text-gray-200 text-pretty">
+            This backend, built with <HighLight>Next.js</HighLight>, provides a
+            scalable and secure API for the ecommerce platform. It uses <HighLight
+              >NextAuth 5</HighLight
+            > for authentication with <HighLight>admin role</HighLight> management,
+            <HighLight>MongoDB</HighLight> for data storage, and <HighLight
+              >Cloudinary</HighLight
+            > for optimized image handling. Products can be <HighLight
+              >created</HighLight
+            >, <HighLight>edited</HighLight>, and <HighLight
+              >categorized</HighLight
+            > efficiently. Combined with a <HighLight
+              >Tailwind-powered</HighLight
+            > frontend, it ensures a seamless and modern user experience.
+          </span>
+        </p>
+      </ProjectCard>
+
+      <!-- E-commerce Backend -->
+      <ProjectCard
+        src="Projects/ecommerce-back.webp"
+        title="Fullstack E-commerce (Backend)"
+        technologies={[
+          { name: "React", icon: React },
+          { name: "Next.js", icon: Nextjs },
+          { name: "TypeScript", icon: TypeScript },
+          { name: "Tailwind CSS", icon: TailwindCSS },
+          { name: "MongoDB", icon: MongoDB },
+          { name: "Cloudinary", icon: Cloudinary },
+        ]}
+        github="https://github.com/javicod92/next-fullstack-ecommerce"
+        live="https://next-fullstack-ecommerce-gules.vercel.app/"
+      >
+        <p class="mt-2">
+          <span class="text-lg text-gray-200 text-pretty">
+            This backend, built with <HighLight>Next.js</HighLight>, provides a
+            scalable and secure API for the ecommerce platform. It uses <HighLight
+              >NextAuth 5</HighLight
+            > for authentication with <HighLight>admin role</HighLight> management,
+            <HighLight>MongoDB</HighLight> for data storage, and <HighLight
+              >Cloudinary</HighLight
+            > for optimized image handling. Products can be <HighLight
+              >created</HighLight
+            >, <HighLight>edited</HighLight>, and <HighLight
+              >categorized</HighLight
+            > efficiently. Combined with a <HighLight
+              >Tailwind-powered</HighLight
+            > frontend, it ensures a seamless and modern user experience.
+          </span>
+        </p>
+      </ProjectCard>
+    </div>
   </GeneralContainer>
 </section>
