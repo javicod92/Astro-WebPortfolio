@@ -33,7 +33,7 @@ const { src, title, technologies, github, live } = Astro.props as ProjectTypes;
       {
         technologies.map((technologie) => (
           <div class="flex items-center gap-2 px-4 rounded-full py-2 bg-gray-800">
-            <technologie.icon class="size-6" />
+            <technologie.icon class="size-6" aria-hidden="true" />
             {technologie.name}
           </div>
         ))
