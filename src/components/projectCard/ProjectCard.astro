@@ -19,7 +19,7 @@ const { src, title, date, technologies, github, live } =
   class="flex bg-gray-800/60 rounded-lg overflow-hidden border border-gray-800 shadow-sm"
 >
   <!-- Image -->
-  <div class="max-w-2/5 flex items-center justify-center bg-black/30">
+  <div class="max-w-2/5 w-full flex items-center justify-center bg-black/30">
     <a
       class="Container relative rounded-sm w-[90%] overflow-hidden cursor-pointer"
       href={src}
@@ -33,7 +33,7 @@ const { src, title, date, technologies, github, live } =
   </div>
 
   <!-- Project Description -->
-  <div class="max-w-2/3 px-6 py-8">
+  <div class="max-w-2/3 w-full px-6 py-8">
     <h3 class="flex flex-col text-cyan-500 font-medium">
       {title}
       <span class="text-base font-light">
@@ -79,7 +79,7 @@ const { src, title, date, technologies, github, live } =
     height: 100%;
     background: rgba(8, 42, 53, 0.8);
     clip-path: circle(0% at center);
-    transition: clip-path 0.3s ease-in-out;
+    transition: clip-path 0.5s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,7 +93,7 @@ const { src, title, date, technologies, github, live } =
     color: white;
     font-size: 1.2rem;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out 0.3s;
+    transition: opacity 0.3s ease-in-out 0.1s;
   }
 
   .Container:hover .Text {
