@@ -9,7 +9,7 @@ const { class: classList, name, Icon } = Astro.props as TechnologyTypes;
 ---
 
 <div
-  class={`flex items-center gap-2 px-4 rounded-full py-2 bg-gray-800 transition-all duration-200 ${classList}`}
+  class={`flex items-center gap-2 px-4 rounded-full py-2 bg-gray-800 transition-all duration-200 cursor-default ${classList}`}
 >
   <Icon class="size-6" aria-hidden="true" />
   {name}
