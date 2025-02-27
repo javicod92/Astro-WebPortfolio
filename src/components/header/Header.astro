@@ -51,18 +51,28 @@ import GeneralContainer from "../../utils/GeneralContainer.astro";
   </GeneralContainer>
 </header>
 
+<style>
+  /* This header style I use to fix the load error with Tailwind CSS */
+  .HeaderBg {
+    background: #1818186e;
+    backdrop-filter: blur(24px);
+  }
+</style>
+
 <!-- This script is used to add a background to my navigation bar -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.getElementById("navbar");
 
-    window.addEventListener("scroll", () => {
+    const updateHeaderStyles = () => {
       if (window.scrollY > 0) {
         navbar?.classList.add("HeaderBg");
-        console.log(window.scrollY);
       } else {
         navbar?.classList.remove("HeaderBg");
       }
-    });
+    };
+
+    window.addEventListener("scroll", updateHeaderStyles);
+    updateHeaderStyles();
   });
 </script>
