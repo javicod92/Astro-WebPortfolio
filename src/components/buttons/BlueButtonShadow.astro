@@ -9,7 +9,7 @@ const { as: Tag, class: classList, ...props } = Astro.props as ButtonTypes;
 ---
 
 <Tag
-  class={`px-10 py-2 border border-cyan-500 rounded-lg bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500 cursor-pointer ${classList}`}
+  class={`px-10 py-2 border border-cyan-500 rounded-full bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500 cursor-pointer ${classList}`}
   {...props}
 >
   <slot />
