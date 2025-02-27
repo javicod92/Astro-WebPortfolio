@@ -58,9 +58,10 @@ import GeneralContainer from "../../utils/GeneralContainer.astro";
 
     window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
-        navbar?.classList.add("bg-[#1818186e]", "backdrop-blur-xl");
+        navbar?.classList.add("HeaderBg");
+        console.log(window.scrollY);
       } else {
-        navbar?.classList.remove("bg-[#1818186e]", "backdrop-blur-xl");
+        navbar?.classList.remove("HeaderBg");
       }
     });
   });
