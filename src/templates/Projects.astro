@@ -22,6 +22,8 @@ import Django from "../icons/Django.astro";
 import HTML from "../icons/HTML.astro";
 import SQLite from "../icons/SQLite.astro";
 import JavaScript from "../icons/JavaScript.astro";
+import BlueButtonShadow from "../components/buttons/BlueButtonShadow.astro";
+import Github from "../icons/Github.astro";
 ---
 
 <section
@@ -268,6 +270,15 @@ import JavaScript from "../icons/JavaScript.astro";
           </span>
         </p>
       </ProjectCard>
+    </div>
+    <!-- Go to Github Button -->
+    <div class="mt-10 w-full flex justify-center">
+      <BlueButtonShadow
+        as="a"
+        class="flex items-center justify-center gap-2"
+        href="https://github.com/javicod92"
+        target="_blank"><Github class="size-6" />Go to Github</BlueButtonShadow
+      >
     </div>
   </GeneralContainer>
 </section>

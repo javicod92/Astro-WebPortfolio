@@ -1,4 +1,5 @@
 ---
+import BlueButtonShadow from "../components/buttons/BlueButtonShadow.astro";
 import GeneralButton from "../components/buttons/GeneralButton.astro";
 import NeonBlue from "../components/buttons/NeonBlue.astro";
 import NeonOrange from "../components/buttons/NeonOrange.astro";
@@ -283,11 +284,10 @@ import HighLight from "../utils/HighLight.astro";
           </CoursesCard>
         </div>
       </div>
-      <div class="w-full flex justify-center">
-        <button
-          class="px-10 py-2 border border-cyan-500 mt-8 rounded-lg bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500 cursor-pointer"
-          id="showMoreBtn">View More</button
-        >
+      <div class="mt-10 w-full flex justify-center">
+        <BlueButtonShadow as="button" id="showMoreBtn">
+          View More
+        </BlueButtonShadow>
       </div>
     </div>
   </GeneralContainer>
