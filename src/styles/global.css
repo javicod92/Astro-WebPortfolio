@@ -27,7 +27,7 @@ h2 {
 }
 
 h3 {
-  @apply text-base sm:text-xl xl:text-2xl;
+  @apply text-xl xl:text-2xl;
 }
 
 p {
