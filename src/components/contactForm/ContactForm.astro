@@ -76,3 +76,21 @@
     border-color: #00bcd4 !important;
   } */
 </style>
+
+<!-- Function to capitalize -->
+<script>
+  const nameInput = document.getElementById("name") as HTMLInputElement;
+
+  function updateName(event: Event): void {
+    const inputElement = event.target as HTMLInputElement;
+    const newPalabra = inputElement.value
+      .split(" ")
+      .map((palabra) =>
+        palabra !== "" ? palabra[0].toUpperCase() + palabra.slice(1) : "",
+      )
+      .join(" ");
+    nameInput.value = newPalabra;
+  }
+
+  nameInput?.addEventListener("input", updateName);
+</script>
