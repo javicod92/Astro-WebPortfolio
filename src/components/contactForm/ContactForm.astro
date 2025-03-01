@@ -1,0 +1,78 @@
+<form action="/api/contact" method="POST" class="space-y-6 max-w-lg w-full p-6">
+  <div class="relative">
+    <label for="name" class="text-sm text-cyan-500">Full Name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      required
+      placeholder="Enter your full name here"
+      class="w-full border-b-2 border-gray-600 text-white focus:border-cyan-500 outline-none py-2"
+    />
+  </div>
+
+  <div class="relative">
+    <label for="email" class="text-sm text-cyan-500">E-mail</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      required
+      placeholder="Enter your email here"
+      class="w-full border-b-2 border-gray-600 text-white focus:border-cyan-500 outline-none py-2"
+    />
+  </div>
+
+  <div class="relative">
+    <label for="subject" class="text-sm text-cyan-500">Subject</label>
+    <input
+      type="text"
+      id="subject"
+      name="subject"
+      required
+      placeholder="Enter your subject here"
+      class="w-full bg-transparent border-b-2 border-gray-600 text-white focus:border-cyan-500 outline-none py-2"
+    />
+  </div>
+
+  <div>
+    <label for="message" class="text-sm text-cyan-500">Mensaje</label>
+    <textarea
+      id="message"
+      name="message"
+      required
+      rows="4"
+      placeholder="Enter your message here"
+      class="w-full bg-transparent border-b-2 border-gray-600 text-white focus:border-cyan-500 outline-none py-2 resize-none"
+    ></textarea>
+  </div>
+
+  <button
+    type="submit"
+    class="w-full p-3 text-white bg-cyan-600 hover:bg-cyan-700 rounded-md font-semibold transition"
+  >
+    Send
+  </button>
+</form>
+
+<style>
+  /* Styles for input and textarea with autocomplete on Chrome and Safari */
+  input:-webkit-autofill,
+  textarea:-webkit-autofill {
+    background-color: transparent !important; /* Elimina el fondo */
+    color: white !important; /* Mantén el color del texto */
+    transition: background-color 5000s ease-in-out 0s; /* Retraso en la transición del fondo */
+  }
+
+  /* Keep the background transparent */
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill:focus {
+    background-color: transparent !important;
+    color: white !important;
+  }
+
+  /* Adjusts the color of the bottom bar when the focus is received */
+  /* input:-webkit-autofill {
+    border-color: #00bcd4 !important;
+  } */
+</style>

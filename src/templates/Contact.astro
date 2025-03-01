@@ -1,4 +1,5 @@
 ---
+import ContactForm from "../components/contactForm/ContactForm.astro";
 import EmailWithCopyButton from "../components/emailWithCopyButton/EmailWithCopyButton.astro";
 import Github from "../icons/Github.astro";
 import LinkedIn from "../icons/LinkedIn.astro";
@@ -30,10 +31,10 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
 
       <!-- Contact Card -->
       <div
-        class="mt-10 w-full h-[500px] bg-gray-800/40 border border-gray-800 rounded-md backdrop-blur-sm p-6 shadow-xl"
+        class="mt-10 w-full h-full flex bg-gray-800/40 border border-gray-800 rounded-md backdrop-blur-sm p-6 shadow-xl"
       >
         <div
-          class="max-w-2/5 w-full h-full border-r border-gray-800 pr-6 flex flex-col gap-10 justify-center items-center"
+          class="max-w-2/5 w-full border-r border-gray-800 pr-6 flex flex-col gap-10 justify-center items-center"
         >
           <!-- Social links -->
           <div class="flex flex-col items-center">
@@ -81,16 +82,20 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
           <!-- Phone number -->
           <div class="flex flex-col items-center">
             <h4 class="text-cyan-500 font-bold">PHONE</h4>
-            <address class="mt-2">
+            <address class="mt-2 not-italic">
               <span class="text-base">+54 0362 155144398</span>
             </address>
           </div>
 
           <!-- E-mail with copy function -->
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center border-b-2 border-gray-600">
             <h4 class="text-cyan-500 font-bold">E-MAIL</h4>
-            <EmailWithCopyButton class="mt-2" />
+            <EmailWithCopyButton />
           </div>
+        </div>
+
+        <div class="w-full max-w-2/3 h-full pl-6">
+          <ContactForm />
         </div>
       </div>
     </div>

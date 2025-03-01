@@ -8,10 +8,8 @@ type EmailProps = {
 const { class: classList } = Astro.props as EmailProps;
 ---
 
-<div
-  class={`flex items-center justify-between border border-white/30 rounded-lg py-2 ${classList}`}
->
-  <span class="email px-2 text-base font-light">javi.javier.jc@gmail.com</span>
+<div class={`flex items-center justify-between py-2 ${classList}`}>
+  <span class="email px-2 text-base font-normal">javi.javier.jc@gmail.com</span>
   <button
     id="copyBtn"
     class="px-2 border-l border-white/30 cursor-pointer hover:text-cyan-500 transition-all duration-200 text-gray-400"
