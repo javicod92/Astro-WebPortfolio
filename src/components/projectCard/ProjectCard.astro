@@ -5,6 +5,7 @@ import TechnologyPill from "../technologyPill/TechnologyPill.astro";
 
 type ProjectTypes = {
   src: string;
+  imageSm: string;
   title: string;
   date: string;
   technologies: Array<Record<string, any>>;
@@ -12,7 +13,7 @@ type ProjectTypes = {
   live: string;
 };
 
-const { src, title, date, technologies, github, live } =
+const { src, imageSm, title, date, technologies, github, live } =
   Astro.props as ProjectTypes;
 ---
 
@@ -25,7 +26,7 @@ const { src, title, date, technologies, github, live } =
   >
     <a
       class="Container relative rounded-sm w-full overflow-hidden cursor-pointer md:max-w-2/3 lg:max-w-full"
-      href={src}
+      href={imageSm}
       target="_blank"
     >
       <img
