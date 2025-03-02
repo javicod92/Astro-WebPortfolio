@@ -5,6 +5,7 @@ import Github from "../icons/Github.astro";
 import LinkedIn from "../icons/LinkedIn.astro";
 import Mail from "../icons/Mail.astro";
 import Send from "../icons/Send.astro";
+import ContainerSm from "../utils/ContainerSm.astro";
 import GeneralContainer from "../utils/GeneralContainer.astro";
 ---
 
@@ -13,93 +14,91 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
   class="relative w-full min-h-screen h-full px-5 py-24 flex flex-col justify-center items-center"
   aria-labelledby="contact-heading"
 >
-  <GeneralContainer class="flex items-center justify-center">
-    <div class="w-full max-w-[800px]">
-      <!-- Page Titles -->
-      <div>
-        <h3
-          class="font-medium text-zinc-400 flex items-center gap-2"
-          id="contact-heading"
-        >
-          <Send class="size-8" aria-hidden="true" />Contact Me! 😀
-        </h3>
-        <h2 class="mt-1 font-semibold">
-          Do you like what you see?
-          <span class="text-cyan-500">Let's work together!</span>
-        </h2>
+  <ContainerSm>
+    <!-- Page Titles -->
+    <div>
+      <h3
+        class="font-medium text-zinc-400 flex items-center gap-2"
+        id="contact-heading"
+      >
+        <Send class="size-8" aria-hidden="true" />Contact Me! 😀
+      </h3>
+      <h2 class="mt-1 font-semibold">
+        Do you like what you see?
+        <span class="text-cyan-500">Let's work together!</span>
+      </h2>
+    </div>
+
+    <!-- Contact Card -->
+    <div
+      class="mt-10 w-full h-full p-12 flex flex-col lg:flex-row bg-gray-800/40 border border-gray-800 rounded-md backdrop-blur-sm shadow-xl"
+    >
+      <div
+        class="lg:max-w-2/5 w-full pb-12 lg:pr-12 lg:pb-0 border-b lg:border-r lg:border-b-0 border-gray-800 flex flex-col gap-10 justify-center items-center"
+      >
+        <!-- Social links -->
+        <div class="flex flex-col items-center">
+          <h4 class="text-cyan-500 font-bold">NETWORKS</h4>
+          <ul class="mt-4 flex gap-4">
+            <li>
+              <a
+                href="https://github.com/javicod92"
+                class="border border-gray-300 p-2 rounded-full inline-flex items-center justify-center size-10 bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500"
+                target="_blank"
+                rel="noopener noreferrer me"
+                title="Github"
+                aria-label="Github"
+              >
+                <Github class="w-full" aria-hidden="true" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://linkedin.com/in/aldo-javier-codutti"
+                class="border border-gray-300 p-2 rounded-full inline-flex items-center justify-center size-10 bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500"
+                target="_blank"
+                rel="noopener noreferrer me"
+                title="LinkedIn"
+                aria-label="LinkedIn"
+              >
+                <LinkedIn class="w-full" aria-hidden="true" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:javi.javier.jc@gmail.com"
+                class="border border-gray-300 p-2 rounded-full inline-flex items-center justify-center size-10 bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Email"
+                aria-label="Email"
+              >
+                <Mail class="w-full" aria-hidden="true" />
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Phone number -->
+        <div class="flex flex-col items-center">
+          <h4 class="text-cyan-500 font-bold">PHONE</h4>
+          <address class="mt-2 not-italic">
+            <span class="text-base">+54 0362 155144398</span>
+          </address>
+        </div>
+
+        <!-- E-mail with copy function -->
+        <div class="flex flex-col items-center">
+          <h4 class="text-cyan-500 font-bold">E-MAIL</h4>
+          <EmailWithCopyButton class="mt-2" />
+        </div>
       </div>
 
-      <!-- Contact Card -->
-      <div
-        class="mt-10 w-full h-full p-12 flex flex-col lg:flex-row bg-gray-800/40 border border-gray-800 rounded-md backdrop-blur-sm shadow-xl"
-      >
-        <div
-          class="lg:max-w-2/5 w-full pb-12 lg:pr-12 lg:pb-0 border-b lg:border-r lg:border-b-0 border-gray-800 flex flex-col gap-10 justify-center items-center"
-        >
-          <!-- Social links -->
-          <div class="flex flex-col items-center">
-            <h4 class="text-cyan-500 font-bold">NETWORKS</h4>
-            <ul class="mt-4 flex gap-4">
-              <li>
-                <a
-                  href="https://github.com/javicod92"
-                  class="border border-gray-300 p-2 rounded-full inline-flex items-center justify-center size-10 bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500"
-                  target="_blank"
-                  rel="noopener noreferrer me"
-                  title="Github"
-                  aria-label="Github"
-                >
-                  <Github class="w-full" aria-hidden="true" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://linkedin.com/in/aldo-javier-codutti"
-                  class="border border-gray-300 p-2 rounded-full inline-flex items-center justify-center size-10 bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500"
-                  target="_blank"
-                  rel="noopener noreferrer me"
-                  title="LinkedIn"
-                  aria-label="LinkedIn"
-                >
-                  <LinkedIn class="w-full" aria-hidden="true" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:javi.javier.jc@gmail.com"
-                  class="border border-gray-300 p-2 rounded-full inline-flex items-center justify-center size-10 bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Email"
-                  aria-label="Email"
-                >
-                  <Mail class="w-full" aria-hidden="true" />
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Phone number -->
-          <div class="flex flex-col items-center">
-            <h4 class="text-cyan-500 font-bold">PHONE</h4>
-            <address class="mt-2 not-italic">
-              <span class="text-base">+54 0362 155144398</span>
-            </address>
-          </div>
-
-          <!-- E-mail with copy function -->
-          <div class="flex flex-col items-center">
-            <h4 class="text-cyan-500 font-bold">E-MAIL</h4>
-            <EmailWithCopyButton class="mt-2" />
-          </div>
-        </div>
-
-        <div class="lg:max-w-2/3 w-full h-full pt-12 lg:pl-12 lg:pt-0">
-          <ContactForm />
-        </div>
+      <div class="lg:max-w-2/3 w-full h-full pt-12 lg:pl-12 lg:pt-0">
+        <ContactForm />
       </div>
     </div>
-  </GeneralContainer>
+  </ContainerSm>
 </section>
 
 <style>
