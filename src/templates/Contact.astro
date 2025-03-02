@@ -14,7 +14,7 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
   aria-labelledby="contact-heading"
 >
   <GeneralContainer class="flex items-center justify-center">
-    <div class="w-full max-w-2/3">
+    <div class="w-full max-w-[800px]">
       <!-- Page Titles -->
       <div>
         <h3
@@ -31,10 +31,10 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
 
       <!-- Contact Card -->
       <div
-        class="mt-10 w-full h-full flex bg-gray-800/40 border border-gray-800 rounded-md backdrop-blur-sm p-6 shadow-xl"
+        class="mt-10 w-full h-full p-12 flex flex-col lg:flex-row bg-gray-800/40 border border-gray-800 rounded-md backdrop-blur-sm shadow-xl"
       >
         <div
-          class="max-w-2/5 w-full border-r border-gray-800 pr-6 flex flex-col gap-10 justify-center items-center"
+          class="lg:max-w-2/5 w-full pb-12 lg:pr-12 lg:pb-0 border-b lg:border-r lg:border-b-0 border-gray-800 flex flex-col gap-10 justify-center items-center"
         >
           <!-- Social links -->
           <div class="flex flex-col items-center">
@@ -94,7 +94,7 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
           </div>
         </div>
 
-        <div class="max-w-2/3 w-full h-full pl-6">
+        <div class="lg:max-w-2/3 w-full h-full pt-12 lg:pl-12 lg:pt-0">
           <ContactForm />
         </div>
       </div>
