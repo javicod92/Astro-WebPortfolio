@@ -18,11 +18,11 @@ const { src, imageSm, title, date, technologies, github, live } =
 ---
 
 <div
-  class="flex flex-col lg:flex-row bg-gray-800/60 rounded-lg overflow-hidden border border-gray-800 shadow-sm"
+  class="flex flex-col lg:flex-row CardBg border border-gray-800 p-8 rounded-lg overflow-hidden shadow-sm"
 >
   <!-- Image -->
   <div
-    class="lg:max-w-2/5 w-full flex items-center justify-center bg-black/30 p-4"
+    class="lg:max-w-2/5 w-full flex items-center justify-center pb-8 lg:pr-8 lg:pb-0 border-b lg:border-r lg:border-b-0 border-gray-800"
   >
     <a
       class="Container relative rounded-sm w-full overflow-hidden cursor-pointer md:max-w-2/3 lg:max-w-full"
@@ -44,7 +44,7 @@ const { src, imageSm, title, date, technologies, github, live } =
   </div>
 
   <!-- Project Description -->
-  <div class="lg:max-w-2/3 w-full px-6 py-8">
+  <div class="lg:max-w-2/3 w-full pt-8 lg:pl-8 lg:pt-0">
     <h3 class="flex flex-col text-cyan-500 font-medium">
       {title}
       <span class="text-base font-light">
@@ -65,12 +65,12 @@ const { src, imageSm, title, date, technologies, github, live } =
     <!-- Buttons to view projects -->
     <div class="flex gap-2 mt-6">
       <GeneralButton as="a" href={github} title={github} target="_blank">
-        View in GitHub
+        View on GitHub
       </GeneralButton>
       {
         live && (
           <ButtonBlue as="a" href={live} title={live} target="_blank">
-            View deploy in Vercel
+            View on Vercel
           </ButtonBlue>
         )
       }
