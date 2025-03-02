@@ -16,6 +16,7 @@ html {
 
 body {
   font-family: "Inter", serif;
+  background-color: #0a0a0a;
 }
 
 h1 {
@@ -23,11 +24,11 @@ h1 {
 }
 
 h2 {
-  @apply text-2xl sm:text-3xl xl:text-4xl;
+  @apply text-xl xl:text-2xl;
 }
 
 h3 {
-  @apply text-xl xl:text-2xl;
+  @apply text-2xl sm:text-3xl xl:text-4xl;
 }
 
 p {
