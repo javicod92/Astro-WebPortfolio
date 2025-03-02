@@ -6,6 +6,6 @@ type ContainerTypes = {
 const { class: classList } = Astro.props as ContainerTypes;
 ---
 
-<div class={`w-full lg:max-w-[800px] ${classList}`}>
+<div class={`w-full md:max-w-[800px] ${classList}`}>
   <slot />
 </div>
