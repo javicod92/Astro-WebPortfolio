@@ -11,14 +11,16 @@ import TailwindCSS from "../../icons/TailwindCSS.astro";
 
 <footer class="w-full bg-[#131313] p-8 text-gray-300">
   <div
-    class="mx-auto max-w-[1200px] grid grid-cols-1 md:grid-cols-[repeat(3,1fr)] gap-20 text-center md:text-left"
+    class="mx-auto max-w-[1200px] grid grid-cols-1 lg:grid-cols-[repeat(3,1fr)] gap-10 text-center lg:text-left"
   >
     <!-- Social Links -->
     <div>
-      <h4 class="border-b border-gray-600 pb-2 text-lg font-semibold">
+      <h4
+        class="lg:border-b border-gray-600 pb-2 text-cyan-500 text-lg font-semibold"
+      >
         Find me on
       </h4>
-      <ul class="mt-4 flex justify-center md:justify-start gap-4">
+      <ul class="mt-4 flex justify-center lg:justify-start gap-4">
         <li>
           <a
             href="https://github.com/javicod92"
@@ -56,7 +58,9 @@ import TailwindCSS from "../../icons/TailwindCSS.astro";
 
     <!-- Navigation Links -->
     <div>
-      <h4 class="border-b border-gray-600 pb-2 text-lg font-semibold">
+      <h4
+        class="lg:border-b border-gray-600 pb-2 text-cyan-500 text-lg font-semibold"
+      >
         Navigation
       </h4>
       <nav class="mt-4 flex flex-col justify-center md:flex-row gap-4">
@@ -71,10 +75,12 @@ import TailwindCSS from "../../icons/TailwindCSS.astro";
 
     <!-- Built With -->
     <div>
-      <h4 class="border-b border-gray-600 pb-2 text-lg font-semibold">
+      <h4
+        class="lg:border-b border-gray-600 text-cyan-500 pb-2 text-lg font-semibold"
+      >
         Built with
       </h4>
-      <div class="mt-4 flex justify-center md:justify-start gap-4">
+      <div class="mt-4 flex justify-center lg:justify-start gap-4">
         <AstroIcon class="size-6" title="Astro" />
         <TailwindCSS class="size-6" />
         <CSS3 class="size-6" />
@@ -85,9 +91,9 @@ import TailwindCSS from "../../icons/TailwindCSS.astro";
   </div>
 
   <!-- Copyright -->
-  <div class="mt-6 text-center">
+  <div class="mt-10 text-center">
     <h4 class="text-gray-500 text-lg">
-      © 2025 - <span class="text-cyan-500 font-semibold">Javier Codutti</span>
+      <span class="font-semibold">© 2025 - Javier Codutti</span>
     </h4>
   </div>
 </footer>
