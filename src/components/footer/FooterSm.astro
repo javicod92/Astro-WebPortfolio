@@ -1,0 +1,60 @@
+---
+import AstroIcon from "../../icons/AstroIcon.astro";
+import CSS3 from "../../icons/CSS3.astro";
+import Github from "../../icons/Github.astro";
+import LinkedIn from "../../icons/LinkedIn.astro";
+import Mail from "../../icons/Mail.astro";
+import Resend from "../../icons/Resend.astro";
+import TailwindCSS from "../../icons/TailwindCSS.astro";
+---
+
+<footer class="w-full bg-[#131313] p-8">
+  <!-- Social links -->
+  <div class="flex flex-col items-center">
+    <ul class="mt-2 flex gap-4">
+      <li>
+        <a
+          href="https://github.com/javicod92"
+          class="border border-gray-300 p-2 rounded-full inline-flex items-center justify-center size-10 bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500"
+          target="_blank"
+          rel="noopener noreferrer me"
+          title="Github"
+          aria-label="Github"
+        >
+          <Github class="w-full" aria-hidden="true" />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://linkedin.com/in/aldo-javier-codutti"
+          class="border border-gray-300 p-2 rounded-full inline-flex items-center justify-center size-10 bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500"
+          target="_blank"
+          rel="noopener noreferrer me"
+          title="LinkedIn"
+          aria-label="LinkedIn"
+        >
+          <LinkedIn class="w-full" aria-hidden="true" />
+        </a>
+      </li>
+      <li>
+        <a
+          href="mailto:javi.javier.jc@gmail.com"
+          class="border border-gray-300 p-2 rounded-full inline-flex items-center justify-center size-10 bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Email"
+          aria-label="Email"
+        >
+          <Mail class="w-full" aria-hidden="true" />
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="mt-6 flex items-center justify-center">
+    <h4>
+      <span class="text-gray-600 text-lg font-semibold"
+        >© 2025 - <span class="text-cyan-600">Javier Codutti</span></span
+      >
+    </h4>
+  </div>
+</footer>
