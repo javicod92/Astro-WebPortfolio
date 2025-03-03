@@ -8,12 +8,9 @@ import Resend from "../../icons/Resend.astro";
 import TailwindCSS from "../../icons/TailwindCSS.astro";
 ---
 
-<footer class="w-full h-[200px] bg-[#222222] p-4">
+<footer class="w-full bg-[#131313] p-8">
   <!-- Social links -->
   <div class="flex flex-col items-center">
-    <h4>
-      <span class="text-gray-400 text-base">Find me on</span>
-    </h4>
     <ul class="mt-2 flex gap-4">
       <li>
         <a
@@ -53,17 +50,32 @@ import TailwindCSS from "../../icons/TailwindCSS.astro";
       </li>
     </ul>
   </div>
+  <div class="mt-8 flex gap-8 items-center justify-center">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Skills</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </div>
   <div class="mt-6 flex flex-col items-center">
     <h4>
       <span class="text-gray-400 text-base"
         >This web portfolio was built with</span
       >
     </h4>
-    <div class="mt-2 flex gap-2">
+    <div class="mt-2 flex gap-4">
       <AstroIcon class="size-6" />
       <TailwindCSS class="size-6" />
       <CSS3 class="size-6" />
       <Resend class="size-6" />
     </div>
+  </div>
+  <div class="mt-6 flex items-center justify-center">
+    <h4>
+      <span class="text-gray-600 text-lg font-semibold"
+        >© 2025 - <span class="text-cyan-600">Javier Codutti</span></span
+      >
+    </h4>
   </div>
 </footer>
