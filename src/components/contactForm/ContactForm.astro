@@ -49,7 +49,7 @@
 
   <button
     type="submit"
-    class="w-full p-3 text-white bg-cyan-600 hover:bg-cyan-700 rounded-md font-semibold transition"
+    class="w-full p-3 text-white bg-cyan-600 hover:bg-cyan-700 rounded-md font-semibold transition cursor-pointer"
   >
     Send
   </button>
@@ -95,12 +95,16 @@
       const response = await axios.post("/api/send-email", data);
       alert(
         response.data.success
-          ? "Correo enviado correctamente"
-          : "Error enviando el correo",
+          ? "Mail sent successfully"
+          : "Error when sending mail",
       );
+
+      if (response.data.success) {
+        form.reset();
+      }
     } catch (error) {
       console.error("Error:", error);
-      alert("Error enviando el correo");
+      alert("Error when sending mail");
     }
   }
 </script>
