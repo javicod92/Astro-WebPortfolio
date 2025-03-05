@@ -10,17 +10,17 @@ const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
 export const POST: APIRoute = async ({ request }) => {
   try {
-    const { name, email, subject, message, honeypot } =
+    const { name, email, subject, message, hp_field } =
       (await request.json()) as {
         name: string;
         email: string;
         subject: string;
         message: string;
-        honeypot: string;
+        hp_field: string;
       };
 
     // Verify if the Honeypot has content to protect against bots
-    if (honeypot) {
+    if (hp_field) {
       return new Response("Bot detected", { status: 400 });
     }
 
