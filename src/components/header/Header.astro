@@ -90,13 +90,8 @@ import GeneralContainer from "../../utils/GeneralContainer.astro";
     };
 
     function openMenu() {
-      if (menuToOpen?.classList.contains("-Left-full")) {
-        menuToOpen.classList.remove("-Left-full");
-        menuToOpen.classList.add("Left-0");
-      } else {
-        menuToOpen?.classList.remove("Left-0");
-        menuToOpen?.classList.add("-Left-full");
-      }
+      menuToOpen?.classList.toggle("-Left-full");
+      menuToOpen?.classList.toggle("Left-0");
     }
 
     function closeMenu() {
