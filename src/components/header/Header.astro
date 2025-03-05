@@ -20,7 +20,10 @@ import GeneralContainer from "../../utils/GeneralContainer.astro";
         JAVIER <span class="text-cyan-500">CODUTTI</span>
       </a>
     </div>
-    <nav class="hidden lg:flex gap-8 text-white/80">
+    <nav
+      id="navigation"
+      class="absolute top-0 -Left-full w-full h-screen bg-zinc-900 transition-all ease-in-out duration-300 lg:static flex flex-col items-center -z-10 py-32 lg:flex-row gap-8 text-white/80 lg:p-0 lg:w-auto lg:h-auto lg:z-0 lg:bg-transparent"
+    >
       <a class="transition-colors duration-250 hover:text-cyan-400" href="#home"
         >Home</a
       >
@@ -45,9 +48,12 @@ import GeneralContainer from "../../utils/GeneralContainer.astro";
         href="#contact">Contact</a
       >
     </nav>
-    <div class="lg:hidden block">
+    <button
+      id="menu"
+      class="lg:hidden block hover:text-cyan-500 transition-all duration-300 cursor-pointer"
+    >
       <Menu />
-    </div>
+    </button>
   </GeneralContainer>
 </header>
 
@@ -57,12 +63,23 @@ import GeneralContainer from "../../utils/GeneralContainer.astro";
     background: #1818186e;
     backdrop-filter: blur(24px);
   }
+
+  .-Left-full {
+    left: -100%;
+  }
+
+  .Left-0 {
+    left: 0;
+  }
 </style>
 
 <!-- This script is used to add a background to my navigation bar -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+    const menuToOpen = document.getElementById("navigation");
+    const MenuButton = document.getElementById("menu");
     const navbar = document.getElementById("navbar");
+    const anchors = document.querySelectorAll("#navbar nav a");
 
     const updateHeaderStyles = () => {
       if (window.scrollY > 0) {
@@ -72,7 +89,26 @@ import GeneralContainer from "../../utils/GeneralContainer.astro";
       }
     };
 
+    function openMenu() {
+      if (menuToOpen?.classList.contains("-Left-full")) {
+        menuToOpen.classList.remove("-Left-full");
+        menuToOpen.classList.add("Left-0");
+      } else {
+        menuToOpen?.classList.remove("Left-0");
+        menuToOpen?.classList.add("-Left-full");
+      }
+    }
+
+    function closeMenu() {
+      menuToOpen?.classList.remove("Left-0");
+      menuToOpen?.classList.add("-Left-full");
+    }
+
     window.addEventListener("scroll", updateHeaderStyles);
+    MenuButton?.addEventListener("click", openMenu);
+    anchors.forEach((anchor) => {
+      anchor.addEventListener("click", closeMenu);
+    });
     updateHeaderStyles();
   });
 </script>
