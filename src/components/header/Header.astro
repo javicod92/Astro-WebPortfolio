@@ -93,6 +93,7 @@ import GeneralContainer from "../../utils/GeneralContainer.astro";
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const sectionId = entry.target.getAttribute("id");
+            console.log("entro", sectionId);
 
             // Remove the class "--Active" to all Links
             anchors.forEach((link) => link.classList.remove("--Active"));
@@ -107,7 +108,7 @@ import GeneralContainer from "../../utils/GeneralContainer.astro";
       },
       {
         root: null,
-        rootMargin: "0px 0px -100% 0px",
+        rootMargin: "-10px 0px -100% 0px",
         threshold: 0,
       },
     );
