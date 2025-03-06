@@ -71,6 +71,11 @@ import GeneralContainer from "../../utils/GeneralContainer.astro";
   .Left-0 {
     left: 0;
   }
+
+  .--Active {
+    color: #06b6d4;
+    border-bottom: 1px solid #06b6d4;
+  }
 </style>
 
 <!-- This script is used to add a background to my navigation bar -->
@@ -80,6 +85,35 @@ import GeneralContainer from "../../utils/GeneralContainer.astro";
     const MenuButton = document.getElementById("menu");
     const navbar = document.getElementById("navbar");
     const anchors = document.querySelectorAll("#navbar nav a");
+    const sections = document.querySelectorAll("section");
+
+    // Adding an IntersectionObserver Browser API
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.getAttribute("id");
+
+            // Remove the class "--Active" to all Links
+            anchors.forEach((link) => link.classList.remove("--Active"));
+
+            // Add "--Active" only to the intersected section
+            const activeLink = document.querySelector(
+              `#navbar nav a[href*=${sectionId}]`,
+            );
+            if (activeLink) activeLink.classList.add("--Active");
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px 0px -100% 0px",
+        threshold: 0,
+      },
+    );
+
+    // Observe all Sections
+    sections.forEach((section) => observer.observe(section));
 
     const updateHeaderStyles = () => {
       if (window.scrollY > 0) {
