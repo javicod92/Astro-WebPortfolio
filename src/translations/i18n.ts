@@ -6,6 +6,10 @@ import DescriptionEn from "./home/DescriptionEn.astro";
 import DescriptionEs from "./home/DescriptionEs.astro";
 import H1En from "./home/H1En.astro";
 import H1Es from "./home/H1Es.astro";
+import SkillsDescriptionEn from "./skills/SkillsDescriptionEn.astro";
+import SkillsDescriptionEs from "./skills/SkillsDescriptionEs.astro";
+import SkillsTitleEn from "./skills/SkillsTitleEn.astro";
+import SkillsTitleEs from "./skills/SkillsTitleEs.astro";
 
 export const translations = {
   //Header and nav bar
@@ -62,6 +66,19 @@ export const translations = {
       h2: "Sobre mi",
       h3: H3Es,
       description: AboutDescriptionEs,
+    },
+  },
+
+  //Skills section
+  SKILLS: {
+    en: {
+      title: SkillsTitleEn,
+      description: SkillsDescriptionEn,
+    },
+
+    es: {
+      title: SkillsTitleEs,
+      description: SkillsDescriptionEs,
     },
   },
 };
