@@ -91,11 +91,13 @@ export const translations = {
     en: {
       title: PortfolioTitleEn,
       coursesCards: PortfolioCoursesEn,
+      buttonCertification: "View Certification",
     },
 
     es: {
       title: PortfolioTitleEs,
       coursesCards: PortfolioCoursesEs,
+      buttonCertification: "Ver Certificación",
     },
   },
 };
