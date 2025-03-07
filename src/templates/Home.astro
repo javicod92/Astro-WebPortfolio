@@ -11,7 +11,7 @@ import { translations } from "../translations/i18n";
 import GeneralContainer from "../utils/GeneralContainer.astro";
 
 const lang = (Astro.locals as { lang: "en" | "es" }).lang || "en";
-const t = translations.Header[lang];
+const t = translations.Home[lang];
 ---
 
 <!-- Home Section -->
@@ -25,47 +25,16 @@ const t = translations.Header[lang];
   >
     <!-- Description content -->
     <div class="flex flex-col justify-center lg:w-2/3">
-      <h3 class="text-zinc-400">
-        {
-          lang === "en"
-            ? "Hey, this is my web portfolio. 👋"
-            : "Hey, este es mi portafolio web. 👋"
-        }
-      </h3>
-      <h1 class="font-semibold flex items-center gap-4 mt-2 flex-wrap">
-        {lang === "en" ? "I'm" : "Soy"}
-        <span class="text-cyan-500">Javier Codutti</span>
-        <a
-          class="flex justify-center items-center"
-          href="https://linkedin.com/in/aldo-javier-codutti"
-          target="_blank"
-          rel="noopener me"
-          aria-label="Check my LinkedIn profile"
-          ><Badge
-            >{
-              lang === "en" ? "Available to Work" : "Disponible para trabajar"
-            }</Badge
-          >
-        </a>
-      </h1>
+      <h3 class="text-zinc-400">{t.h3}</h3>
+      {
+        (
+          <h1 class="font-semibold flex items-center gap-4 mt-2 flex-wrap">
+            {<t.h1 />}
+          </h1>
+        )
+      }
       <p class="opacity-80 font-extralight mt-4 text-pretty">
-        <span class="text-white font-semibold"
-          >{
-            lang === "en" ? "Frontend Developer" : "Desarrollador Frontend"
-          }</span
-        >
-        <span class="text-amber-200 font-semibold"
-          >{
-            lang === "en"
-              ? "with 2+ years of experience"
-              : "con 2+ años de experiencia"
-          }</span
-        >
-        {
-          lang === "en"
-            ? "building Web Applications. Passionate about clean code, UX/UI, and scalable solutions. From Argentina, always learning and improving. 🙂"
-            : "construyendo Aplicaciones Web. Apasionado por el código limpio, UX/UI y soluciones escalables. Desde Argentina, siempre aprendiendo y mejorando. 🙂"
-        }
+        {(<t.description />)}
       </p>
 
       <!-- Socials -->
@@ -110,11 +79,8 @@ const t = translations.Header[lang];
 
       <!-- Curriculum and Resume -->
       <div class="mt-12 flex gap-2 flex-wrap">
-        <NeonBlue
-          >{lang === "en" ? "Download Resume" : "Descargar Resume"}</NeonBlue
-        >
-        <NeonOrange>{lang === "en" ? "Download CV" : "Descargar CV"}</NeonOrange
-        >
+        <NeonBlue>{t.resume}</NeonBlue>
+        <NeonOrange>{t.cv}</NeonOrange>
       </div>
     </div>
 
@@ -132,6 +98,6 @@ const t = translations.Header[lang];
   </GeneralContainer>
   <ScrollIndicator
     class="hidden lg:flex absolute bottom-10"
-    text={lang === "en" ? "Discover me" : "Descúbreme"}
+    text={t.discover}
   />
 </section>

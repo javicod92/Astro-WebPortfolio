@@ -1,7 +1,10 @@
 ---
-import SideRadialBlue from "../components/backgrounds/SideRadialBlue.astro";
 import User from "../icons/User.astro";
+import { translations } from "../translations/i18n";
 import GeneralContainer from "../utils/GeneralContainer.astro";
+
+const lang = (Astro.locals as { lang: "en" | "es" }).lang || "en";
+const t = translations.ABOUT[lang];
 ---
 
 <section
@@ -32,45 +35,14 @@ import GeneralContainer from "../utils/GeneralContainer.astro";
         <div class="text-gray-200 flex flex-col gap-6">
           <div>
             <h2 class="font-medium text-zinc-400 flex items-center gap-2">
-              <User class="size-6" /> About me
+              <User class="size-6" />
+              {t.h2}
             </h2>
             <h3 class="mt-1 md:mt-2 font-semibold">
-              This is a little bit <span class="text-cyan-500">about me</span>
+              {(<t.h3 />)}
             </h3>
           </div>
-          <p class="mt-2 text-pretty border-l-4 border-cyan-600 pl-4">
-            I'm <span class="text-cyan-500 font-semibold">Javier Codutti</span>,
-            a web developer with <span class="text-cyan-500 font-semibold"
-              >2+ years of experience</span
-            >
-            crafting modern, scalable, and high-performance applications. I specialize
-            in <span class="text-cyan-500 font-semibold"
-              >React, Next.js, and Astro</span
-            >, focusing on UX/UI.
-          </p>
-          <p
-            class="text-lg md:text-xl text-pretty border-l-4 border-cyan-600 pl-4"
-          >
-            Passionate about learning, I’ve worked with <span
-              class="text-cyan-500 font-semibold">JWT, NextAuth</span
-            >, and database integration like <span
-              class="text-cyan-500 font-semibold">MongoDB</span
-            >. My projects include <span class="text-amber-200 font-semibold"
-              >Podcast Music</span
-            >
-            (a YouTube Music-inspired app) and an <span
-              class="text-amber-200 font-semibold">E-commerce</span
-            >, prioritizing performance and accessibility.
-          </p>
-          <p
-            class="text-lg md:text-xl text-pretty border-l-4 border-cyan-600 pl-4"
-          >
-            Looking for a developer who values <span
-              class="text-amber-200 font-semibold"
-              >quality, scalability, and innovation?</span
-            >
-            <span class="text-amber-200 font-semibold">Let's talk! 🙂</span>
-          </p>
+          {(<t.description />)}
         </div>
       </div>
     </div>
