@@ -6,6 +6,10 @@ import DescriptionEn from "./home/DescriptionEn.astro";
 import DescriptionEs from "./home/DescriptionEs.astro";
 import H1En from "./home/H1En.astro";
 import H1Es from "./home/H1Es.astro";
+import PortfolioCoursesEn from "./portfolio/PortfolioCoursesEn.astro";
+import PortfolioCoursesEs from "./portfolio/PortfolioCoursesEs.astro";
+import PortfolioTitleEn from "./portfolio/PortfolioTitleEn.astro";
+import PortfolioTitleEs from "./portfolio/PortfolioTitleEs.astro";
 import SkillsDescriptionEn from "./skills/SkillsDescriptionEn.astro";
 import SkillsDescriptionEs from "./skills/SkillsDescriptionEs.astro";
 import SkillsTitleEn from "./skills/SkillsTitleEn.astro";
@@ -79,6 +83,19 @@ export const translations = {
     es: {
       title: SkillsTitleEs,
       description: SkillsDescriptionEs,
+    },
+  },
+
+  //Portfolio section
+  PORTFOLIO: {
+    en: {
+      title: PortfolioTitleEn,
+      coursesCards: PortfolioCoursesEn,
+    },
+
+    es: {
+      title: PortfolioTitleEs,
+      coursesCards: PortfolioCoursesEs,
     },
   },
 };

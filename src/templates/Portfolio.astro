@@ -1,13 +1,14 @@
 ---
 import BlueButtonShadow from "../components/buttons/BlueButtonShadow.astro";
 import GeneralButton from "../components/buttons/GeneralButton.astro";
-import NeonBlue from "../components/buttons/NeonBlue.astro";
-import NeonOrange from "../components/buttons/NeonOrange.astro";
 import CoursesCard from "../components/coursesCard/CoursesCard.astro";
 import Certificate from "../icons/Certificate.astro";
+import { translations } from "../translations/i18n";
 import ContainerSm from "../utils/ContainerSm.astro";
-import GeneralContainer from "../utils/GeneralContainer.astro";
 import HighLight from "../utils/HighLight.astro";
+
+const lang = (Astro.locals as { lang: "en" | "es" }).lang || "en";
+const t = translations.PORTFOLIO[lang];
 ---
 
 <section
@@ -18,294 +19,39 @@ import HighLight from "../utils/HighLight.astro";
   <ContainerSm>
     <!-- Page Titles -->
     <div>
-      <h2
-        class="font-medium text-zinc-400 flex items-center gap-2"
-        id="portfolio-heading"
-      >
-        <Certificate class="size-8" />Courses and Certifications
-      </h2>
-      <h3 class="mt-1 font-semibold">
-        These are some of my most relevant
-        <span class="text-cyan-500"> courses and certifications </span>
-      </h3>
+      {(<t.title />)}
     </div>
 
     <!-- Courses and Certifications Cards -->
     <div
       class="mt-10 lg:pl-10 flex flex-col gap-8 lg:border-l-2 border-zinc-700 w-full"
     >
-      <CoursesCard
-        title="React"
-        platform="Informatorio Chaco"
-        date="July - November 2024"
-      >
-        <p>
-          <span class="text-gray-200 text-pretty">
-            <p>
-              <span class="text-gray-200 text-pretty">
-                Developed and deployed <HighLight
-                  >interactive web applications</HighLight
-                > using <HighLight>React and Next.js.</HighLight> Implemented state
-                management with <HighLight
-                  >useState, useEffect, useRef</HighLight
-                > and consolidated the use of <HighLight
-                  >React Router, TypeScript, and Context API</HighLight
-                >. Integrated authentication with <HighLight
-                  >NextAuth and JWT</HighLight
-                >, connected to databases like <HighLight>MongoDB</HighLight>,
-                and consumed APIs with <HighLight>Axios</HighLight>. Optimized
-                styling with <HighLight>Tailwind CSS</HighLight> and enhanced user
-                experience with <HighLight>Framer Motion animations</HighLight>.
-                Applied these skills in personal projects, including an <HighLight
-                  >audio streaming app</HighLight
-                > inspired by YouTube Music.
-              </span>
-            </p>
-          </span>
-        </p>
-        <GeneralButton
-          class="mt-6"
-          as="a"
-          target="_blank"
-          href="/Certifications/React-Informatorio.pdf"
-        >
-          View Certification
-        </GeneralButton>
-      </CoursesCard>
-      <CoursesCard
-        title="Inglés Técnico (Technical English)"
-        platform="Informatorio Chaco"
-        date="July - November 2024"
-      >
-        <p>
-          <span class="text-gray-200 text-pretty">
-            Enhanced my <HighLight>English proficiency</HighLight> in reading, writing,
-            and speaking, with a specific focus on <HighLight
-              >technical terminology in programming</HighLight
-            >. Applied these skills in various projects to improve
-            documentation, communication, and coding efficiency.
-          </span>
-        </p>
-
-        <GeneralButton
-          class="mt-6"
-          as="a"
-          target="_blank"
-          href="/Certifications/InglesTecnico-Informatorio.pdf"
-        >
-          View Certification
-        </GeneralButton>
-      </CoursesCard>
-      <CoursesCard
-        title="JavaScript Algorithms and Data Structures (Beta)"
-        platform="freeCodeCamp"
-        date="July 2024"
-      >
-        <p>
-          <span class="text-gray-200 text-pretty">
-            Strengthened my <HighLight>JavaScript</HighLight> skills by building
-            <HighLight>interactive applications</HighLight>
-            and improving my understanding of <HighLight
-              >functions, arrays, objects, and asynchronous programming</HighLight
-            >. Gained experience in <HighLight
-              >DOM manipulation, event handling,</HighLight
-            > and best practices for clean and maintainable code.
-          </span>
-        </p>
-
-        <GeneralButton
-          class="mt-6"
-          as="a"
-          target="_blank"
-          href="/Certifications/JsDataStructures-freeCodeCamp.png"
-        >
-          View Certification
-        </GeneralButton>
-      </CoursesCard>
-      <CoursesCard
-        title="Introducción a la Programación (Introduction to the Programming)"
-        platform="Informatorio Chaco"
-        date="May - June 2024"
-      >
-        <p>
-          <span class="text-gray-200 text-pretty">
-            Gained hands-on experience with <HighLight
-              >HTML, CSS3, Git, and GitHub</HighLight
-            > by developing a personal portfolio website. Applied <HighLight
-              >best programming practices</HighLight
-            > to improve code structure, maintainability, and accessibility.
-          </span>
-        </p>
-
-        <GeneralButton
-          class="mt-6"
-          as="a"
-          target="_blank"
-          href="/Certifications/IntroduccionProgramacion-Informatorio.pdf"
-        >
-          View Certification
-        </GeneralButton>
-      </CoursesCard>
-
-      <!-- Courses Hidden -->
-      <div id="coursesHidden" class="hidden flex-col gap-8">
-        <CoursesCard
-          title="Legacy JavaScript Algorithms and Data Structures"
-          platform="freeCodeCamp"
-          date="May - 2024"
-        >
-          <p>
-            <span class="text-gray-200 text-pretty">
-              Strengthened my understanding of <HighLight>JavaScript</HighLight>
-              by working with <HighLight
-                >variables, functions, and classes</HighLight
-              >. Improved my ability to perform <HighLight
-                >arithmetic operations</HighLight
-              > and efficiently manipulate <HighLight
-                >arrays and objects</HighLight
-              >.
-            </span>
-          </p>
-          <GeneralButton
-            class="mt-6"
-            as="a"
-            target="_blank"
-            href="/Certifications/LegacyJs-freeCodeCamp.png"
-          >
-            View Certification
-          </GeneralButton>
-        </CoursesCard>
-        <CoursesCard
-          title="Curso CSS3 (CSS3 Course)"
-          platform="Ademass"
-          date="May - 2024"
-        >
-          <p>
-            <span class="text-gray-200 text-pretty">
-              Applied <HighLight>CSS3</HighLight> concepts in real projects, improving
-              my skills in <HighLight
-                >selectors, classes, and responsive design</HighLight
-              >. Focused on <HighLight>Flexbox and Grid</HighLight> for structuring
-              layouts and developed <HighLight
-                >animations and transitions</HighLight
-              > to enhance <HighLight>user experience</HighLight>. Also learned
-              best practices for <HighLight
-                >scalable and maintainable styles</HighLight
-              >.
-            </span>
-          </p>
-          <GeneralButton
-            class="mt-6"
-            as="a"
-            target="_blank"
-            href="/Certifications/CSS3-Ademass.pdf"
-          >
-            View Certification
-          </GeneralButton>
-        </CoursesCard>
-        <CoursesCard
-          title="Curso HTML5 (HTML5 Course)"
-          platform="Ademass"
-          date="May - 2024"
-        >
-          <p>
-            <span class="text-gray-200 text-pretty">
-              Learned to build <HighLight>structured and accessible</HighLight> web
-              applications using <HighLight>HTML5</HighLight>. Focused on <HighLight
-                >semantic elements, headings, forms, and attributes</HighLight
-              > to improve <HighLight>SEO and user experience</HighLight>.
-              Gained experience with <HighLight>ARIA roles</HighLight> for accessibility
-              and integrated multimedia elements like <HighLight
-                >videos and audio</HighLight
-              > to create engaging content.
-            </span>
-          </p>
-          <GeneralButton
-            class="mt-6"
-            as="a"
-            target="_blank"
-            href="/Certifications/HTML5-Ademass.pdf"
-          >
-            View Certification
-          </GeneralButton>
-        </CoursesCard>
-        <CoursesCard
-          title="Responsive Web Design"
-          platform="freeCodeCamp"
-          date="April - 2024"
-        >
-          <p>
-            <span class="text-gray-200 text-pretty">
-              Developed <HighLight>responsive websites</HighLight> using <HighLight
-                >HTML5, CSS3, Flexbox, and Grid</HighLight
-              >, ensuring adaptability across different devices. Implemented <HighLight
-                >media queries</HighLight
-              > to create fluid designs that adjust dynamically to screen sizes.
-              Built several <HighLight>real-world projects</HighLight> to solidify
-              my skills in modern <HighLight
-                >web design and accessibility</HighLight
-              >.
-            </span>
-          </p>
-          <GeneralButton
-            class="mt-6"
-            as="a"
-            target="_blank"
-            href="/Certifications/ResponsiveWD-freeCodeCamp.png"
-          >
-            View Certification
-          </GeneralButton>
-        </CoursesCard>
-        <CoursesCard
-          title="Desarrollo Web (Web Development)"
-          platform="Informatorio Chaco"
-          date="August - December 2022"
-        >
-          <p>
-            <span class="text-gray-200 text-pretty">
-              Learned and applied backend oriented programming skills using
-              <HighLight>Python and Django.</HighLight> Developed the user interface
-              for an “association” using HTML CSS and Vanilla JavaScript. Implemented
-              user authentication and user storage in <HighLight
-                >SQL Server and SQLite3</HighLight
-              > databases. This was one of my first experiences for a real client.
-            </span>
-          </p>
-          <GeneralButton
-            class="mt-6"
-            as="a"
-            target="_blank"
-            href="/Certifications/DesarrolloWeb-Informatorio.png"
-          >
-            View Certification
-          </GeneralButton>
-        </CoursesCard>
-      </div>
-    </div>
-    <div class="mt-10 w-full flex justify-center">
-      <BlueButtonShadow as="button" id="showMoreBtn">
-        View More
-      </BlueButtonShadow>
+      {(<t.coursesCards />)}
     </div>
   </ContainerSm>
-</section>
+  <div class="mt-10 w-full flex justify-center">
+    <BlueButtonShadow as="button" id="showMoreBtn">
+      View More
+    </BlueButtonShadow>
+  </div>
 
-<!-- Script to handle opening and closing of elements -->
-<script>
-  const containerHidden = document.getElementById("coursesHidden");
-  const showMoreBtn = document.getElementById("showMoreBtn");
+  <!-- Script to handle opening and closing of elements -->
+  <script>
+    const containerHidden = document.getElementById("coursesHidden");
+    const showMoreBtn = document.getElementById("showMoreBtn");
 
-  function handleBtn() {
-    if (containerHidden?.classList.contains("hidden")) {
-      containerHidden.classList.remove("hidden");
-      containerHidden.classList.add("flex");
-      showMoreBtn ? (showMoreBtn.textContent = "Show Less") : "";
-    } else {
-      containerHidden?.classList.remove("flex");
-      containerHidden?.classList.add("hidden");
-      showMoreBtn ? (showMoreBtn.textContent = "Show More") : "";
+    function handleBtn() {
+      if (containerHidden?.classList.contains("hidden")) {
+        containerHidden.classList.remove("hidden");
+        containerHidden.classList.add("flex");
+        showMoreBtn ? (showMoreBtn.textContent = "Show Less") : "";
+      } else {
+        containerHidden?.classList.remove("flex");
+        containerHidden?.classList.add("hidden");
+        showMoreBtn ? (showMoreBtn.textContent = "Show More") : "";
+      }
     }
-  }
 
-  showMoreBtn?.addEventListener("click", handleBtn);
-</script>
+    showMoreBtn?.addEventListener("click", handleBtn);
+  </script>
+</section>
