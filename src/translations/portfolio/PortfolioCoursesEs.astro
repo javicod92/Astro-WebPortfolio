@@ -2,6 +2,10 @@
 import GeneralButton from "../../components/buttons/GeneralButton.astro";
 import CoursesCard from "../../components/coursesCard/CoursesCard.astro";
 import HighLight from "../../utils/HighLight.astro";
+import { translations } from "../i18n";
+
+const lang = (Astro.locals as { lang: "en" | "es" }).lang || "en";
+const t = translations.PORTFOLIO[lang];
 ---
 
 <CoursesCard
@@ -38,7 +42,7 @@ import HighLight from "../../utils/HighLight.astro";
     target="_blank"
     href="/Certifications/React-Informatorio.pdf"
   >
-    Ver Certificación
+    {t.buttonCertification}
   </GeneralButton>
 </CoursesCard>
 <CoursesCard
@@ -68,17 +72,17 @@ import HighLight from "../../utils/HighLight.astro";
 <CoursesCard
   title="JavaScript Algorithms and Data Structures (Beta)"
   platform="freeCodeCamp"
-  date="July 2024"
+  date="Julio 2024"
 >
   <p>
     <span class="text-gray-200 text-pretty">
-      Strengthened my <HighLight>JavaScript</HighLight> skills by building
-      <HighLight>interactive applications</HighLight>
-      and improving my understanding of <HighLight
-        >functions, arrays, objects, and asynchronous programming</HighLight
-      >. Gained experience in <HighLight
-        >DOM manipulation, event handling,</HighLight
-      > and best practices for clean and maintainable code.
+      Fortalecí mis habilidades en <HighLight>JavaScript</HighLight> construyendo
+      <HighLight>aplicaciones interactivas</HighLight>
+      y mejorando mi entendimiento de <HighLight
+        >funciones, arrays, objetos, y programación asíncrona.</HighLight
+      > Fortalecí mi experiencia en <HighLight
+        >manipulación del DOM, manejo de eventos,</HighLight
+      > y las mejores prácticas para lograr un código limpio y escalable.
     </span>
   </p>
 
@@ -88,21 +92,21 @@ import HighLight from "../../utils/HighLight.astro";
     target="_blank"
     href="/Certifications/JsDataStructures-freeCodeCamp.png"
   >
-    View Certification
+    {t.buttonCertification}
   </GeneralButton>
 </CoursesCard>
 <CoursesCard
-  title="Introducción a la Programación (Introduction to the Programming)"
+  title="Introducción a la Programación"
   platform="Informatorio Chaco"
-  date="May - June 2024"
+  date="Mayo - Junio 2024"
 >
   <p>
     <span class="text-gray-200 text-pretty">
-      Gained hands-on experience with <HighLight
-        >HTML, CSS3, Git, and GitHub</HighLight
-      > by developing a personal portfolio website. Applied <HighLight
-        >best programming practices</HighLight
-      > to improve code structure, maintainability, and accessibility.
+      Gané experiencia práctica con <HighLight
+        >HTML, CSS3, Git y GitHub</HighLight
+      > desarrollando un portafolios web personal. Apliqué <HighLight
+        >buenas prácticas de programación</HighLight
+      > para mejorar la estructura del código, mantenibilidad y accesibilidad.
     </span>
   </p>
 
@@ -112,7 +116,7 @@ import HighLight from "../../utils/HighLight.astro";
     target="_blank"
     href="/Certifications/IntroduccionProgramacion-Informatorio.pdf"
   >
-    View Certification
+    {t.buttonCertification}
   </GeneralButton>
 </CoursesCard>
 
@@ -121,15 +125,15 @@ import HighLight from "../../utils/HighLight.astro";
   <CoursesCard
     title="Legacy JavaScript Algorithms and Data Structures"
     platform="freeCodeCamp"
-    date="May - 2024"
+    date="Mayo - 2024"
   >
     <p>
       <span class="text-gray-200 text-pretty">
-        Strengthened my understanding of <HighLight>JavaScript</HighLight>
-        by working with <HighLight>variables, functions, and classes</HighLight
-        >. Improved my ability to perform <HighLight
-          >arithmetic operations</HighLight
-        > and efficiently manipulate <HighLight>arrays and objects</HighLight>.
+        Fortalecí mi entendimiento de <HighLight>JavaScript</HighLight>
+        trabajando con <HighLight>variables, funciones y clases.</HighLight> Mejoré
+        mis habilidades para llevar a cabo <HighLight
+          >operaciones aritméticas</HighLight
+        > y manipular eficientemente <HighLight>arrays y objetos.</HighLight>
       </span>
     </p>
     <GeneralButton
@@ -138,24 +142,21 @@ import HighLight from "../../utils/HighLight.astro";
       target="_blank"
       href="/Certifications/LegacyJs-freeCodeCamp.png"
     >
-      View Certification
+      {t.buttonCertification}
     </GeneralButton>
   </CoursesCard>
-  <CoursesCard
-    title="Curso CSS3 (CSS3 Course)"
-    platform="Ademass"
-    date="May - 2024"
-  >
+  <CoursesCard title="Curso CSS3" platform="Ademass" date="Mayo - 2024">
     <p>
       <span class="text-gray-200 text-pretty">
-        Applied <HighLight>CSS3</HighLight> concepts in real projects, improving
-        my skills in <HighLight
-          >selectors, classes, and responsive design</HighLight
-        >. Focused on <HighLight>Flexbox and Grid</HighLight> for structuring layouts
-        and developed <HighLight>animations and transitions</HighLight> to enhance
-        <HighLight>user experience</HighLight>. Also learned best practices for <HighLight
-          >scalable and maintainable styles</HighLight
-        >.
+        Apliqué conceptos de <HighLight>CSS3</HighLight> en proyectos reales, mejoré
+        mis habilidades en el uso de <HighLight
+          >selectores, clases y diseño web responsivo.</HighLight
+        > Me enfoqué en <HighLight>Flexbox y Grid</HighLight> para estructurar layouts
+        y desarrollé <HighLight>animaciones y transiciones</HighLight> para mejorar
+        la <HighLight>experiencia de usuario</HighLight>. También aprendí las
+        mejores prácticas para brindar un código de estilos <HighLight
+          >fáciles de mantener y escalar.</HighLight
+        >
       </span>
     </p>
     <GeneralButton
@@ -164,7 +165,7 @@ import HighLight from "../../utils/HighLight.astro";
       target="_blank"
       href="/Certifications/CSS3-Ademass.pdf"
     >
-      View Certification
+      {t.buttonCertification}
     </GeneralButton>
   </CoursesCard>
   <CoursesCard
@@ -189,7 +190,7 @@ import HighLight from "../../utils/HighLight.astro";
       target="_blank"
       href="/Certifications/HTML5-Ademass.pdf"
     >
-      View Certification
+      {t.buttonCertification}
     </GeneralButton>
   </CoursesCard>
   <CoursesCard
@@ -214,7 +215,7 @@ import HighLight from "../../utils/HighLight.astro";
       target="_blank"
       href="/Certifications/ResponsiveWD-freeCodeCamp.png"
     >
-      View Certification
+      {t.buttonCertification}
     </GeneralButton>
   </CoursesCard>
   <CoursesCard
@@ -238,7 +239,7 @@ import HighLight from "../../utils/HighLight.astro";
       target="_blank"
       href="/Certifications/DesarrolloWeb-Informatorio.png"
     >
-      View Certification
+      {t.buttonCertification}
     </GeneralButton>
   </CoursesCard>
 </div>

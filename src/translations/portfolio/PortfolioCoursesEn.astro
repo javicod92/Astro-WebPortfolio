@@ -2,6 +2,10 @@
 import GeneralButton from "../../components/buttons/GeneralButton.astro";
 import CoursesCard from "../../components/coursesCard/CoursesCard.astro";
 import HighLight from "../../utils/HighLight.astro";
+import { translations } from "../i18n";
+
+const lang = (Astro.locals as { lang: "en" | "es" }).lang || "en";
+const t = translations.PORTFOLIO[lang];
 ---
 
 <CoursesCard
@@ -38,7 +42,7 @@ import HighLight from "../../utils/HighLight.astro";
     target="_blank"
     href="/Certifications/React-Informatorio.pdf"
   >
-    View Certification
+    {t.buttonCertification}
   </GeneralButton>
 </CoursesCard>
 <CoursesCard
@@ -62,7 +66,7 @@ import HighLight from "../../utils/HighLight.astro";
     target="_blank"
     href="/Certifications/InglesTecnico-Informatorio.pdf"
   >
-    View Certification
+    {t.buttonCertification}
   </GeneralButton>
 </CoursesCard>
 <CoursesCard
@@ -88,7 +92,7 @@ import HighLight from "../../utils/HighLight.astro";
     target="_blank"
     href="/Certifications/JsDataStructures-freeCodeCamp.png"
   >
-    View Certification
+    {t.buttonCertification}
   </GeneralButton>
 </CoursesCard>
 <CoursesCard
@@ -112,7 +116,7 @@ import HighLight from "../../utils/HighLight.astro";
     target="_blank"
     href="/Certifications/IntroduccionProgramacion-Informatorio.pdf"
   >
-    View Certification
+    {t.buttonCertification}
   </GeneralButton>
 </CoursesCard>
 
@@ -138,7 +142,7 @@ import HighLight from "../../utils/HighLight.astro";
       target="_blank"
       href="/Certifications/LegacyJs-freeCodeCamp.png"
     >
-      View Certification
+      {t.buttonCertification}
     </GeneralButton>
   </CoursesCard>
   <CoursesCard
@@ -164,7 +168,7 @@ import HighLight from "../../utils/HighLight.astro";
       target="_blank"
       href="/Certifications/CSS3-Ademass.pdf"
     >
-      View Certification
+      {t.buttonCertification}
     </GeneralButton>
   </CoursesCard>
   <CoursesCard
@@ -189,7 +193,7 @@ import HighLight from "../../utils/HighLight.astro";
       target="_blank"
       href="/Certifications/HTML5-Ademass.pdf"
     >
-      View Certification
+      {t.buttonCertification}
     </GeneralButton>
   </CoursesCard>
   <CoursesCard
@@ -214,7 +218,7 @@ import HighLight from "../../utils/HighLight.astro";
       target="_blank"
       href="/Certifications/ResponsiveWD-freeCodeCamp.png"
     >
-      View Certification
+      {t.buttonCertification}
     </GeneralButton>
   </CoursesCard>
   <CoursesCard
@@ -238,7 +242,7 @@ import HighLight from "../../utils/HighLight.astro";
       target="_blank"
       href="/Certifications/DesarrolloWeb-Informatorio.png"
     >
-      View Certification
+      {t.buttonCertification}
     </GeneralButton>
   </CoursesCard>
 </div>
