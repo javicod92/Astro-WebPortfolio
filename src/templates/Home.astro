@@ -11,7 +11,7 @@ import { translations } from "../translations/i18n";
 import GeneralContainer from "../utils/GeneralContainer.astro";
 
 const lang = (Astro.locals as { lang: "en" | "es" }).lang || "en";
-const t = translations.Home[lang];
+const t = translations.HOME[lang];
 ---
 
 <!-- Home Section -->
@@ -29,13 +29,23 @@ const t = translations.Home[lang];
       {
         (
           <h1 class="font-semibold flex items-center gap-4 mt-2 flex-wrap">
-            {<t.h1 />}
+            <div set:html={t.h1} />
+            <a
+              class="flex justify-center items-center"
+              href="https://linkedin.com/in/aldo-javier-codutti"
+              target="_blank"
+              rel="noopener me"
+              aria-label="Check my LinkedIn profile"
+            >
+              <Badge>{t.badge}</Badge>
+            </a>
           </h1>
         )
       }
-      <p class="opacity-80 font-extralight mt-4 text-pretty">
-        {(<t.description />)}
-      </p>
+      <p
+        class="opacity-80 font-extralight mt-4 text-pretty"
+        set:html={t.description}
+      />
 
       <!-- Socials -->
       <ul class="mt-10 flex gap-4">

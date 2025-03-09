@@ -6,7 +6,7 @@ import { translations } from "../../translations/i18n";
 import Language from "../../icons/Language.astro";
 
 const lang = (Astro.locals as { lang: "en" | "es" }).lang || "en";
-const t = translations.Header[lang];
+const t = translations.HEADER.Navigation[lang];
 ---
 
 <header
@@ -29,33 +29,20 @@ const t = translations.Header[lang];
       id="navigation"
       class="absolute top-0 -Left-full w-full h-screen bg-zinc-900 transition-all lg:transition-none ease-in-out duration-300 lg:static flex flex-col items-center -z-10 py-32 lg:flex-row gap-8 text-white/80 lg:p-0 lg:w-auto lg:h-auto lg:z-0 lg:bg-transparent"
     >
-      <a class="transition-colors duration-250 hover:text-cyan-400" href="#home"
-        >{t.home}</a
-      >
-      <a
-        class="transition-colors duration-250 hover:text-cyan-400"
-        href="#about">{t.about}</a
-      >
-      <a
-        class="transition-colors duration-250 hover:text-cyan-400"
-        href="#skills">{t.skills}</a
-      >
-      <a
-        class="transition-colors duration-250 hover:text-cyan-400"
-        href="#portfolio">{t.portfolio}</a
-      >
-      <a
-        class="transition-colors duration-250 hover:text-cyan-400"
-        href="#projects">{t.projects}</a
-      >
-      <a
-        class="transition-colors duration-250 hover:text-cyan-400"
-        href="#contact">{t.contact}</a
-      >
+      {
+        t.map(({ item, href }) => (
+          <a
+            class="transition-colors duration-250 hover:text-cyan-400"
+            href={`#${href}`}
+          >
+            {item}
+          </a>
+        ))
+      }
       <button
         id="language"
         name={lang}
-        class="flex gap-2 cursor-pointer hover:text-cyan-500 trnsition ease-in-out duration-300"
+        class="flex gap-2 cursor-pointer hover:text-cyan-500 transition ease-in-out duration-300"
       >
         <Language />
         <span>{lang === "en" ? "EN" : "ES"}</span>
@@ -116,7 +103,6 @@ const t = translations.Header[lang];
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const sectionId = entry.target.getAttribute("id");
-            console.log("entro", sectionId);
 
             // Remove the class "--Active" to all Links
             anchors.forEach((link) => link.classList.remove("--Active"));

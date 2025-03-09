@@ -1,4 +1,5 @@
 ---
+import { jsx } from "astro/jsx-runtime";
 import TechnologyCard from "../components/technologyCard/TechnologyCard.astro";
 import AstroIcon from "../icons/AstroIcon.astro";
 import CSS3 from "../icons/CSS3.astro";
@@ -7,6 +8,7 @@ import JavaScript from "../icons/JavaScript.astro";
 import Nextjs from "../icons/Nextjs.astro";
 import ReactIcon from "../icons/React.astro";
 import TailwindCSS from "../icons/TailwindCSS.astro";
+import Tool from "../icons/Tool.astro";
 import TypeScript from "../icons/TypeScript.astro";
 import { translations } from "../translations/i18n";
 import GeneralContainer from "../utils/GeneralContainer.astro";
@@ -36,9 +38,22 @@ const skills = [
     <!-- Skills Description -->
     <div class="flex flex-col gap-6 lg:w-1/2">
       <div>
-        {(<t.title />)}
+        <h2
+          class="font-medium text-zinc-400 flex items-center gap-2"
+          id="skills-heading"
+        >
+          <Tool class="size-6" aria-hidden="true" />{t.h2}
+        </h2>
+        <h3 class="mt-1 font-semibold" set:html={t.h3} />
       </div>
-      {(<t.description />)}
+      {
+        t.description.map((description) => (
+          <p
+            class="mt-2 text-pretty border-l-4 border-cyan-600 pl-4"
+            set:html={description}
+          />
+        ))
+      }
     </div>
 
     <!-- Skills Cards -->

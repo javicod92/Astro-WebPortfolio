@@ -4,18 +4,21 @@ import FooterSm from "../components/footer/FooterSm.astro";
 import FooterXl from "../components/footer/FooterXl.astro";
 import Header from "../components/header/Header.astro";
 import "../styles/global.css";
+import { translations } from "../translations/i18n";
+
+const lang = (Astro.locals as { lang: "en" | "es" }).lang || "en";
+const t = translations.ROOT[lang];
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>
-      Web Portfolio | Javier Codutti - Developer & Programmer with 2+ Years of
-      Experience
+      {t.title}
     </title>
     <meta
       name="description"
