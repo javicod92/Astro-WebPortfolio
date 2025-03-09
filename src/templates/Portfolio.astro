@@ -19,14 +19,65 @@ const t = translations.PORTFOLIO[lang];
   <ContainerSm>
     <!-- Page Titles -->
     <div>
-      {(<t.title />)}
+      <h2
+        class="font-medium text-zinc-400 flex items-center gap-2"
+        id="portfolio-heading"
+      >
+        <Certificate class="size-8" />{t.h2}
+      </h2>
+      <h3 class="mt-1 font-semibold" set:html={t.h3} />
     </div>
 
     <!-- Courses and Certifications Cards -->
     <div
       class="mt-10 lg:pl-10 flex flex-col gap-8 lg:border-l-2 border-zinc-700 w-full"
     >
-      {(<t.coursesCards />)}
+      {
+        t.coursesCards
+          .map((course) => (
+            <CoursesCard
+              title={course.title}
+              platform={course.platform}
+              date={course.date}
+            >
+              <p set:html={course.description} />
+              <GeneralButton
+                class="mt-6"
+                as="a"
+                target="_blank"
+                href={course.href}
+              >
+                {t.certificationButton}
+              </GeneralButton>
+            </CoursesCard>
+          ))
+          .slice(0, 4)
+      }
+
+      <!-- Courses Hidden -->
+      <div id="coursesHidden" class="hidden flex-col gap-8">
+        {
+          t.coursesCards
+            .map((course) => (
+              <CoursesCard
+                title={course.title}
+                platform={course.platform}
+                date={course.date}
+              >
+                <p set:html={course.description} />
+                <GeneralButton
+                  class="mt-6"
+                  as="a"
+                  target="_blank"
+                  href={course.href}
+                >
+                  {t.certificationButton}
+                </GeneralButton>
+              </CoursesCard>
+            ))
+            .slice(4)
+        }
+      </div>
     </div>
   </ContainerSm>
   <div class="mt-10 w-full flex justify-center">

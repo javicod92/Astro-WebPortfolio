@@ -8,64 +8,10 @@ const lang = (Astro.locals as { lang: "en" | "es" }).lang || "en";
 const t = translations.PORTFOLIO[lang];
 ---
 
-<CoursesCard
-  title="React"
-  platform="Informatorio Chaco"
-  date="Julio - Noviembre 2024"
->
-  <p>
-    <span class="text-gray-200 text-pretty">
-      <p>
-        <span class="text-gray-200 text-pretty">
-          Desarrollé y desplegué <HighLight
-            >aplicaciones web interactivas</HighLight
-          > usando <HighLight>React y Next.js.</HighLight> Implementé el manejo de
-          estados con <HighLight>useState, useEffect, useRef</HighLight> y consolidé
-          el uso de <HighLight
-            >React Router, TypeScript, y Context API</HighLight
-          >. Integré autenticación con <HighLight>NextAuth y JWT</HighLight>,
-          conecté a base de datos como <HighLight>MongoDB</HighLight>, y consumí
-          APIs con <HighLight>Axios</HighLight>. Optimice estilos con <HighLight
-            >Tailwind CSS</HighLight
-          > y mejoré la experiencia de usuario con
-          <HighLight>Framer Motion animations</HighLight>. Apliqué estas
-          habilidades en proyectos personales, incluyendo una <HighLight
-            >aplicación de reproducción de audio</HighLight
-          > inspirada en YouTube Music.
-        </span>
-      </p>
-    </span>
-  </p>
-  <GeneralButton
-    class="mt-6"
-    as="a"
-    target="_blank"
-    href="/Certifications/React-Informatorio.pdf"
-  >
-    {t.buttonCertification}
-  </GeneralButton>
-</CoursesCard>
-<CoursesCard
-  title="Inglés Técnico"
-  platform="Informatorio Chaco"
-  date="Julio - Noviembre 2024"
->
-  <p>
-    <span class="text-gray-200 text-pretty">
-      Mejoré mi <HighLight>dominio de Inglés</HighLight> en lectura, escritura y
-      habla, con un enfoque especifico sobre <HighLight
-        >terminologías técnicas en programación.</HighLight
-      > Apliqué estas habilidades en multiples proyectos para mejorar documentación,
-      comunicación y eficiencia del código.
-    </span>
-  </p>
+<CoursesCard>
+  <p></p>
 
-  <GeneralButton
-    class="mt-6"
-    as="a"
-    target="_blank"
-    href="/Certifications/InglesTecnico-Informatorio.pdf"
-  >
+  <GeneralButton class="mt-6" as="a" target="_blank">
     Ver Certificación
   </GeneralButton>
 </CoursesCard>
@@ -76,12 +22,12 @@ const t = translations.PORTFOLIO[lang];
 >
   <p>
     <span class="text-gray-200 text-pretty">
-      Fortalecí mis habilidades en <HighLight>JavaScript</HighLight> construyendo
-      <HighLight>aplicaciones interactivas</HighLight>
-      y mejorando mi entendimiento de <HighLight
-        >funciones, arrays, objetos, y programación asíncrona.</HighLight
-      > Fortalecí mi experiencia en <HighLight
-        >manipulación del DOM, manejo de eventos,</HighLight
+      Fortalecí mis habilidades en <span class="HighLight">JavaScript</span> construyendo
+      <span class="HighLight">aplicaciones interactivas</span>
+      y mejorando mi entendimiento de <span class="HighLight">
+        >funciones, arrays, objetos, y programación asíncrona.</span
+      > Fortalecí mi experiencia en <span class="HighLight">
+        >manipulación del DOM, manejo de eventos,</span
       > y las mejores prácticas para lograr un código limpio y escalable.
     </span>
   </p>
@@ -92,7 +38,7 @@ const t = translations.PORTFOLIO[lang];
     target="_blank"
     href="/Certifications/JsDataStructures-freeCodeCamp.png"
   >
-    {t.buttonCertification}
+    {t.certificationButton}
   </GeneralButton>
 </CoursesCard>
 <CoursesCard
@@ -102,10 +48,12 @@ const t = translations.PORTFOLIO[lang];
 >
   <p>
     <span class="text-gray-200 text-pretty">
-      Gané experiencia práctica con <HighLight
-        >HTML, CSS3, Git y GitHub</HighLight
-      > desarrollando un portafolios web personal. Apliqué <HighLight
-        >buenas prácticas de programación</HighLight
+      Gané experiencia práctica con <span class="HighLight">
+        >HTML, CSS3, Git y GitHub</span
+      > desarrollando un portafolios web personal. Apliqué <span
+        class="HighLight"
+      >
+        >buenas prácticas de programación</span
       > para mejorar la estructura del código, mantenibilidad y accesibilidad.
     </span>
   </p>
@@ -116,7 +64,7 @@ const t = translations.PORTFOLIO[lang];
     target="_blank"
     href="/Certifications/IntroduccionProgramacion-Informatorio.pdf"
   >
-    {t.buttonCertification}
+    {t.certificationButton}
   </GeneralButton>
 </CoursesCard>
 
@@ -129,11 +77,14 @@ const t = translations.PORTFOLIO[lang];
   >
     <p>
       <span class="text-gray-200 text-pretty">
-        Fortalecí mi entendimiento de <HighLight>JavaScript</HighLight>
-        trabajando con <HighLight>variables, funciones y clases.</HighLight> Mejoré
-        mis habilidades para llevar a cabo <HighLight
-          >operaciones aritméticas</HighLight
-        > y manipular eficientemente <HighLight>arrays y objetos.</HighLight>
+        Fortalecí mi entendimiento de <span class="HighLight">JavaScript</span>
+        trabajando con <span class="HighLight"
+          >variables, funciones y clases.</span
+        > Mejoré mis habilidades para llevar a cabo <span class="HighLight">
+          >operaciones aritméticas</span
+        > y manipular eficientemente <span class="HighLight"
+          >arrays y objetos.</span
+        >
       </span>
     </p>
     <GeneralButton
@@ -142,20 +93,23 @@ const t = translations.PORTFOLIO[lang];
       target="_blank"
       href="/Certifications/LegacyJs-freeCodeCamp.png"
     >
-      {t.buttonCertification}
+      {t.certificationButton}
     </GeneralButton>
   </CoursesCard>
   <CoursesCard title="Curso CSS3" platform="Ademass" date="Mayo - 2024">
     <p>
       <span class="text-gray-200 text-pretty">
-        Apliqué conceptos de <HighLight>CSS3</HighLight> en proyectos reales, mejoré
-        mis habilidades en el uso de <HighLight
-          >selectores, clases y diseño web responsivo.</HighLight
-        > Me enfoqué en <HighLight>Flexbox y Grid</HighLight> para estructurar layouts
-        y desarrollé <HighLight>animaciones y transiciones</HighLight> para mejorar
-        la <HighLight>experiencia de usuario</HighLight>. También aprendí las
-        mejores prácticas para brindar un código de estilos <HighLight
-          >fáciles de mantener y escalar.</HighLight
+        Apliqué conceptos de <span class="HighLight">CSS3</span> en proyectos reales,
+        mejoré mis habilidades en el uso de <span class="HighLight">
+          >selectores, clases y diseño web responsivo.</span
+        > Me enfoqué en <span class="HighLight">Flexbox y Grid</span> para estructurar
+        layouts y desarrollé <span class="HighLight"
+          >animaciones y transiciones</span
+        > para mejorar la <span class="HighLight">experiencia de usuario</span>.
+        También aprendí las mejores prácticas para brindar un código de estilos <span
+          class="HighLight"
+        >
+          >fáciles de mantener y escalar.</span
         >
       </span>
     </p>
@@ -165,7 +119,7 @@ const t = translations.PORTFOLIO[lang];
       target="_blank"
       href="/Certifications/CSS3-Ademass.pdf"
     >
-      {t.buttonCertification}
+      {t.certificationButton}
     </GeneralButton>
   </CoursesCard>
   <CoursesCard
@@ -175,13 +129,15 @@ const t = translations.PORTFOLIO[lang];
   >
     <p>
       <span class="text-gray-200 text-pretty">
-        Learned to build <HighLight>structured and accessible</HighLight> web applications
-        using <HighLight>HTML5</HighLight>. Focused on <HighLight
-          >semantic elements, headings, forms, and attributes</HighLight
-        > to improve <HighLight>SEO and user experience</HighLight>. Gained
-        experience with <HighLight>ARIA roles</HighLight> for accessibility and integrated
-        multimedia elements like <HighLight>videos and audio</HighLight> to create
-        engaging content.
+        Learned to build <span class="HighLight">structured and accessible</span
+        > web applications using <span class="HighLight">HTML5</span>. Focused
+        on <span class="HighLight">
+          >semantic elements, headings, forms, and attributes</span
+        > to improve <span class="HighLight">SEO and user experience</span>.
+        Gained experience with <span class="HighLight">ARIA roles</span> for accessibility
+        and integrated multimedia elements like <span class="HighLight"
+          >videos and audio</span
+        > to create engaging content.
       </span>
     </p>
     <GeneralButton
@@ -190,7 +146,7 @@ const t = translations.PORTFOLIO[lang];
       target="_blank"
       href="/Certifications/HTML5-Ademass.pdf"
     >
-      {t.buttonCertification}
+      {t.certificationButton}
     </GeneralButton>
   </CoursesCard>
   <CoursesCard
@@ -200,13 +156,19 @@ const t = translations.PORTFOLIO[lang];
   >
     <p>
       <span class="text-gray-200 text-pretty">
-        Developed <HighLight>responsive websites</HighLight> using <HighLight
-          >HTML5, CSS3, Flexbox, and Grid</HighLight
-        >, ensuring adaptability across different devices. Implemented <HighLight
-          >media queries</HighLight
+        Developed <span class="HighLight">responsive websites</span> using <span
+          class="HighLight"
+        >
+          >HTML5, CSS3, Flexbox, and Grid</span
+        >, ensuring adaptability across different devices. Implemented <span
+          class="HighLight"
+        >
+          >media queries</span
         > to create fluid designs that adjust dynamically to screen sizes. Built
-        several <HighLight>real-world projects</HighLight> to solidify my skills
-        in modern <HighLight>web design and accessibility</HighLight>.
+        several <span class="HighLight">real-world projects</span> to solidify my
+        skills in modern <span class="HighLight"
+          >web design and accessibility</span
+        >.
       </span>
     </p>
     <GeneralButton
@@ -215,7 +177,7 @@ const t = translations.PORTFOLIO[lang];
       target="_blank"
       href="/Certifications/ResponsiveWD-freeCodeCamp.png"
     >
-      {t.buttonCertification}
+      {t.certificationButton}
     </GeneralButton>
   </CoursesCard>
   <CoursesCard
@@ -226,10 +188,10 @@ const t = translations.PORTFOLIO[lang];
     <p>
       <span class="text-gray-200 text-pretty">
         Learned and applied backend oriented programming skills using
-        <HighLight>Python and Django.</HighLight> Developed the user interface for
-        an “association” using HTML CSS and Vanilla JavaScript. Implemented user
-        authentication and user storage in <HighLight
-          >SQL Server and SQLite3</HighLight
+        <span class="HighLight">Python and Django.</span> Developed the user interface
+        for an “association” using HTML CSS and Vanilla JavaScript. Implemented user
+        authentication and user storage in <span class="HighLight">
+          >SQL Server and SQLite3</span
         > databases. This was one of my first experiences for a real client.
       </span>
     </p>
@@ -239,7 +201,7 @@ const t = translations.PORTFOLIO[lang];
       target="_blank"
       href="/Certifications/DesarrolloWeb-Informatorio.png"
     >
-      {t.buttonCertification}
+      {t.certificationButton}
     </GeneralButton>
   </CoursesCard>
 </div>
