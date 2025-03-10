@@ -169,6 +169,16 @@ export const translations = {
       email: "E-MAIL",
       copyEmail: "Copy email",
       copyEmailAlert: "E-mail address copied to clipboard",
+      FORM: {
+        fullname: {
+          title: "Full Name",
+          placeholder: "Enter your full name here",
+        },
+        email: { title: "E-mail", placeholder: "Enter your email here" },
+        subject: { title: "Subject", placeholder: "Enter your subject here" },
+        message: { title: "Message", placeholder: "Enter your message here" },
+        sendButton: "Send",
+      },
     },
 
     es: {
@@ -179,6 +189,16 @@ export const translations = {
       email: "CORREO",
       copyEmail: "Copiar correo",
       copyEmailAlert: "Dirección de correo copiada al portapapeles",
+      FORM: {
+        fullname: {
+          title: "Nombre Completo",
+          placeholder: "Ingrese su nombre aquí",
+        },
+        email: { title: "Correo", placeholder: "Ingrese su correo aquí" },
+        subject: { title: "Asunto", placeholder: "Ingrese el asunto aquí" },
+        message: { title: "Mensaje", placeholder: "Ingrese su mensaje aquí" },
+        sendButton: "Enviar",
+      },
     },
   },
 };
