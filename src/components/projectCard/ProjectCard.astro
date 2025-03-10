@@ -1,7 +1,12 @@
 ---
+import YouTube from "../../icons/YouTube.astro";
+import { translations } from "../../translations/i18n";
 import ButtonBlue from "../buttons/ButtonBlue.astro";
 import GeneralButton from "../buttons/GeneralButton.astro";
 import TechnologyPill from "../technologyPill/TechnologyPill.astro";
+
+const lang = (Astro.locals as { lang: "en" | "es" }).lang || "en";
+const t = translations.PROJECTS[lang];
 
 type ProjectTypes = {
   src: string;
@@ -10,10 +15,11 @@ type ProjectTypes = {
   date: string;
   technologies: Array<Record<string, any>>;
   github: string;
-  live: string;
+  live?: string;
+  youtube?: Record<string, string>;
 };
 
-const { src, imageSm, title, date, technologies, github, live } =
+const { src, imageSm, title, date, technologies, github, live, youtube } =
   Astro.props as ProjectTypes;
 ---
 
@@ -38,7 +44,7 @@ const { src, imageSm, title, date, technologies, github, live } =
         height="500"
       />
       <div class="Overlay">
-        <div class="Text">Click to see the image</div>
+        <div class="Text">{t.clickToSee}</div>
       </div>
     </a>
   </div>
@@ -65,12 +71,25 @@ const { src, imageSm, title, date, technologies, github, live } =
     <!-- Buttons to view projects -->
     <div class="flex gap-2 mt-6 flex-wrap">
       <GeneralButton as="a" href={github} title={github} target="_blank">
-        View on GitHub
+        {t.viewOnGithub}
       </GeneralButton>
       {
         live && (
           <ButtonBlue as="a" href={live} title={live} target="_blank">
-            View on Vercel
+            {t.viewOnVercel}
+          </ButtonBlue>
+        )
+      }
+      {
+        youtube && (
+          <ButtonBlue
+            as="a"
+            href={youtube.href}
+            title={youtube.href}
+            target="_blank"
+            class="flex gap-2"
+          >
+            <YouTube class="size-6" /> {youtube.buttonTitle}
           </ButtonBlue>
         )
       }

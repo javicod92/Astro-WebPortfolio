@@ -26,6 +26,7 @@ type ProjectsType = Array<{
   technologies: Array<Record<string, any>>;
   github: string;
   live?: string;
+  youtube?: Record<string, string>;
   description: string;
 }>;
 
@@ -83,6 +84,10 @@ export const projectsCardsEn: ProjectsType = [
     ],
     github: "https://github.com/javicod92/podcast-player",
     live: "https://podcast-player-eight.vercel.app/",
+    youtube: {
+      buttonTitle: "See the Video on YouTube",
+      href: "https://youtu.be/1pzEEwrPn9Y",
+    },
     description: `<span class="text-gray-200 text-pretty"> A podcast player inspired by <span class="HighLight">YouTube Music.</span> With a <span class="HighLight">sleek</span> and <span class="HighLight">minimalist interface,</span> it lets you <span class="HighLight">explore,</span> <span class="HighLight">play,</span> and <span class="HighLight">manage podcasts</span> seamlessly. Built with <span class="HighLight">React,</span> <span class="HighLight">Vite,</span> and <span class="HighLight">TypeScript,</span> it leverages <span class="HighLight">useState,</span> <span class="HighLight">useEffect,</span> <span class="HighLight">useRef,</span> and a custom hook (<span class="HighLight">useFetch</span>) for optimized performance. The <span class="HighLight">playback control</span> is handled separately in a <span class="HighLight">dedicated section</span> of the code, ensuring a <span class="HighLight">clean</span> and <span class="HighLight">modular architecture.</span> This application ensures a <span class="HighLight">smooth</span> and <span class="HighLight">uninterrupted</span> audio playback experience. </span>`,
   },
 

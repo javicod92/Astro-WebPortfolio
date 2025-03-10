@@ -1,6 +1,7 @@
 import { coursesCardEn } from "./portfolio/coursesCardEn";
 import { coursesCardEs } from "./portfolio/coursesCardEs";
 import { projectsCardsEn } from "./projects/projectsCardsEn";
+import { projectsCardsEs } from "./projects/projectsCardsEs";
 
 export const translations = {
   //Page title
@@ -141,13 +142,19 @@ export const translations = {
       h2: "Projects",
       h3: `These are some of my <span class="text-cyan-500">most relevant projects</span>`,
       projectsCards: projectsCardsEn,
+      clickToSee: "Click to see the image",
+      viewOnGithub: "View on GitHub",
+      viewOnVercel: "View on Vercel",
       gotoGithub: "Go to GitHub",
     },
 
     es: {
       h2: "Proyectos",
       h3: `Estos son algunos de mis <span class="text-cyan-500">proyectos más relevantes</span>`,
-      projectsCards: projectsCardsEn,
+      projectsCards: projectsCardsEs,
+      clickToSee: "Click para ver la imagen",
+      viewOnGithub: "Ver en GitHub",
+      viewOnVercel: "Ver en Vercel",
       gotoGithub: "Ir a GitHub",
     },
   },
