@@ -5,7 +5,11 @@ import Github from "../icons/Github.astro";
 import LinkedIn from "../icons/LinkedIn.astro";
 import Mail from "../icons/Mail.astro";
 import Send from "../icons/Send.astro";
+import { translations } from "../translations/i18n";
 import ContainerSm from "../utils/ContainerSm.astro";
+
+const lang = (Astro.locals as { lang: "en" | "es" }).lang || "en";
+const t = translations.CONTACT[lang];
 ---
 
 <section
@@ -20,12 +24,9 @@ import ContainerSm from "../utils/ContainerSm.astro";
         class="font-medium text-zinc-400 flex items-center gap-2"
         id="contact-heading"
       >
-        <Send class="size-8" aria-hidden="true" />Contact Me! 😀
+        <Send class="size-8" aria-hidden="true" />{t.h2}
       </h2>
-      <h3 class="mt-1 font-semibold">
-        Do you like what you see?
-        <span class="text-cyan-500">Let's work together!</span>
-      </h3>
+      <h3 class="mt-1 font-semibold" set:html={t.h3} />
     </div>
 
     <!-- Contact Card -->
@@ -37,7 +38,7 @@ import ContainerSm from "../utils/ContainerSm.astro";
       >
         <!-- Social links -->
         <div class="flex flex-col items-center">
-          <h4 class="text-cyan-500 font-bold">NETWORKS</h4>
+          <h4 class="text-cyan-500 font-bold">{t.networks}</h4>
           <ul class="mt-4 flex gap-4">
             <li>
               <a
@@ -80,7 +81,7 @@ import ContainerSm from "../utils/ContainerSm.astro";
 
         <!-- Phone number -->
         <div class="flex flex-col items-center">
-          <h4 class="text-cyan-500 font-bold">PHONE</h4>
+          <h4 class="text-cyan-500 font-bold">{t.phone}</h4>
           <address class="mt-2 not-italic">
             <span class="text-base">+54 0362 155144398</span>
           </address>
@@ -88,7 +89,7 @@ import ContainerSm from "../utils/ContainerSm.astro";
 
         <!-- E-mail with copy function -->
         <div class="flex flex-col items-center">
-          <h4 class="text-cyan-500 font-bold">E-MAIL</h4>
+          <h4 class="text-cyan-500 font-bold">{t.email}</h4>
           <EmailWithCopyButton class="mt-2" />
         </div>
       </div>

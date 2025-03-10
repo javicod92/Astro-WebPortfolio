@@ -55,3 +55,7 @@ h4 {
   grid-auto-flow: row;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 }
+
+.HighLight {
+  @apply text-amber-200 font-medium;
+}

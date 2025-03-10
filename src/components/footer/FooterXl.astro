@@ -7,6 +7,10 @@ import LinkedIn from "../../icons/LinkedIn.astro";
 import Mail from "../../icons/Mail.astro";
 import Resend from "../../icons/Resend.astro";
 import TailwindCSS from "../../icons/TailwindCSS.astro";
+import { translations } from "../../translations/i18n";
+
+const lang = (Astro.locals as { lang: "en" | "es" }).lang || "en";
+const t = translations.FOOTER[lang];
 ---
 
 <footer class="w-full bg-[#131313] p-10 text-gray-300">
@@ -18,7 +22,7 @@ import TailwindCSS from "../../icons/TailwindCSS.astro";
       <h4
         class="lg:border-b border-gray-600 pb-2 text-cyan-500 text-lg font-semibold"
       >
-        Find me on
+        {t.findme}
       </h4>
       <ul class="mt-4 flex justify-center lg:justify-start gap-4">
         <li>
@@ -61,16 +65,27 @@ import TailwindCSS from "../../icons/TailwindCSS.astro";
       <h4
         class="lg:border-b border-gray-600 pb-2 text-cyan-500 text-lg font-semibold"
       >
-        Navigation
+        {t.navigation.title}
       </h4>
       <nav class="mt-4 flex flex-col justify-center md:flex-row gap-4">
-        <a href="#home" class="hover:text-cyan-400 transition">Home</a>
-        <a href="#about" class="hover:text-cyan-400 transition">About</a>
-        <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
-        <a href="#portfolio" class="hover:text-cyan-400 transition">Portfolio</a
+        <a href="#home" class="hover:text-cyan-400 transition"
+          >{t.navigation.home}</a
         >
-        <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
-        <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+        <a href="#about" class="hover:text-cyan-400 transition"
+          >{t.navigation.about}</a
+        >
+        <a href="#skills" class="hover:text-cyan-400 transition"
+          >{t.navigation.skills}</a
+        >
+        <a href="#portfolio" class="hover:text-cyan-400 transition"
+          >{t.navigation.portfolio}</a
+        >
+        <a href="#projects" class="hover:text-cyan-400 transition"
+          >{t.navigation.projects}</a
+        >
+        <a href="#contact" class="hover:text-cyan-400 transition"
+          >{t.navigation.contact}</a
+        >
       </nav>
     </div>
 
@@ -79,7 +94,7 @@ import TailwindCSS from "../../icons/TailwindCSS.astro";
       <h4
         class="lg:border-b border-gray-600 text-cyan-500 pb-2 text-lg font-semibold"
       >
-        Built with
+        {t.built}
       </h4>
       <div class="mt-4 flex justify-center lg:justify-start gap-4">
         <AstroIcon class="size-6" title="Astro" />

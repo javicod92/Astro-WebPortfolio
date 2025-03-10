@@ -2,6 +2,11 @@
 import Briefcase from "../../icons/Briefcase.astro";
 import Menu from "../../icons/Menu.astro";
 import GeneralContainer from "../../utils/GeneralContainer.astro";
+import { translations } from "../../translations/i18n";
+import Language from "../../icons/Language.astro";
+
+const lang = (Astro.locals as { lang: "en" | "es" }).lang || "en";
+const t = translations.HEADER.Navigation[lang];
 ---
 
 <header
@@ -24,29 +29,24 @@ import GeneralContainer from "../../utils/GeneralContainer.astro";
       id="navigation"
       class="absolute top-0 -Left-full w-full h-screen bg-zinc-900 transition-all lg:transition-none ease-in-out duration-300 lg:static flex flex-col items-center -z-10 py-32 lg:flex-row gap-8 text-white/80 lg:p-0 lg:w-auto lg:h-auto lg:z-0 lg:bg-transparent"
     >
-      <a class="transition-colors duration-250 hover:text-cyan-400" href="#home"
-        >Home</a
+      {
+        t.map(({ item, href }) => (
+          <a
+            class="transition-colors duration-250 hover:text-cyan-400"
+            href={`#${href}`}
+          >
+            {item}
+          </a>
+        ))
+      }
+      <button
+        id="language"
+        name={lang}
+        class="flex gap-2 cursor-pointer hover:text-cyan-500 transition ease-in-out duration-300"
       >
-      <a
-        class="transition-colors duration-250 hover:text-cyan-400"
-        href="#about">About</a
-      >
-      <a
-        class="transition-colors duration-250 hover:text-cyan-400"
-        href="#skills">Skills</a
-      >
-      <a
-        class="transition-colors duration-250 hover:text-cyan-400"
-        href="#portfolio">Portfolio</a
-      >
-      <a
-        class="transition-colors duration-250 hover:text-cyan-400"
-        href="#projects">Projects</a
-      >
-      <a
-        class="transition-colors duration-250 hover:text-cyan-400"
-        href="#contact">Contact</a
-      >
+        <Language />
+        <span>{lang === "en" ? "ES" : "EN"}</span>
+      </button>
     </nav>
     <button
       id="menu"
@@ -80,12 +80,22 @@ import GeneralContainer from "../../utils/GeneralContainer.astro";
 
 <!-- This script is used to add a background to my navigation bar -->
 <script>
+  import { switchLanguage } from "../../utils/switchLanguage";
+
   document.addEventListener("DOMContentLoaded", () => {
     const menuToOpen = document.getElementById("navigation");
     const MenuButton = document.getElementById("menu");
     const navbar = document.getElementById("navbar");
     const anchors = document.querySelectorAll("#navbar nav a");
     const sections = document.querySelectorAll("section");
+    const englisLang = document.getElementById("en");
+    const spanishLang = document.getElementById("es");
+
+    // Function to change the page language
+    const toggleLanguage = document.getElementById("language");
+    toggleLanguage?.addEventListener("click", () =>
+      switchLanguage((toggleLanguage as HTMLButtonElement).name),
+    );
 
     // Adding an IntersectionObserver Browser API
     const observer = new IntersectionObserver(
@@ -93,7 +103,6 @@ import GeneralContainer from "../../utils/GeneralContainer.astro";
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const sectionId = entry.target.getAttribute("id");
-            console.log("entro", sectionId);
 
             // Remove the class "--Active" to all Links
             anchors.forEach((link) => link.classList.remove("--Active"));

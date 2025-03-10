@@ -1,6 +1,10 @@
 ---
 import Copy from "../../icons/Copy.astro";
+import { translations } from "../../translations/i18n";
 import GeneralButton from "../buttons/GeneralButton.astro";
+
+const lang = (Astro.locals as { lang: "en" | "es" }).lang || "en";
+const t = translations.CONTACT[lang];
 
 type EmailProps = {
   class: string;
@@ -11,8 +15,11 @@ const { class: classList } = Astro.props as EmailProps;
 
 <div class={`flex flex-col items-center ${classList}`}>
   <span class="email px-2 text-base font-normal">javi.javier.jc@gmail.com</span>
-  <GeneralButton id="copyBtn" class="mt-4 px-6! flex! gap-2 items-center"
-    ><Copy aria-hidden="true" class="size-4" />Copy email</GeneralButton
+  <GeneralButton
+    id="copyBtn"
+    class="mt-4 px-6! flex! gap-2 items-center"
+    data-message={t.copyEmailAlert}
+    ><Copy aria-hidden="true" class="size-4" />{t.copyEmail}</GeneralButton
   >
 </div>
 
@@ -22,7 +29,7 @@ const { class: classList } = Astro.props as EmailProps;
   function copyEmail() {
     const email = document.querySelector(".email")!.textContent;
     navigator.clipboard.writeText(email!).then(() => {
-      alert("E-mail address copied to clipboard");
+      alert(copyBtn?.dataset.message || "E-mail address copied to clipboard");
     });
   }
 

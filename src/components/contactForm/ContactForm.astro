@@ -1,48 +1,62 @@
+---
+import { translations } from "../../translations/i18n";
+
+const lang = (Astro.locals as { lang: "en" | "es" }).lang || "en";
+const t = translations.CONTACT[lang];
+---
+
 <form id="submitForm" class="space-y-6 w-full">
   <div>
-    <label for="name" class="text-sm text-cyan-500">Full Name</label>
+    <label for="name" class="text-sm text-cyan-500"
+      >{t.FORM.fullname.title}</label
+    >
     <input
       type="text"
       id="name"
       name="name"
       required
-      placeholder="Enter your full name here"
+      placeholder={t.FORM.fullname.placeholder}
       class="w-full border-b-2 border-gray-600 text-white focus:border-cyan-500 outline-none py-2"
     />
   </div>
 
   <div class="relative">
-    <label for="email" class="text-sm text-cyan-500">E-mail</label>
+    <label for="email" class="text-sm text-cyan-500">{t.FORM.email.title}</label
+    >
     <input
       type="email"
       id="email"
       name="email"
       required
-      placeholder="Enter your email here"
+      placeholder={t.FORM.email.placeholder}
       class="w-full border-b-2 border-gray-600 text-white focus:border-cyan-500 outline-none py-2"
     />
   </div>
 
   <div class="relative">
-    <label for="subject" class="text-sm text-cyan-500">Subject</label>
+    <label for="subject" class="text-sm text-cyan-500"
+      >{t.FORM.subject.title}</label
+    >
     <input
       type="text"
       id="subject"
       name="subject"
       required
-      placeholder="Enter your subject here"
+      placeholder={t.FORM.subject.placeholder}
       class="w-full bg-transparent border-b-2 border-gray-600 text-white focus:border-cyan-500 outline-none py-2"
     />
   </div>
 
   <div>
-    <label for="message" class="text-sm text-cyan-500">Mensaje</label>
+    <label for="message" class="text-sm text-cyan-500"
+      >{t.FORM.message.title}</label
+    >
     <textarea
       id="message"
       name="message"
       required
       rows="4"
-      placeholder="Enter your message here"
+      placeholder={t.FORM.message.placeholder}
       class="w-full bg-transparent border-b-2 border-gray-600 text-white focus:border-cyan-500 outline-none py-2 resize-none"
     ></textarea>
   </div>
@@ -59,7 +73,7 @@
     type="submit"
     class="w-full p-3 text-white bg-cyan-600 hover:bg-cyan-700 rounded-md font-semibold transition cursor-pointer"
   >
-    Send
+    {t.FORM.sendButton}
   </button>
 </form>
 

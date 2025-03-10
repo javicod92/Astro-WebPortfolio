@@ -1,29 +1,13 @@
 ---
 import ProjectCard from "../components/projectCard/ProjectCard.astro";
-import Cloudinary from "../icons/Cloudinary.astro";
-import Zod from "../icons/Zod.astro";
 import CodeIcon from "../icons/CodeIcon.astro";
-import CSS3 from "../icons/CSS3.astro";
-import FramerMotion from "../icons/FramerMotion.astro";
-import JWT from "../icons/JWT.astro";
-import MongoDB from "../icons/MongoDB.astro";
-import Nextjs from "../icons/Nextjs.astro";
-import React from "../icons/React.astro";
-import Resend from "../icons/Resend.astro";
-import Sass from "../icons/Sass.astro";
-import Stripe from "../icons/Stripe.astro";
-import TailwindCSS from "../icons/TailwindCSS.astro";
-import TypeScript from "../icons/TypeScript.astro";
-import Vite from "../icons/Vite.astro";
 import GeneralContainer from "../utils/GeneralContainer.astro";
-import HighLight from "../utils/HighLight.astro";
-import Python from "../icons/Python.astro";
-import Django from "../icons/Django.astro";
-import HTML from "../icons/HTML.astro";
-import SQLite from "../icons/SQLite.astro";
-import JavaScript from "../icons/JavaScript.astro";
 import BlueButtonShadow from "../components/buttons/BlueButtonShadow.astro";
 import Github from "../icons/Github.astro";
+import { translations } from "../translations/i18n";
+
+const lang = (Astro.locals as { lang: "en" | "es" }).lang || "en";
+const t = translations.PROJECTS[lang];
 ---
 
 <section
@@ -38,252 +22,39 @@ import Github from "../icons/Github.astro";
         class="font-medium text-zinc-400 flex items-center gap-2"
         id="projects-heading"
       >
-        <CodeIcon class="size-8" />Projects
+        <CodeIcon class="size-8" />{t.h2}
       </h2>
-      <h3 class="mt-1 font-semibold">
-        These are some of my
-        <span class="text-cyan-500">most relevant projects</span>
-      </h3>
+      <h3 class="mt-1 font-semibold" set:html={t.h3} />
     </div>
 
     <!-- Main Project Sections -->
     <div class="mt-10 flex flex-col gap-10">
-      <!-- E-commerce Frontend -->
-      <ProjectCard
-        src="/Projects/ecommerce-frontSm.webp"
-        imageSm="/Projects/ecommerce-front.webp"
-        title="Fullstack E-commerce (Frontend)"
-        date="2024 - 2025"
-        technologies={[
-          { name: "React", icon: React },
-          { name: "Next.js", icon: Nextjs },
-          { name: "TypeScript", icon: TypeScript },
-          { name: "Tailwind CSS", icon: TailwindCSS },
-          { name: "MongoDB", icon: MongoDB },
-          { name: "Stripe", icon: Stripe },
-          { name: "Framer Motion", icon: FramerMotion },
-        ]}
-        github="https://github.com/javicod92/next-fullstack-ecommerce"
-        live="https://next-fullstack-ecommerce-1rpa.vercel.app"
-      >
-        <p class="mt-2">
-          <span class="text-gray-200 text-pretty">
-            This ecommerce, built with <HighLight>Next.js,</HighLight> offers a fast
-            and seamless shopping experience. It features a carousel of <HighLight
-              >highlighted products,</HighLight
-            >
-            <HighLight>category filters,</HighLight> and a modern interface designed
-            with <HighLight>Tailwind CSS</HighLight> and animations powered by <HighLight
-              >Framer Motion.</HighLight
-            > Products are stored in <HighLight>MongoDB,</HighLight> and <HighLight
-              >Stripe</HighLight
-            > integration ensures secure payments. Optimized for <HighLight
-              >high performance,</HighLight
-            > it guarantees smooth navigation on any device.
-          </span>
-        </p>
-      </ProjectCard>
-
-      <!-- E-commerce Backend -->
-      <ProjectCard
-        src="Projects/ecommerce-backSm.webp"
-        imageSm="Projects/ecommerce-back.webp"
-        title="Fullstack E-commerce (Backend)"
-        date="2024 - 2025"
-        technologies={[
-          { name: "React", icon: React },
-          { name: "Next.js", icon: Nextjs },
-          { name: "TypeScript", icon: TypeScript },
-          { name: "Tailwind CSS", icon: TailwindCSS },
-          { name: "MongoDB", icon: MongoDB },
-          { name: "Cloudinary", icon: Cloudinary },
-        ]}
-        github="https://github.com/javicod92/next-fullstack-ecommerce"
-        live="https://next-fullstack-ecommerce-gules.vercel.app/"
-      >
-        <p class="mt-2">
-          <span class="text-gray-200 text-pretty">
-            This backend, built with <HighLight>Next.js</HighLight>, provides a
-            scalable and secure API for the ecommerce platform. It uses <HighLight
-              >NextAuth 5</HighLight
-            > for authentication with <HighLight>admin role</HighLight> management,
-            <HighLight>MongoDB</HighLight> for data storage, and <HighLight
-              >Cloudinary</HighLight
-            > for optimized image handling. Products can be <HighLight
-              >created</HighLight
-            >, <HighLight>edited</HighLight>, and <HighLight
-              >categorized</HighLight
-            > efficiently. Combined with a <HighLight
-              >Tailwind-powered</HighLight
-            > frontend, it ensures a seamless and modern user experience.
-          </span>
-        </p>
-      </ProjectCard>
-
-      <!-- YouTube Music App -->
-      <ProjectCard
-        src="Projects/YoutubeCloneSm.webp"
-        imageSm="Projects/YoutubeClone.webp"
-        title="YouTube Music App (Clone)"
-        date="2024"
-        technologies={[
-          { name: "React", icon: React },
-          { name: "Vite", icon: Vite },
-          { name: "TypeScript", icon: TypeScript },
-          { name: "CSS Modules", icon: CSS3 },
-        ]}
-        github="https://github.com/javicod92/podcast-player"
-        live="https://podcast-player-eight.vercel.app/"
-      >
-        <p class="mt-2">
-          <span class="text-gray-200 text-pretty">
-            A podcast player inspired by <HighLight>YouTube Music.</HighLight>
-            With a <HighLight>sleek</HighLight> and <HighLight
-              >minimalist interface,</HighLight
-            > it lets you <HighLight>explore,</HighLight>
-            <HighLight>play,</HighLight> and <HighLight
-              >manage podcasts</HighLight
-            > seamlessly. Built with
-            <HighLight>React,</HighLight>
-            <HighLight>Vite,</HighLight> and <HighLight>TypeScript,</HighLight> it
-            leverages <HighLight>useState,</HighLight>
-            <HighLight>useEffect,</HighLight>
-            <HighLight>useRef,</HighLight> and a custom hook (<HighLight
-              >useFetch</HighLight
-            >) for optimized performance. The <HighLight
-              >playback control</HighLight
-            > is handled separately in a <HighLight>dedicated section</HighLight
-            > of the code, ensuring <HighLight>clean</HighLight> and <HighLight
-              >modular architecture.</HighLight
-            > Experience the world of podcasting with <HighLight
-              >smooth,</HighLight
-            >
-            <HighLight>uninterrupted audio!</HighLight>
-          </span>
-        </p>
-      </ProjectCard>
-
-      <!-- Credentials Creation and Validation System -->
-      <ProjectCard
-        src="/Projects/NextAuthSm.webp"
-        imageSm="/Projects/NextAuth.webp"
-        title="Credentials Creation and Validation System"
-        date="2024"
-        technologies={[
-          { name: "React", icon: React },
-          { name: "Next.js", icon: Nextjs },
-          { name: "TypeScript", icon: TypeScript },
-          { name: "CSS", icon: CSS3 },
-          { name: "Sass", icon: Sass },
-          { name: "JWT", icon: JWT },
-          { name: "MongoDB", icon: MongoDB },
-          { name: "Resend", icon: Resend },
-          { name: "Zod", icon: Zod },
-        ]}
-        github="https://github.com/javicod92/auth-next-15"
-      >
-        <p class="mt-2">
-          <span class="text-gray-200 text-pretty">
-            A modern platform for <HighLight
-              >secure user authentication</HighLight
-            > and <HighLight>credential management.</HighLight> Built with <HighLight
-              >Next.js</HighLight
-            >, <HighLight>React,</HighLight> and <HighLight
-              >TypeScript,</HighLight
-            > it ensures robust security with <HighLight
-              >JWT authentication,</HighLight
-            >
-            <HighLight>bcrypt password encryption,</HighLight> and <HighLight
-              >cookie-based session management.</HighLight
-            > Featuring <HighLight>Zod</HighLight> for <HighLight
-              >data validation,</HighLight
-            >
-            <HighLight>MongoDB</HighLight> with <HighLight>Mongoose,</HighLight>
-            and <HighLight>Resend</HighLight> for <HighLight
-              >email notifications,</HighLight
-            > this system provides a <HighLight>scalable</HighLight> and <HighLight
-              >modular architecture</HighLight
-            > for seamless <HighLight>user authentication.</HighLight>
-          </span>
-        </p>
-      </ProjectCard>
-
-      <!-- Estudio Edificar -->
-      <ProjectCard
-        src="/Projects/Edificar-StudioProjectSm.webp"
-        imageSm="/Projects/Edificar-StudioProject.webp"
-        title="Estudio Edificar (Architecture Studio)"
-        date="2023"
-        technologies={[
-          { name: "Python", icon: Python },
-          { name: "Django", icon: Django },
-          { name: "HTML 5", icon: HTML },
-          { name: "CSS 3", icon: CSS3 },
-          { name: "JavaScript", icon: JavaScript },
-          { name: "SQLite", icon: SQLite },
-        ]}
-        github="https://github.com/javicod92/EstudioEdificar"
-      >
-        <p class="mt-2">
-          <span class="text-gray-200 text-pretty">
-            An elegant and functional website for an <HighLight
-              >architecture studio</HighLight
-            >, built with <HighLight>Python</HighLight> and <HighLight
-              >Django.</HighLight
-            > It showcases the firm’s identity, services, and portfolio through a
-            sleek <HighLight>image carousel.</HighLight> Featuring an <HighLight
-              >admin panel</HighLight
-            > with <HighLight>credential validation,</HighLight> it allows only authorized
-            users to manage <HighLight>project albums</HighLight> stored in <HighLight
-              >SQLite.</HighLight
-            > Developed using <HighLight>Pillow</HighLight> for image processing
-            and deployed on <HighLight>PythonAnywhere,</HighLight> this project was
-            one of my first <HighLight>real-client experiences.</HighLight>
-          </span>
-        </p>
-      </ProjectCard>
-      <ProjectCard
-        src="/Projects/Blog-ProjectSm.webp"
-        imageSm="/Projects/Blog-Project.webp"
-        title="Institutional Blog"
-        date="2022"
-        technologies={[
-          { name: "Python", icon: Python },
-          { name: "Django", icon: Django },
-          { name: "HTML 5", icon: HTML },
-          { name: "CSS 3", icon: CSS3 },
-          { name: "JavaScript", icon: JavaScript },
-          { name: "SQLite", icon: SQLite },
-        ]}
-        github="https://github.com/javicod92/Asociacion_Juntos_en_Accion"
-      >
-        <p class="mt-2">
-          <span class="text-gray-200 text-pretty">
-            An institutional blog for <HighLight
-              >Asociación Civil Juntos en Acción,</HighLight
-            > built with <HighLight>Python</HighLight> and <HighLight
-              >Django.</HighLight
-            > It allows <HighLight>user registration,</HighLight> secure authentication
-            with <HighLight>SQLite,</HighLight> and a dynamic <HighLight
-              >news section</HighLight
-            > where the institution shares updates with images, and users can comment.
-            Includes pages for <HighLight>institutional info,</HighLight>
-            <HighLight>location,</HighLight> and <HighLight
-              >community outreach.</HighLight
-            > While it's a <HighLight>backend-focused project,</HighLight> I prioritized
-            <HighLight>frontend development</HighLight> to ensure an intuitive and
-            engaging user experience.
-          </span>
-        </p>
-      </ProjectCard>
+      {
+        t.projectsCards.map((project) => (
+          <ProjectCard
+            src={project.src}
+            imageSm={project.imageSm}
+            title={project.title}
+            date={project.date}
+            technologies={project.technologies}
+            github={project.github}
+            live={project.live}
+            youtube={project.youtube}
+          >
+            <p class="mt-2" set:html={project.description} />
+          </ProjectCard>
+        ))
+      }
     </div>
+
     <!-- Go to Github Button -->
     <div class="mt-10 w-full flex justify-center">
       <BlueButtonShadow
         as="a"
         class="flex items-center justify-center gap-2"
         href="https://github.com/javicod92"
-        target="_blank"><Github class="size-6" />Go to Github</BlueButtonShadow
+        target="_blank"
+        ><Github class="size-6" />{t.gotoGithub}</BlueButtonShadow
       >
     </div>
   </GeneralContainer>
