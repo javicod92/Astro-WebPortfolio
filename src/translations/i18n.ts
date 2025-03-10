@@ -45,7 +45,7 @@ export const translations = {
       h3: "Hey, this is my web portfolio. 👋",
       h1: `I'm <span class="text-cyan-500">Javier Codutti</span>`,
       badge: "Available to work",
-      description: `<span class="text-white font-semibold">Frontend Developer</span><span class="text-amber-200 font-semibold">with 2+ years of experience</span> building Web Applications. Passionate about clean code, UX/UI, and scalable solutions. From Argentina, always learning and improving. 🙂`,
+      description: `<span class="text-white font-semibold">Frontend Developer </span><span class="text-amber-200 font-semibold">with 2+ years of experience</span> building Web Applications. Passionate about clean code, UX/UI, and scalable solutions. From Argentina, always learning and improving. 🙂`,
       resume: "Download Resume",
       cv: "Download CV",
       discover: "Discover me",
