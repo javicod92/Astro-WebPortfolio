@@ -4,7 +4,7 @@ import { projectsCardsEn } from "./projects/projectsCardsEn";
 import { projectsCardsEs } from "./projects/projectsCardsEs";
 
 export const translations = {
-  //Page title
+  // Page title
   ROOT: {
     en: {
       title:
@@ -17,7 +17,7 @@ export const translations = {
     },
   },
 
-  //Header and nav bar
+  // Header and nav bar
   HEADER: {
     Navigation: {
       en: [
@@ -63,7 +63,7 @@ export const translations = {
     },
   },
 
-  //About me section
+  // About me section
   ABOUT: {
     en: {
       h2: "About me",
@@ -90,7 +90,7 @@ export const translations = {
     },
   },
 
-  //Skills section
+  // Skills section
   SKILLS: {
     en: {
       h2: "My Skills",
@@ -117,7 +117,7 @@ export const translations = {
     },
   },
 
-  //Portfolio section
+  // Portfolio section
   PORTFOLIO: {
     en: {
       h2: "Courses and Certifications",
@@ -136,7 +136,7 @@ export const translations = {
     },
   },
 
-  //Projects section
+  // Projects section
   PROJECTS: {
     en: {
       h2: "Projects",
@@ -156,6 +156,29 @@ export const translations = {
       viewOnGithub: "Ver en GitHub",
       viewOnVercel: "Ver en Vercel",
       gotoGithub: "Ir a GitHub",
+    },
+  },
+
+  // Contact Section
+  CONTACT: {
+    en: {
+      h2: "Contact Me! 😀",
+      h3: `Do you like what you see? <span class="text-cyan-500">Let's work together!</span>`,
+      networks: "NETWORKS",
+      phone: "PHONE",
+      email: "E-MAIL",
+      copyEmail: "Copy email",
+      copyEmailAlert: "E-mail address copied to clipboard",
+    },
+
+    es: {
+      h2: "¡Contáctame! 😀",
+      h3: `¿Te gusta lo que ves? <span class="text-cyan-500">¡Trabajemos juntos!</span>`,
+      networks: "REDES",
+      phone: "TELÉFONO",
+      email: "CORREO",
+      copyEmail: "Copiar correo",
+      copyEmailAlert: "Dirección de correo copiada al portapapeles",
     },
   },
 };
