@@ -1,5 +1,6 @@
 import { coursesCardEn } from "./portfolio/coursesCardEn";
 import { coursesCardEs } from "./portfolio/coursesCardEs";
+import { projectsCardsEn } from "./projects/projectsCardsEn";
 
 export const translations = {
   //Page title
@@ -131,6 +132,21 @@ export const translations = {
       coursesCards: coursesCardEs,
       certificationButton: "Ver Certificación",
       showButton: ["Ver Más", "Ver Menos"],
+    },
+  },
+
+  //Projects section
+  PROJECTS: {
+    en: {
+      h2: "Projects",
+      h3: `These are some of my <span class="text-cyan-500">most relevant projects</span>`,
+      projectsCards: projectsCardsEn,
+    },
+
+    es: {
+      h2: "Proyectos",
+      h3: `Estos son algunos de mis <span class="text-cyan-500">proyectos más relevantes</span>`,
+      projectsCards: projectsCardsEn,
     },
   },
 };

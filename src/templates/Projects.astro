@@ -16,7 +16,6 @@ import TailwindCSS from "../icons/TailwindCSS.astro";
 import TypeScript from "../icons/TypeScript.astro";
 import Vite from "../icons/Vite.astro";
 import GeneralContainer from "../utils/GeneralContainer.astro";
-import HighLight from "../utils/HighLight.astro";
 import Python from "../icons/Python.astro";
 import Django from "../icons/Django.astro";
 import HTML from "../icons/HTML.astro";
@@ -24,6 +23,10 @@ import SQLite from "../icons/SQLite.astro";
 import JavaScript from "../icons/JavaScript.astro";
 import BlueButtonShadow from "../components/buttons/BlueButtonShadow.astro";
 import Github from "../icons/Github.astro";
+import { translations } from "../translations/i18n";
+
+const lang = (Astro.locals as { lang: "en" | "es" }).lang || "en";
+const t = translations.PROJECTS[lang];
 ---
 
 <section
@@ -38,16 +41,29 @@ import Github from "../icons/Github.astro";
         class="font-medium text-zinc-400 flex items-center gap-2"
         id="projects-heading"
       >
-        <CodeIcon class="size-8" />Projects
+        <CodeIcon class="size-8" />{t.h2}
       </h2>
-      <h3 class="mt-1 font-semibold">
-        These are some of my
-        <span class="text-cyan-500">most relevant projects</span>
-      </h3>
+      <h3 class="mt-1 font-semibold" set:html={t.h3} />
     </div>
 
     <!-- Main Project Sections -->
     <div class="mt-10 flex flex-col gap-10">
+      {
+        t.projectsCards.map((project) => (
+          <ProjectCard
+            src={project.src}
+            imageSm={project.imageSm}
+            title={project.title}
+            date={project.date}
+            technologies={project.technologies}
+            github={project.github}
+            live={project.live}
+          >
+            <p class="mt-2" set:html={project.description} />
+          </ProjectCard>
+        ))
+      }
+
       <!-- E-commerce Frontend -->
       <ProjectCard
         src="/Projects/ecommerce-frontSm.webp"
@@ -72,19 +88,19 @@ import Github from "../icons/Github.astro";
             a fast and seamless shopping experience. It features a carousel of <span
               class="HighLight"
             >
-              >highlighted products,</span
+              highlighted products,</span
             >
             <span class="HighLight">category filters,</span> and a modern interface
             designed with <span class="HighLight">Tailwind CSS</span> and animations
-            powered by <span class="HighLight">>Framer Motion.</span> Products are
+            powered by <span class="HighLight">Framer Motion.</span> Products are
             stored in <span class="HighLight">MongoDB,</span> and <span
               class="HighLight"
             >
-              >Stripe</span
+              Stripe</span
             > integration ensures secure payments. Optimized for <span
               class="HighLight"
             >
-              >high performance,</span
+              high performance,</span
             > it guarantees smooth navigation on any device.
           </span>
         </p>
