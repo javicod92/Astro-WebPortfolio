@@ -201,4 +201,35 @@ export const translations = {
       },
     },
   },
+
+  // Footer Section
+  FOOTER: {
+    en: {
+      findme: "Find me on:",
+      navigation: {
+        title: "Navigation",
+        home: "Home",
+        about: "About",
+        skills: "Skills",
+        portfolio: "Portfolio",
+        projects: "Projects",
+        contact: "contact",
+      },
+      built: "Built with:",
+    },
+
+    es: {
+      findme: "Encuéntrame en:",
+      navigation: {
+        title: "Navegación",
+        home: "Inicio",
+        about: "Sobre",
+        skills: "Habilidades",
+        portfolio: "Portafolio",
+        projects: "Proyectos",
+        contact: "Contacto",
+      },
+      built: "Construido con:",
+    },
+  },
 };
