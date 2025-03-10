@@ -128,7 +128,7 @@ export const translations = {
 
     es: {
       h2: "Cursos y Certificaciones",
-      h3: `Estos son algunos de mis más relevantes<span class="text-cyan-500"> cursos y certificaciones </span>`,
+      h3: `Estos son algunos de mis <span class="text-cyan-500"> cursos y certificaciones más relevantes</span>`,
       coursesCards: coursesCardEs,
       certificationButton: "Ver Certificación",
       showButton: ["Ver Más", "Ver Menos"],
@@ -141,12 +141,14 @@ export const translations = {
       h2: "Projects",
       h3: `These are some of my <span class="text-cyan-500">most relevant projects</span>`,
       projectsCards: projectsCardsEn,
+      gotoGithub: "Go to GitHub",
     },
 
     es: {
       h2: "Proyectos",
       h3: `Estos son algunos de mis <span class="text-cyan-500">proyectos más relevantes</span>`,
       projectsCards: projectsCardsEn,
+      gotoGithub: "Ir a GitHub",
     },
   },
 };
