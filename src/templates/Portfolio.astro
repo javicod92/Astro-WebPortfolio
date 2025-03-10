@@ -81,8 +81,13 @@ const t = translations.PORTFOLIO[lang];
     </div>
   </ContainerSm>
   <div class="mt-10 w-full flex justify-center">
-    <BlueButtonShadow as="button" id="showMoreBtn">
-      View More
+    <BlueButtonShadow
+      as="button"
+      id="showMoreBtn"
+      data-show-text={t.showButton[0]}
+      data-hide-text={t.showButton[1]}
+    >
+      {t.showButton[0]}
     </BlueButtonShadow>
   </div>
 
@@ -95,11 +100,17 @@ const t = translations.PORTFOLIO[lang];
       if (containerHidden?.classList.contains("hidden")) {
         containerHidden.classList.remove("hidden");
         containerHidden.classList.add("flex");
-        showMoreBtn ? (showMoreBtn.textContent = "Show Less") : "";
+        showMoreBtn
+          ? (showMoreBtn.textContent =
+              showMoreBtn.dataset.hideText || "Show Less")
+          : "";
       } else {
         containerHidden?.classList.remove("flex");
         containerHidden?.classList.add("hidden");
-        showMoreBtn ? (showMoreBtn.textContent = "Show More") : "";
+        showMoreBtn
+          ? (showMoreBtn.textContent =
+              showMoreBtn.dataset.showText || "Show More")
+          : "";
       }
     }
 
