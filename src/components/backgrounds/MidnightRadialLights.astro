@@ -116,3 +116,34 @@
     }
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const background = document.querySelector(".background");
+    const lights = document.querySelectorAll(
+      ".light",
+    ) as NodeListOf<HTMLElement>;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Si está en viewport, reanudar animaciones
+            lights.forEach((light) => {
+              light.style.animationPlayState = "running";
+            });
+          } else {
+            // Si sale del viewport, pausar animaciones
+            lights.forEach((light) => {
+              light.style.animationPlayState = "paused";
+              console.log("paused");
+            });
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    observer.observe(background!);
+  });
+</script>
