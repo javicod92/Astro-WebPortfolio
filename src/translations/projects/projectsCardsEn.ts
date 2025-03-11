@@ -17,6 +17,8 @@ import JavaScript from "../../icons/JavaScript.astro";
 import Django from "../../icons/Django.astro";
 import HTML from "../../icons/HTML.astro";
 import Python from "../../icons/Python.astro";
+import AstroIcon from "../../icons/AstroIcon.astro";
+import Axios from "../../icons/Axios.astro";
 
 type ProjectsType = Array<{
   src: string;
@@ -31,6 +33,25 @@ type ProjectsType = Array<{
 }>;
 
 export const projectsCardsEn: ProjectsType = [
+  // Astro Portfolio
+  {
+    src: "/Projects/Astro-PortfolioSm.webp",
+    imageSm: "/Projects/Astro-Portfolio.webp",
+    title: "Portafolio Web - Astro",
+    date: "2025",
+    technologies: [
+      { name: "Astro", icon: AstroIcon },
+      { name: "TypeScript", icon: TypeScript },
+      { name: "Tailwind CSS", icon: TailwindCSS },
+      { name: "CSS", icon: CSS3 },
+      { name: "Resend", icon: Resend },
+      { name: "Axios", icon: Axios },
+    ],
+    github: "https://github.com/javicod92/Astro-WebPortfolio",
+    live: "https://astro-web-portfolio.vercel.app/",
+    description: `<span class="text-gray-200 text-pretty">Developed my portfolio using <span class="HighLight">Astro</span>, optimizing <span class="HighLight">translation</span> without code duplication and improving Astro’s official approach. Implemented a <span class="HighLight">contact form</span> with <span class="HighLight">Resend</span> and used <span class="HighLight">Axios</span> for HTTP requests. The page is optimized for <span class="HighLight">high performance</span> and <span class="HighLight">smooth navigation</span>, with optimized images and a structure based on <span class="HighLight">reusable components</span>.</span>`,
+  },
+
   // E-commerce Frontend
   {
     src: "/Projects/ecommerce-frontSm.webp",
@@ -84,10 +105,6 @@ export const projectsCardsEn: ProjectsType = [
     ],
     github: "https://github.com/javicod92/podcast-player",
     live: "https://podcast-player-eight.vercel.app/",
-    youtube: {
-      buttonTitle: "See the Video on YouTube",
-      href: "https://youtu.be/1pzEEwrPn9Y",
-    },
     description: `<span class="text-gray-200 text-pretty"> A podcast player inspired by <span class="HighLight">YouTube Music.</span> With a <span class="HighLight">sleek</span> and <span class="HighLight">minimalist interface,</span> it lets you <span class="HighLight">explore,</span> <span class="HighLight">play,</span> and <span class="HighLight">manage podcasts</span> seamlessly. Built with <span class="HighLight">React,</span> <span class="HighLight">Vite,</span> and <span class="HighLight">TypeScript,</span> it leverages <span class="HighLight">useState,</span> <span class="HighLight">useEffect,</span> <span class="HighLight">useRef,</span> and a custom hook (<span class="HighLight">useFetch</span>) for optimized performance. The <span class="HighLight">playback control</span> is handled separately in a <span class="HighLight">dedicated section</span> of the code, ensuring a <span class="HighLight">clean</span> and <span class="HighLight">modular architecture.</span> This application ensures a <span class="HighLight">smooth</span> and <span class="HighLight">uninterrupted</span> audio playback experience. </span>`,
   },
 
@@ -121,7 +138,7 @@ export const projectsCardsEn: ProjectsType = [
     technologies: [
       { name: "Python", icon: Python },
       { name: "Django", icon: Django },
-      { name: "HTML 5", icon: HTML },
+      { name: "HTML", icon: HTML },
       { name: "CSS", icon: CSS3 },
       { name: "JavaScript", icon: JavaScript },
       { name: "SQLite", icon: SQLite },
@@ -139,12 +156,16 @@ export const projectsCardsEn: ProjectsType = [
     technologies: [
       { name: "Python", icon: Python },
       { name: "Django", icon: Django },
-      { name: "HTML 5", icon: HTML },
-      { name: "CSS 3", icon: CSS3 },
+      { name: "HTML", icon: HTML },
+      { name: "CSS", icon: CSS3 },
       { name: "JavaScript", icon: JavaScript },
       { name: "SQLite", icon: SQLite },
     ],
     github: "https://github.com/javicod92/Asociacion_Juntos_en_Accion",
+    youtube: {
+      buttonTitle: "See the Video on YouTube",
+      href: "https://youtu.be/1pzEEwrPn9Y",
+    },
     description: `<span class="text-gray-200 text-pretty"> An institutional blog for <span class="HighLight"> Asociación Civil Juntos en Acción,</span > built with <span class="HighLight">Python</span> and <span class="HighLight" > Django.</span > It allows <span class="HighLight">user registration,</span> secure authentication with <span class="HighLight">SQLite,</span> and a dynamic <span class="HighLight">news section</span> where the institution shares updates with images, and users can comment. Includes pages for <span class="HighLight">institutional info,</span > <span class="HighLight">location,</span> and <span class="HighLight" > community outreach.</span > While it's a <span class="HighLight" >backend-focused project,</span > I prioritized <span class="HighLight">frontend development</span> to ensure an intuitive and engaging user experience. </span>`,
   },
 ];

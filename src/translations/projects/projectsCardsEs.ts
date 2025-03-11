@@ -17,6 +17,8 @@ import JavaScript from "../../icons/JavaScript.astro";
 import Django from "../../icons/Django.astro";
 import HTML from "../../icons/HTML.astro";
 import Python from "../../icons/Python.astro";
+import AstroIcon from "../../icons/AstroIcon.astro";
+import Axios from "../../icons/Axios.astro";
 
 type ProjectsType = Array<{
   src: string;
@@ -31,6 +33,25 @@ type ProjectsType = Array<{
 }>;
 
 export const projectsCardsEs: ProjectsType = [
+  // Astro Portfolio
+  {
+    src: "/Projects/Astro-PortfolioSm.webp",
+    imageSm: "/Projects/Astro-Portfolio.webp",
+    title: "Portafolio Web - Astro",
+    date: "2025",
+    technologies: [
+      { name: "Astro", icon: AstroIcon },
+      { name: "TypeScript", icon: TypeScript },
+      { name: "Tailwind CSS", icon: TailwindCSS },
+      { name: "CSS", icon: CSS3 },
+      { name: "Resend", icon: Resend },
+      { name: "Axios", icon: Axios },
+    ],
+    github: "https://github.com/javicod92/next-fullstack-ecommerce",
+    live: "https://next-fullstack-ecommerce-1rpa.vercel.app",
+    description: `<span class="text-gray-200 text-pretty">Desarrollé mi portafolio con <span class="HighLight">Astro</span>, optimizando la <span class="HighLight">traducción</span> sin duplicar código y mejorando la propuesta oficial. Implementé un <span class="HighLight">formulario de contacto</span> con <span class="HighLight">Resend</span> y utilicé <span class="HighLight">Axios</span> para solicitudes HTTP. La página está optimizada para una <span class="HighLight">alta performance</span> y <span class="HighLight">fluidez</span>, con imágenes optimizadas y una estructura basada en <span class="HighLight">componentes reutilizables</span>. </span>`,
+  },
+
   // E-commerce Frontend
   {
     src: "/Projects/ecommerce-frontSm.webp",
@@ -117,7 +138,7 @@ export const projectsCardsEs: ProjectsType = [
     technologies: [
       { name: "Python", icon: Python },
       { name: "Django", icon: Django },
-      { name: "HTML 5", icon: HTML },
+      { name: "HTML", icon: HTML },
       { name: "CSS", icon: CSS3 },
       { name: "JavaScript", icon: JavaScript },
       { name: "SQLite", icon: SQLite },
@@ -135,8 +156,8 @@ export const projectsCardsEs: ProjectsType = [
     technologies: [
       { name: "Python", icon: Python },
       { name: "Django", icon: Django },
-      { name: "HTML 5", icon: HTML },
-      { name: "CSS 3", icon: CSS3 },
+      { name: "HTML", icon: HTML },
+      { name: "CSS", icon: CSS3 },
       { name: "JavaScript", icon: JavaScript },
       { name: "SQLite", icon: SQLite },
     ],
