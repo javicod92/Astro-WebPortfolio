@@ -49,7 +49,7 @@ export const projectsCardsEn: ProjectsType = [
     ],
     github: "https://github.com/javicod92/Astro-WebPortfolio",
     live: "https://astro-web-portfolio.vercel.app/",
-    description: `<span class="text-gray-200 text-pretty">Developed my portfolio using <span class="HighLight">Astro</span>, optimizing <span class="HighLight">translation</span> without code duplication and improving Astro’s official approach. Implemented a <span class="HighLight">contact form</span> with <span class="HighLight">Resend</span> and used <span class="HighLight">Axios</span> for HTTP requests. The page is optimized for <span class="HighLight">high performance</span> and <span class="HighLight">smooth navigation</span>, with optimized images and a structure based on <span class="HighLight">reusable components</span>.</span>`,
+    description: `<span class="text-gray-200 text-pretty">Developed my portfolio using <span class="HighLight">Astro</span>, optimizing <span class="HighLight">translation</span> without code duplication and adding an alternative approach to Astro’s official solution. Implemented a <span class="HighLight">contact form</span> with <span class="HighLight">Resend</span> and used <span class="HighLight">Axios</span> for HTTP requests. The page is optimized for <span class="HighLight">high performance</span> and <span class="HighLight">smooth navigation</span>, with optimized images and a structure based on <span class="HighLight">reusable components</span>.</span>`,
   },
 
   // E-commerce Frontend

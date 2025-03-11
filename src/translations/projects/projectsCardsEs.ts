@@ -49,7 +49,7 @@ export const projectsCardsEs: ProjectsType = [
     ],
     github: "https://github.com/javicod92/next-fullstack-ecommerce",
     live: "https://next-fullstack-ecommerce-1rpa.vercel.app",
-    description: `<span class="text-gray-200 text-pretty">Desarrollé mi portafolio con <span class="HighLight">Astro</span>, optimizando la <span class="HighLight">traducción</span> sin duplicar código, adding an alternative approach to Astro’s official solution. Implementé un <span class="HighLight">formulario de contacto</span> con <span class="HighLight">Resend</span> y utilicé <span class="HighLight">Axios</span> para solicitudes HTTP. La página está optimizada para una <span class="HighLight">alta performance</span> y <span class="HighLight">fluidez</span>, con imágenes optimizadas y una estructura basada en <span class="HighLight">componentes reutilizables</span>. </span>`,
+    description: `<span class="text-gray-200 text-pretty">Desarrollé mi portafolio con <span class="HighLight">Astro</span>, optimizando la <span class="HighLight">traducción</span> sin duplicar código, añadiendo un nuevo enfoque a la solución oficial. Implementé un <span class="HighLight">formulario de contacto</span> con <span class="HighLight">Resend</span> y utilicé <span class="HighLight">Axios</span> para solicitudes HTTP. La página está optimizada para una <span class="HighLight">alta performance</span> y <span class="HighLight">fluidez</span>, con imágenes optimizadas y una estructura basada en <span class="HighLight">componentes reutilizables</span>. </span>`,
   },
 
   // E-commerce Frontend
