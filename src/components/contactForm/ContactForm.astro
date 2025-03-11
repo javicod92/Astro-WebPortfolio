@@ -5,7 +5,12 @@ const lang = (Astro.locals as { lang: "en" | "es" }).lang || "en";
 const t = translations.CONTACT[lang];
 ---
 
-<form id="submitForm" class="space-y-6 w-full">
+<form
+  id="submitForm"
+  class="space-y-6 w-full"
+  data-error-message={t.FORM.emailSent.error}
+  data-success-message={t.FORM.emailSent.success}
+>
   <div>
     <label for="name" class="text-sm text-cyan-500"
       >{t.FORM.fullname.title}</label
@@ -102,9 +107,7 @@ const t = translations.CONTACT[lang];
 <script>
   import axios from "axios";
 
-  document
-    .getElementById("submitForm")
-    ?.addEventListener("submit", handleSubmit);
+  const form = document.getElementById("submitForm");
 
   export async function handleSubmit(e: Event) {
     e.preventDefault();
@@ -117,8 +120,8 @@ const t = translations.CONTACT[lang];
       const response = await axios.post("/api/send-email", data);
       alert(
         response.data.success
-          ? "Mail sent successfully"
-          : "Error when sending mail",
+          ? form.dataset.successMessage
+          : form.dataset.errorMessage,
       );
 
       if (response.data.success) {
@@ -129,6 +132,8 @@ const t = translations.CONTACT[lang];
       alert("Error when sending mail");
     }
   }
+
+  form?.addEventListener("submit", handleSubmit);
 </script>
 
 <!-- Function to capitalize -->

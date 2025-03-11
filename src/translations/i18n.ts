@@ -178,6 +178,10 @@ export const translations = {
         subject: { title: "Subject", placeholder: "Enter your subject here" },
         message: { title: "Message", placeholder: "Enter your message here" },
         sendButton: "Send",
+        emailSent: {
+          error: "Error when sending mail",
+          success: "Mail sent successfully",
+        },
       },
     },
 
@@ -198,6 +202,10 @@ export const translations = {
         subject: { title: "Asunto", placeholder: "Ingrese el asunto aquí" },
         message: { title: "Mensaje", placeholder: "Ingrese su mensaje aquí" },
         sendButton: "Enviar",
+        emailSent: {
+          error: "Error al enviar el mensaje",
+          success: "Éxito al enviar el mensaje",
+        },
       },
     },
   },
