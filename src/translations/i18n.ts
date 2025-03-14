@@ -50,6 +50,10 @@ export const translations = {
       resume: "Download Resume",
       cv: "Download CV",
       discover: "Discover me",
+      download: {
+        resume: "/Resume-Cv/Aldo Javier Codutti - Resume (en).pdf",
+        name: "Codutti, Aldo Javier - Resume.pdf",
+      },
     },
 
     es: {
@@ -60,6 +64,10 @@ export const translations = {
       resume: "Descargar Resume",
       cv: "Descargar CV",
       discover: "Descúbreme",
+      download: {
+        resume: "/Resume-Cv/Aldo Javier Codutti - Resume (es).pdf",
+        name: "Codutti, Aldo Javier - Resume.pdf",
+      },
     },
   },
 

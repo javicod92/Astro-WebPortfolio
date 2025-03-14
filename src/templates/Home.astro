@@ -89,7 +89,9 @@ const t = translations.HOME[lang];
 
       <!-- Curriculum and Resume -->
       <div class="mt-12 flex gap-2 flex-wrap">
-        <NeonBlue>{t.resume}</NeonBlue>
+        <NeonBlue href={t.download.resume} as="a" download={t.download.name}
+          >{t.resume}</NeonBlue
+        >
         <NeonOrange>{t.cv}</NeonOrange>
       </div>
     </div>
