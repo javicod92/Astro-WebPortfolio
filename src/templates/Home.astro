@@ -47,52 +47,54 @@ const t = translations.HOME[lang];
         set:html={t.description}
       />
 
-      <!-- Socials -->
-      <ul class="mt-10 flex gap-4">
-        <li>
-          <a
-            href="https://github.com/javicod92"
-            class="border border-gray-300 p-2 rounded-full inline-flex items-center justify-center size-10 bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500"
-            target="_blank"
-            rel="noopener noreferrer me"
-            title="Github"
-            aria-label="Github"
-          >
-            <Github class="w-full" aria-hidden="true" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://linkedin.com/in/aldo-javier-codutti"
-            class="border border-gray-300 p-2 rounded-full inline-flex items-center justify-center size-10 bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500"
-            target="_blank"
-            rel="noopener noreferrer me"
-            title="LinkedIn"
-            aria-label="LinkedIn"
-          >
-            <LinkedIn class="w-full" aria-hidden="true" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="mailto:javi.javier.jc@gmail.com"
-            class="border border-gray-300 p-2 rounded-full inline-flex items-center justify-center size-10 bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Email"
-            aria-label="Email"
-          >
-            <Mail class="w-full" aria-hidden="true" />
-          </a>
-        </li>
-      </ul>
+      <div class="flex mt-10 gap-8 items-center flex-wrap">
+        <!-- Socials -->
+        <ul class="flex gap-4">
+          <li>
+            <a
+              href="https://github.com/javicod92"
+              class="border border-gray-300 p-2 rounded-full inline-flex items-center justify-center size-10 bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500"
+              target="_blank"
+              rel="noopener noreferrer me"
+              title="Github"
+              aria-label="Github"
+            >
+              <Github class="w-full" aria-hidden="true" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com/in/aldo-javier-codutti"
+              class="border border-gray-300 p-2 rounded-full inline-flex items-center justify-center size-10 bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500"
+              target="_blank"
+              rel="noopener noreferrer me"
+              title="LinkedIn"
+              aria-label="LinkedIn"
+            >
+              <LinkedIn class="w-full" aria-hidden="true" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:javi.javier.jc@gmail.com"
+              class="border border-gray-300 p-2 rounded-full inline-flex items-center justify-center size-10 bg-zinc-800 hover:text-cyan-500 hover:shadow-[0_0_20px_5px_#185367] transition duration-150 hover:border-cyan-500"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Email"
+              aria-label="Email"
+            >
+              <Mail class="w-full" aria-hidden="true" />
+            </a>
+          </li>
+        </ul>
 
-      <!-- Curriculum and Resume -->
-      <div class="mt-12 flex gap-2 flex-wrap">
-        <NeonBlue href={t.download.resume} as="a" target="_blank"
-          >{t.resume}</NeonBlue
-        >
-        <NeonOrange>{t.cv}</NeonOrange>
+        <!-- Curriculum and Resume -->
+        <div>
+          <NeonBlue href={t.download.resume} as="a" target="_blank"
+            >{t.resume}</NeonBlue
+          >
+          <!-- <NeonOrange>{t.cv}</NeonOrange> -->
+        </div>
       </div>
     </div>
 
