@@ -3,6 +3,7 @@ import MidnightRadialLights from "../components/backgrounds/MidnightRadialLights
 import Badge from "../components/badge/Badge.astro";
 import NeonBlue from "../components/buttons/NeonBlue.astro";
 import ScrollIndicator from "../components/scrollIndicators/ScrollIndicator.astro";
+import Download from "../icons/Download.astro";
 import Github from "../icons/Github.astro";
 import LinkedIn from "../icons/LinkedIn.astro";
 import Mail from "../icons/Mail.astro";
@@ -90,7 +91,7 @@ const t = translations.HOME[lang];
         <!-- Curriculum and Resume -->
         <div>
           <NeonBlue href={t.download.resume} as="a" target="_blank"
-            >{t.resume}</NeonBlue
+            ><Download class="size-5 stroke-blue-200" /> {t.resume}</NeonBlue
           >
           <!-- <NeonOrange>{t.cv}</NeonOrange> -->
         </div>
