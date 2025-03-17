@@ -101,7 +101,7 @@ export const projectsCardsEn: ProjectsType = [
       { name: "React", icon: React },
       { name: "Vite", icon: Vite },
       { name: "TypeScript", icon: TypeScript },
-      { name: "CSS Modules", icon: CSS3 },
+      { name: "Modules CSS", icon: CSS3 },
     ],
     github: "https://github.com/javicod92/podcast-player",
     live: "https://podcast-player-eight.vercel.app/",
