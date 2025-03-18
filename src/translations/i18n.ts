@@ -104,7 +104,7 @@ export const translations = {
       h2: "My Skills",
       h3: `Let's explore my most popular<span class="text-cyan-500"> skills and experience </span>`,
       description: [
-        `I'm a developer with experience in <span class="HighLight">React, Next.js,</span> and <span class="HighLight">Astro,</span> using <span class="HighLight">Tailwind CSS</span> and <span class="HighLight">CSS Modules</span > for styling.`,
+        `I'm a developer with experience in <span class="HighLight">React, Next.js,</span> and <span class="HighLight">Astro,</span> using <span class="HighLight">Tailwind CSS</span> and <span class="HighLight">Modules CSS</span > for styling.`,
 
         `On the backend, I work with <span class="HighLight">MongoDB</span > and integrate tools like <span class="HighLight">Axios, Zod, Resend,</span> and <span class="HighLight">Framer Motion</span>.`,
 
@@ -116,7 +116,7 @@ export const translations = {
       h2: "Mis Habilidades",
       h3: `Conoce mis mejores<span class="text-cyan-500"> habilidades y experiencias </span>`,
       description: [
-        `Soy un desarrollador con experiencia en <span class="HighLight">React, Next.js</span > y <span class="HighLight">Astro,</span> usando <span class="HighLight">Tailwind CSS</span> y <span class="HighLight">CSS Modules</span> para estilizar.`,
+        `Soy un desarrollador con experiencia en <span class="HighLight">React, Next.js</span > y <span class="HighLight">Astro,</span> usando <span class="HighLight">Tailwind CSS</span> y <span class="HighLight">Modules CSS</span> para estilizar.`,
 
         `En Backend, trabajo con <span class="HighLight">MongoDB</span > e integro herramientas como <span class="HighLight">Axios, Zod, Resend,</span> y <span class="HighLight">Framer Motion.</span>`,
 
