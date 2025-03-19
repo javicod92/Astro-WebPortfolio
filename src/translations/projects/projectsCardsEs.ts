@@ -34,23 +34,23 @@ type ProjectsType = Array<{
 
 export const projectsCardsEs: ProjectsType = [
   // Astro Portfolio
-  {
-    src: "/Projects/Astro-PortfolioSm.webp",
-    imageSm: "/Projects/Astro-Portfolio.webp",
-    title: "Portafolio Web - Astro",
-    date: "2025",
-    technologies: [
-      { name: "Astro", icon: AstroIcon },
-      { name: "TypeScript", icon: TypeScript },
-      { name: "Tailwind CSS", icon: TailwindCSS },
-      { name: "CSS", icon: CSS3 },
-      { name: "Resend", icon: Resend },
-      { name: "Axios", icon: Axios },
-    ],
-    github: "https://github.com/javicod92/Astro-WebPortfolio",
-    live: "https://astro-web-portfolio.vercel.app/",
-    description: `<span class="text-gray-200 text-pretty">Desarrollé mi portafolio con <span class="HighLight">Astro</span>, optimizando la <span class="HighLight">traducción</span> sin duplicar código, añadiendo un nuevo enfoque a la solución oficial. Implementé un <span class="HighLight">formulario de contacto</span> con <span class="HighLight">Resend</span> y utilicé <span class="HighLight">Axios</span> para solicitudes HTTP. La página está optimizada para una <span class="HighLight">alta performance</span> y <span class="HighLight">fluidez</span>, con imágenes optimizadas y una estructura basada en <span class="HighLight">componentes reutilizables</span>. </span>`,
-  },
+  // {
+  //   src: "/Projects/Astro-PortfolioSm.webp",
+  //   imageSm: "/Projects/Astro-Portfolio.webp",
+  //   title: "Portafolio Web - Astro",
+  //   date: "2025",
+  //   technologies: [
+  //     { name: "Astro", icon: AstroIcon },
+  //     { name: "TypeScript", icon: TypeScript },
+  //     { name: "Tailwind CSS", icon: TailwindCSS },
+  //     { name: "CSS", icon: CSS3 },
+  //     { name: "Resend", icon: Resend },
+  //     { name: "Axios", icon: Axios },
+  //   ],
+  //   github: "https://github.com/javicod92/Astro-WebPortfolio",
+  //   live: "https://astro-web-portfolio.vercel.app/",
+  //   description: `<span class="text-gray-200 text-pretty">Desarrollé mi portafolio con <span class="HighLight">Astro</span>, optimizando la <span class="HighLight">traducción</span> sin duplicar código, añadiendo un nuevo enfoque a la solución oficial. Implementé un <span class="HighLight">formulario de contacto</span> con <span class="HighLight">Resend</span> y utilicé <span class="HighLight">Axios</span> para solicitudes HTTP. La página está optimizada para una <span class="HighLight">alta performance</span> y <span class="HighLight">fluidez</span>, con imágenes optimizadas y una estructura basada en <span class="HighLight">componentes reutilizables</span>. </span>`,
+  // },
 
   // E-commerce Frontend
   {
