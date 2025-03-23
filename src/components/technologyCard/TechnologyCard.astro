@@ -1,6 +1,4 @@
 ---
-import React from "../../icons/React.astro";
-
 type ClassTypes = {
   class: string;
 };
@@ -9,14 +7,55 @@ const { class: classList } = Astro.props as ClassTypes;
 ---
 
 <div
-  class={`h-[150px] bg-gray-800/60 rounded-sm flex flex-col items-center justify-evenly p-2 transition-all duration-100 ${classList}`}
+  class={`glow-card relative h-[150px] bg-gray-800/60 rounded-sm flex flex-col items-center justify-evenly p-2 transition-all duration-200 overflow-hidden ${classList}`}
 >
+  <div class="glow"></div>
   <slot />
 </div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".glow-card");
+
+    cards.forEach((card) => {
+      const cardElement = card as HTMLElement;
+      const glow = cardElement.querySelector(".glow") as HTMLElement | null;
+
+      if (!glow) return;
+
+      cardElement.addEventListener("mousemove", (e: MouseEvent) => {
+        const rect = cardElement.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        glow.style.top = `${y}px`;
+        glow.style.left = `${x}px`;
+      });
+    });
+  });
+</script>
+
 <style>
-  div:hover {
-    box-shadow: 0 0 20px 2px rgb(0, 109, 182);
+  .glow-card:hover {
     transform: scale(1.05);
+  }
+
+  .glow {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(
+      circle,
+      rgba(0, 109, 182, 0.5) 0%,
+      rgba(0, 109, 182, 0) 60%
+    );
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .glow-card:hover .glow {
+    opacity: 0.8;
   }
 </style>
