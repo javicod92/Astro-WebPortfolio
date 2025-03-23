@@ -42,6 +42,7 @@ const { class: classList } = Astro.props as ClassTypes;
 
   .glow {
     position: absolute;
+    z-index: -10;
     width: 200px;
     height: 200px;
     background: radial-gradient(
@@ -49,6 +50,7 @@ const { class: classList } = Astro.props as ClassTypes;
       rgba(0, 109, 182, 0.5) 0%,
       rgba(0, 109, 182, 0) 60%
     );
+    mix-blend-mode: lighten;
     transform: translate(-50%, -50%);
     transition: opacity 0.2s ease-out;
     opacity: 0;
@@ -56,6 +58,6 @@ const { class: classList } = Astro.props as ClassTypes;
   }
 
   .glow-card:hover .glow {
-    opacity: 0.8;
+    opacity: 1;
   }
 </style>
