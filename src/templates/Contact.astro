@@ -114,4 +114,23 @@ const t = translations.CONTACT[lang];
     opacity: 0.8;
     z-index: -10;
   }
+
+  .CardBg {
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+  }
+
+  .CardBg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("/noisy-texture.png"); /* Coloca aquí tu textura de ruido */
+    z-index: 2;
+    opacity: 0.25; /* Ajusta la opacidad al gusto */
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    mix-blend-mode: overlay; /* O prueba con soft-light, multiply, etc. */
+  }
 </style>
